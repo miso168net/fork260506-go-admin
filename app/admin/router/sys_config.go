@@ -2,6 +2,7 @@ package router
 
 import (
 	"go-admin/app/admin/apis"
+	"go-admin/common/actions"
 	"go-admin/common/middleware"
 
 	"github.com/gin-gonic/gin"
@@ -15,7 +16,7 @@ func init() {
 // 需认证的路由代码
 func registerSysConfigRouter(v1 *gin.RouterGroup, authMiddleware *jwt.GinJWTMiddleware) {
 	api := apis.SysConfig{}
-	r := v1.Group("/config").Use(authMiddleware.MiddlewareFunc()).Use(middleware.AuthCheckRole())
+	r := v1.Group("/config").Use(authMiddleware.MiddlewareFunc()).Use(middleware.AuthCheckRole()).Use(actions.PermissionAction())
 	{
 		r.GET("", api.GetPage)
 		r.GET("/:id", api.Get)

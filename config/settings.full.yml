@@ -11,7 +11,7 @@ settings:
     readtimeout: 1
     writertimeout: 2
     # 数据权限功能开关
-    enabledp: false
+    enabledp: true
   ssl:
     # https对应的域名
     domain: localhost:8000
