@@ -1,0 +1,18 @@
+---
+source_file: "cmd/migrate/migration/models/role_dept.go"
+type: "code"
+community: "Community 39"
+location: "L3"
+tags:
+  - graphify/code
+  - graphify/EXTRACTED
+  - community/Community_39
+---
+
+# SysRoleDept
+
+## Connections
+- [[.TableName()_15]] - `method` [EXTRACTED]
+- [[role_dept.go]] - `contains` [EXTRACTED]
+
+#graphify/code #graphify/EXTRACTED #community/Community_39
