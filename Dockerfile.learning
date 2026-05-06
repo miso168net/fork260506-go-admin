@@ -21,7 +21,7 @@ RUN CGO_ENABLED=1 go build -tags sqlite3 -ldflags="-w -s" -o /out/go-admin .
 
 # ---------- runtime ----------
 FROM alpine
-RUN apk add --no-cache ca-certificates tzdata libc6-compat
+RUN apk add --no-cache ca-certificates tzdata libc6-compat sqlite
 ENV TZ=Asia/Shanghai
 COPY --from=builder /out/go-admin /go-admin
 COPY config/settings.sqlite.yml /config/settings.yml
