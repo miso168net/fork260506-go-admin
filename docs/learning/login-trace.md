@@ -75,7 +75,7 @@ docker compose -f docker-compose.learning.yml up --build
 docker compose -f docker-compose.learning.yml up --build -d
 ```
 
-`-f docker-compose.learning.yml` 是必要的——倉庫根目錄的預設 `docker-compose.yml` 是給 MySQL 完整環境用的，**不要拿去跑學習流程**，否則會掉進 default-MySQL-config 陷阱。
+`-f docker-compose.learning.yml` 是必要的——倉庫根目錄的預設 `docker-compose.yml` 假設你已經 build 好 `go-admin:latest` 並會掛載 `config/settings.yml`（預設指向 MySQL `127.0.0.1:3306`），跑下去會掉進 default-MySQL-config 陷阱。學習流程改用 `docker-compose.learning.yml`，它走 SQLite 不需要外部 DB。
 
 ### 2.2 第一次 vs 之後重啟的時間預算
 
@@ -90,7 +90,7 @@ docker compose -f docker-compose.learning.yml up --build -d
 
   看到這兩行就代表 Gin 已經 listen 在 `:8000`。
 
-> 注意：multi-stage build 的 builder stage 需要 CGO（SQLite driver `mattn/go-sqlite3` 依賴 C 編譯器），Dockerfile 已用 `golang:1.24-alpine` + `apk add build-base` 處理好；本機**不需要** `gcc` / `CGO_ENABLED=1`。
+> 注意：multi-stage build 的 builder stage 需要 CGO（SQLite driver `mattn/go-sqlite3` 依賴 C 編譯器），Dockerfile 已用 `golang:1.24-alpine` + `apk add gcc g++ libc6-compat` 處理好；本機**不需要** `gcc` / `CGO_ENABLED=1`。
 
 ### 2.3 Sanity check：HTTP 200 from Swagger UI
 
