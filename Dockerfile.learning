@@ -7,12 +7,16 @@
 FROM golang:1.24-alpine AS builder
 RUN apk add --no-cache gcc g++ libc6-compat
 WORKDIR /src
-# go.sum is gitignored in this repo and not present on disk; `go mod download`
-# will materialise it from go.mod during the build. Copy go.mod alone so the
-# module-download layer still caches across edits to non-module sources.
+# go.sum is gitignored in this repo and not present on disk. `go mod download`
+# alone does not populate go.sum for transitive dependencies (Go 1.17+),
+# which makes `go build` fail with "missing go.sum entry" errors. We split
+# the work: download to populate the module cache (still cached across
+# non-module edits via the early COPY go.mod ./ layer), then `go mod tidy`
+# after the full source is present to fill go.sum gaps inside the builder.
 COPY go.mod ./
 RUN go mod download
 COPY . .
+RUN go mod tidy
 RUN CGO_ENABLED=1 go build -tags sqlite3 -ldflags="-w -s" -o /out/go-admin .
 
 # ---------- runtime ----------
