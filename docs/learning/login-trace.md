@@ -604,7 +604,17 @@ SELECT * FROM sys_role WHERE role_id = ?
 docker compose -f docker-compose.learning.yml logs go-admin-learning | grep -E 'SELECT|INSERT|UPDATE'
 ```
 
-**比對**：實務上 GORM logger 會把 `?` placeholder 連同 rendered 後的字面值一起印出來——你可能看到 `username = "admin"` 直接寫死，也可能看到 `username = ?` 加另一行 args；兩種形狀都算 match，只要 **table name + WHERE 欄位** 對得上 5.5 / 5.7 預測即可。請把預測 SQL 抄一份在筆記，把 `grep` 出來的實際 SQL 貼旁邊一條一條打勾；任何「預測有但實際沒看到」（例如 `sys_role` 的 SELECT 不見）都代表你對 5.5 / 5.7 的拆解有缺口，回去重讀。
+**比對**：上面那個 naive 預測只是教學切入點——實際印出來的兩條 SQL 會比預測長，shape 大致是：
+
+```
+... trace .../login.go:17 [0.367ms] [rows:1] SELECT * FROM `sys_user` WHERE (username = "admin"  and status = '2') AND `sys_user`.`deleted_at` IS NULL ORDER BY `sys_user`.`user_id` LIMIT 1
+... trace .../login.go:27 [0.322ms] [rows:1] SELECT * FROM `sys_role` WHERE role_id = 1  AND `sys_role`.`deleted_at` IS NULL ORDER BY `sys_role`.`role_id` LIMIT 1
+```
+
+差異拆兩類看：
+
+- **Cosmetic（OK 不算 mismatch）**：行首 timestamp + `trace` + caller `file:line` + `[duration]` + `[rows:N]` 是 GORM logger 的 framing；反引號 quote table/column、WHERE 子句外那層 `(...)`、`and` 小寫、`?` 被 render 成字面值（`"admin"` / `1`），這些都是 logger 的呈現選擇，跟 5.5 / 5.7 程式碼本身意義一樣。
+- **Substantive（必須對得上）**：兩條 SQL 都會多出 `AND \`<table>\`.\`deleted_at\` IS NULL` 與 `ORDER BY \`<table>\`.\`<pk>\` LIMIT 1`——這不是 bug，是 GORM 自動補的：(1) `models.ModelTime` 嵌入 `gorm.DeletedAt` 欄位，所有走 `db` 的查詢都會自動帶 soft-delete 過濾；(2) `.First(&...)` 的語意本來就是「依 PK 排序取第一筆」，所以一定會出現 `ORDER BY pk LIMIT 1`。把預測 SQL 抄一份在筆記，跟 `grep` 出來的實際 SQL 比對 **table name + WHERE 欄位 + 兩條 GORM 自動補的 clause** 都齊全即可；任何「預測有但實際沒看到」（例如 `sys_role` 的 SELECT 不見）才代表你對 5.5 / 5.7 的拆解有缺口，回去重讀。
 
 ### 6.2 Recipe (b) — JWT claim decode（FR-012b）
 
@@ -651,12 +661,14 @@ echo "$TOKEN" | cut -d. -f2 | tr '_-' '/+' | python3 -c "import sys,base64,json;
 
 第三條 runtime 證據是 `sys_login_log` 真的會出現一筆對應這次登入的 row，用來驗證 5.10 那條「`Authenticator → memory queue → SaveLoginLog consumer → DB`」async chain 走完。這條 row 也是 Constitution Principle V「login log 是 product feature 不是 debug aid」在 runtime 層的硬證據。
 
+**前置**：本 recipe 需要 container 內有 `sqlite3` CLI 才能查 row。`Dockerfile.learning` 的 runtime stage 已經 `apk add --no-cache sqlite`，所以 `docker compose -f docker-compose.learning.yml exec` 可以直接呼叫；不需要額外裝。
+
 **Async wrinkle（research.md §R2）**：5.10 是 deferred 的非同步寫——`Authenticator` 在 return 之後 defer 才把 message append 進 in-memory queue，consumer goroutine 才在後面把它 flush 到 SQLite。實測 client 收到 200 response 與 row 落 DB 之間有 50–500ms 競賽窗：HTTP 端已經拿到 token 了，DB 端 row 可能還沒寫進去。所以**先 `sleep 1` 再查**、或者用一個短的 retry loop 重試最多 3 次，是這條 recipe 不能省的步驟。
 
-**預測**：對一個剛剛 `docker compose down -v && up -d` 重啟過、只跑了一次 `curl` 登入的 container，最近一筆 row 應該長這樣（status `'2'` 表示成功、msg 是 `auth.go:74` 寫的 `var msg = "登录成功"` 那個 string literal）：
+**預測**：對一個剛剛 `docker compose down -v && up -d` 重啟過、只跑了一次 `curl` 登入的 container，最近一筆 row 應該長這樣（sqlite3 預設 pipe-separated 輸出、欄位順序為 `id|username|status|msg|login_time`；status `2` 表示成功、msg 是 `auth.go:74` 寫的 `var msg = "登录成功"` 那個 string literal）：
 
 ```
-id=1, username='admin', status='2', msg='登录成功', login_time=<近一秒內的 timestamp>
+1|admin|2|登录成功|2026-05-07 03:16:28.43132477+08:00
 ```
 
 **執行**：登入完之後在 host 端打：
@@ -688,12 +700,24 @@ done
 **執行**（密碼錯誤——`code:"0",uuid:"0"` 仍然 dev-mode 通過 captcha，所以失敗點在 `Login.GetUser` 內部 bcrypt compare）：
 
 ```bash
-curl -s -X POST http://localhost:8000/api/v1/login \
+curl -s -o /tmp/body -w 'HTTP %{http_code}\n' -X POST http://localhost:8000/api/v1/login \
   -H 'Content-Type: application/json' \
   -d '{"username":"admin","password":"wrong","code":"0","uuid":"0"}'
+cat /tmp/body
 ```
 
-response 預測為 `{"code":401,"msg":"<SDK 預設 Unauthorized 訊息>"}` 形狀（具體訊息來自 gin-jwt SDK 的 `Unauthorized` callback 寫進去的 `message` 參數，本 repo `Unauthorized` 只是把它 echo 回 JSON，不會看到 token 欄位）。等 1 秒之後查 log row：
+預測會看到兩件意外但 go-admin 一致採用的事：
+
+- **HTTP code 是 200，不是 401**——本專案的 gin-jwt 整合對 auth 失敗用「HTTP 200 + body 的 `code` 欄位帶業務 error code」這種包法，而不是讓 HTTP 層直接帶 4xx。所以 `curl -w '%{http_code}'` 會印 `HTTP 200`，狀態的真正資訊在 body。
+- **body `msg` 是英文 `"incorrect Username or Password"`，不是 `登录失败`**——這串字面值來自 gin-jwt SDK 預設 `Unauthorized` callback：當 `Authenticator` 回傳 `jwt.ErrFailedAuthentication` 時，SDK 把 `err.Error()`（即 `"incorrect Username or Password"`）當作 `message` 參數丟進 `Unauthorized` callback；本 repo 的 `Unauthorized` 把它 echo 進 JSON 的 `msg`。換句話說 `auth.go:102` 那個 Simplified Chinese `msg = "登录失败"` **完全不會出現在 HTTP response**——它只走 `defer LoginLogToDB` 進 `sys_login_log` row。
+
+預測 response body 大致：
+
+```json
+{"code":400,"msg":"incorrect Username or Password"}
+```
+
+接著等 1 秒查 sys_login_log row：
 
 ```bash
 sleep 1
@@ -702,7 +726,16 @@ docker compose -f docker-compose.learning.yml exec -T go-admin-learning \
   'SELECT id, username, status, msg FROM sys_login_log ORDER BY id DESC LIMIT 1;'
 ```
 
-**比對**：最近一筆 row 應該是 `username='admin'`、`status='1'`、`msg='登录失败'`（verbatim 從 `auth.go:102` 來——是 Simplified Chinese「登录失败」不是 Traditional「登錄失敗」）。看到這條 row 就證實「失敗也會 log」——Principle V 的負向半邊也成立。
+預測最近一筆 row 大致：
+
+```
+<下一個 id>||1|登录失败
+```
+
+**比對**：兩件事要同時成立才算 PASS——
+
+1. HTTP 層拿到 `HTTP 200` + body `{"code":400,"msg":"incorrect Username or Password"}`：證實 SDK 邊界（5.11）把 in-process `jwt.ErrFailedAuthentication` 翻譯成「200 wrap 400」這套 go-admin 慣例。
+2. `sys_login_log` 多一筆 `status='1'`、`msg='登录失败'` 的 row（verbatim 從 `auth.go:102`、Simplified Chinese「登录失败」），且 `username` 欄位是**空字串**——這是 `auth.go` 的小細節：`var username = ""` 在 line 75 預設成空、只有 bind 成功與 `GetUser` 成功兩條路徑會把 `username = loginVals.Username` 補上去（line 81、98），bcrypt 失敗那支返回前沒補，所以 defer 寫進 DB 的 username 就是空的。看到這條 row 就證實 FR-013「失敗路徑也落 log」——Principle V 的負向半邊也成立，**即使 HTTP response 對 in-process 的中文 error msg 完全沒透露**。
 
 **選配第二條負向**：故意漏 `code` 欄位送出 `{"username":"admin","password":"123456","uuid":"0"}`，會在 5.3 的 `c.ShouldBind` 那一行先觸發 gin binding error（因為 `Login` struct 四個欄位都有 `binding:"required"`），對應 row 應為 `status='1'`、`msg='数据解析失败'`（`auth.go:82` verbatim）。
 
