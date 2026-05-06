@@ -267,7 +267,7 @@ sequenceDiagram
     end
 
     Authenticator ->> LoginLog: enqueue log message (auth.go:77)
-    Note over LoginLog: async; row arrives ~50-500ms later via queue consumer (cmd/api/server.go:70)
+    Note over LoginLog: async — row arrives ~50-500ms later via queue consumer (cmd/api/server.go:70)
     LoginLog -->> Authenticator: returns immediately (no inline INSERT)
 
     Authenticator -->> LoginHandler: (claims, nil)
