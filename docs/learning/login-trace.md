@@ -617,4 +617,31 @@ T012 的勘誤要點：第 3.2 節實測到的登入成功 5-key response（`cod
 
 ## 8. 下一步
 
-> 本節將在 T014 由 `[US2]` 任務填寫。
+讀到這裡你已經把 `POST /api/v1/login` 從 router 進門到 JWT 出門的 11 層鏈路追完一輪。下一步是把同樣的「逐層追蹤 + runtime 驗證」工法套到本文刻意排除（§1.5）的兩條鏈路上——FR-014 把它們明確指定為兩份獨立的後續 SpecKit feature。
+
+### 8.1 Track A — 已驗證 GET CRUD 鏈路（建議：`GET /api/v1/sys-user`）
+
+第一條值得追的後續鏈路是任一條**已驗證的 GET CRUD**，推薦 `GET /api/v1/sys-user`。它跟 login 的差別正好是這份文件刻意略過的兩塊：
+
+- (a) **Casbin 強制授權**——request 進來會先過 JWT auth middleware 解出 `roleid` / `rolekey`，再交給 Casbin enforcer 對照 `sys_casbin_rule` 判斷該 role 能不能 `GET /api/v1/sys-user`。
+- (b) **data-scope 過濾**——通過授權後還要根據 JWT 內的 `datascope` claim（第 3.4 節看到 admin 是空字串）在 GORM list query 上加 `WHERE` 條件做列級隔離。
+
+預期會看到的新層包含：JWT auth middleware（解 token、塞 claims 進 context）、Casbin enforcer 中介層、data-scope filter 中介層、GORM list query 與 paging、以及 response wrapper。
+
+開啟方式：在專案根目錄打 `/speckit-specify`，照 brainstorming flow 把範圍與成功條件聊清楚，再讓它幫你產 spec.md / plan.md / tasks.md。
+
+### 8.2 Track B — 寫入路徑 CRUD 鏈路（建議：任一 `sys-*` 寫端點）
+
+第二條值得追的是**寫入路徑 CRUD**，例如 `POST /api/v1/sys-user` 或任一 `sys-*` 的 create / update / delete。它的學習價值是 Constitution Principle V 在寫入路徑上的另一條 log：本 fork 的 auth 路徑寫的是 `sys_login_log`（5.10 層），但寫入路徑寫的是 `sys_operation_log`，由獨立的 hook 透過同一條 in-memory queue（`global.OperateLog` topic，見 5.10 `cmd/api/server.go:70`）非同步寫入。
+
+對照本文 5.10 三檔聯動的拆解，你可以把 operation log 的 `Authenticator → queue → consumer` 三段對應出來，把 Principle V 的兩條落地路徑放在一起讀。
+
+開啟方式同 Track A：`/speckit-specify` + brainstorming flow。
+
+### 8.3 Bonus — SDK 內部深追（可選）
+
+如果你真的對第 7 節三道 SDK 邊界（`LoginHandler` / `TokenGenerator` / 預設 `LoginResponse`）內部的樣板實作有興趣，建議另開一份 SpecKit feature，**範圍限定在兄弟倉庫 `fork260506-go-admin-core/sdk/pkg/jwtauth/`**，跟本文件分工清楚。
+
+它跟 Track A / B 不衝突，可以平行進行。同樣用 `/speckit-specify` 開啟。
+
+完成後請回報，我們可以接續下一份 spec。
