@@ -589,7 +589,29 @@ func Unauthorized(c *gin.Context, code int, message string) {
 
 ## 7. SDK 邊界
 
-> 本節將在 T013 由 `[US2]` 任務填寫。
+本節把整條登入鏈路上「**這份 spec 刻意不追進去**」的幾道接縫整理出來。所謂 SDK 邊界，指的是 `POST /api/v1/login` 流程裡那些控制權交給 gin-jwt（住在兄弟倉庫 `fork260506-go-admin-core/sdk/pkg/jwtauth/`）、本 repo 只負責提供 callback 或設定的位置。FR-010 是這條紀律的明文：跨倉庫追進 SDK 內部需要另外開一份 spec，這份學習文件守在邊界外側做「契約信任 + 觀察驗證」，不下探。
+
+### 7.1 邊界一：gin-jwt `LoginHandler`（5.2 層）
+
+`LoginHandler` 是 gin-jwt 提供的「樣板登入 orchestrator」：它從 router 接到 `POST /api/v1/login` 之後，依序呼叫專案註冊的 `Authenticator` callback（5.3 層）取得 `(user, role)`、把回傳值丟給 `PayloadFunc` callback（5.8 層）攤平成 `MapClaims`、把 claims 交給內部的 `TokenGenerator`（即 7.2 邊界）簽出 JWT 字串，最後呼叫 `LoginResponse` callback（即 7.3 邊界）把 JSON 寫回 `*gin.Context`。整條鏈路上 `LoginHandler` 是 control flow 的指揮中樞，但本 repo 完全不重寫它——`app/admin/router/sys_router.go:71` 直接把 SDK 的 `authMiddleware.LoginHandler` 釘到 router 上。
+
+依 FR-010，本 spec 在 5.2 把這層當「stub」處理：只描述它的職責，不貼 SDK 內部程式碼。要看樣板實作（callback 的呼叫順序、錯誤如何傳回 `Unauthorized`、`disabledRoles` 如何過濾等內部細節），請進兄弟倉庫 `fork260506-go-admin-core/sdk/pkg/jwtauth/` 自行追讀，或者另開一份 SpecKit feature 專門 trace SDK 內部。
+
+### 7.2 邊界二：JWT `TokenGenerator`（5.9 層）
+
+`TokenGenerator` 是 gin-jwt 內部的簽章單元：拿 `PayloadFunc` 回傳的 `MapClaims`、補上 `exp` 與 `orig_iat` 兩個 envelope claim、用 `SigningAlgorithm`（go-admin 預設 HS256）與 secret（讀自 `settings.jwt.secret`，本 fork 的 `config/settings.yml` 預設值是字面字串 `"go-admin"`）簽出最終的 JWT 字串。簽完的字串就是第 3.2 節 response 裡 `token` 與 `currentAuthority` 兩個欄位的內容。
+
+依 FR-010，本 spec 也不深追簽章流程的內部（HMAC 計算、base64url 編碼、segment join 等步驟）。要看實作請到 `fork260506-go-admin-core/sdk/pkg/jwtauth/`。本 repo 對這道邊界的觀察點是「契約輸入輸出」：第 3.4 節 decode JWT 看到的 8 個 claim、以及第 6 節要做的 runtime JWT decode，都是在邊界外側驗證 SDK 確實做了我們以為它做的事。
+
+### 7.3 邊界三：gin-jwt 預設 `LoginResponse` callback（5.11 層）
+
+T012 的勘誤要點：第 3.2 節實測到的登入成功 5-key response（`code` / `currentAuthority` / `expire` / `success` / `token`）**不是**本 repo 寫出來的——`common/middleware/handler/auth.go` 全檔沒有自家的 `LoginResponse` 實作，本 repo 在 `middleware.AuthInit()` 也沒把 `LoginResponse` 欄位塞進 `*jwt.GinJWTMiddleware`，因此 SDK 直接走它的預設 callback 把那 5 個 key 拼出來。`auth.go:155`（`LogOut` 成功）與 `:178`（`Unauthorized` fallback）兩處 `c.JSON` 是 2-key 的 `{code, msg}` shape，跟登入成功的 5-key shape**結構不同**——這正是「response 不是這個檔產出」的程式碼層證據（交叉參考第 3.2 節與 5.11 層的對比）。
+
+依 FR-010，本 spec 不追 SDK 預設 `LoginResponse` 的內部實作。想看那 5 個 key 怎麼組裝、`currentAuthority` 為什麼跟 `token` 同值、`success: true` 的判斷分支寫在哪，請到 `fork260506-go-admin-core/sdk/pkg/jwtauth/` 找預設 `LoginResponse`。
+
+### 7.4 學習者怎麼用這幾道邊界
+
+這三道邊界不是「死路」、也不是「黑盒子」，而是「**契約信任 + 觀察驗證**」的工作介面：把 SDK 當成有契約的合作方（吃什麼 callback、回什麼 JSON），把驗證放在邊界外側用 runtime 證據反推（第 6 節的 GORM SQL log、JWT decode、`sys_login_log` row 三條線就是在做這件事）。要進一步深挖 SDK 內部的學習者，建議另開一份 `/speckit-specify` 把範圍限在 `fork260506-go-admin-core/sdk/pkg/jwtauth/`，獨立成一份 SDK trace spec，跟本文件保持兩份分工清楚的學習筆記。
 
 ---
 
