@@ -29,11 +29,11 @@
 - 講得出 `POST /api/v1/login` 從 router 進來、到 JWT 出去之間每一層的角色，並指得出對應的 `file:line`。
 - 用 runtime 證據（GORM 的 SQL 日誌、JWT claims、`sys_login_log` 資料列）反向驗證自己讀程式碼讀出來的預測。
 
-### 1.2 前置條件（只有一項）
+### 1.2 前置條件（核心只有一項：Docker）
 
-- **Docker**：Docker Desktop（Mac/Windows）或 Docker Engine + `compose` plugin（Linux/WSL2）。
-- 一個能打 `curl` 的終端機。
-- 約 500 MB 磁碟空間放 `golang:1.24-alpine` 與 `alpine` 兩個 base image。
+- **Docker**：Docker Desktop（macOS）、Docker Desktop + WSL2（Windows）或 Docker Engine + `compose` plugin（Linux / WSL2）。本文件實測過 Linux 與 WSL2，未驗證純 Windows 路徑。
+- 終端機（多數 OS 內建 `curl`，或自行安裝）。
+- 數百 MB 磁碟空間放 `golang:1.24-alpine` builder image、`alpine` runtime image、以及 builder 的 module cache。
 
 ```text
 required: docker (with compose plugin), curl
