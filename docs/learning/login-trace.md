@@ -193,7 +193,7 @@ echo "$TOKEN" | cut -d. -f2 | base64 -d 2>/dev/null
 
 ### 3.5 為什麼 `code:"0", uuid:"0"` 會通過？
 
-source-of-truth 是 `common/middleware/handler/auth.go:51–66` 的 swagger 註解（FR-017 verbatim）：
+source-of-truth 是 `common/middleware/handler/auth.go:49–62` 的 swagger 註解（FR-017 verbatim）：
 
 ```go
 // Authenticator 获取token
