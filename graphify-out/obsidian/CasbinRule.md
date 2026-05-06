@@ -1,12 +1,12 @@
 ---
 source_file: "cmd/migrate/migration/models/casbin_rule.go"
 type: "code"
-community: "Community 33"
+community: "Community 79"
 location: "L4"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_33
+  - community/Community_79
 ---
 
 # CasbinRule
@@ -16,4 +16,4 @@ tags:
 - [[casbin_rule.go]] - `contains` [EXTRACTED]
 - [[casbin_rule.go_1]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_33
+#graphify/code #graphify/EXTRACTED #community/Community_79

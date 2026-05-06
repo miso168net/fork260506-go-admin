@@ -1,12 +1,12 @@
 ---
 source_file: "app/admin/service/dto/sys_role.go"
 type: "code"
-community: "Community 14"
+community: "Sys Role DTOs"
 location: "L131"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_14
+  - community/Sys_Role_DTOs
 ---
 
 # SysRoleGetReq
@@ -15,4 +15,4 @@ tags:
 - [[.GetId()_46]] - `method` [EXTRACTED]
 - [[sys_role.go_4]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_14
+#graphify/code #graphify/EXTRACTED #community/Sys_Role_DTOs

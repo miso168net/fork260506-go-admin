@@ -1,12 +1,12 @@
 ---
 source_file: "common/storage/initialize.go"
 type: "code"
-community: "Community 4"
+community: "Community 34"
 location: "L19"
 tags:
   - graphify/code
   - graphify/INFERRED
-  - community/Community_4
+  - community/Community_34
 ---
 
 # Setup()
@@ -28,4 +28,4 @@ tags:
 - [[setupQueue()]] - `calls` [EXTRACTED]
 - [[setupSimpleDatabase()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/Community_4
+#graphify/code #graphify/INFERRED #community/Community_34

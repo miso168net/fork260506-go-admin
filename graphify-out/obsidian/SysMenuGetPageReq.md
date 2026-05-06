@@ -1,12 +1,12 @@
 ---
 source_file: "app/admin/service/dto/sys_menu.go"
 type: "code"
-community: "Community 17"
+community: "Community 29"
 location: "L11"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_17
+  - community/Community_29
 ---
 
 # SysMenuGetPageReq
@@ -15,4 +15,4 @@ tags:
 - [[.GetNeedSearch()_8]] - `method` [EXTRACTED]
 - [[sys_menu.go_4]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_17
+#graphify/code #graphify/EXTRACTED #community/Community_29

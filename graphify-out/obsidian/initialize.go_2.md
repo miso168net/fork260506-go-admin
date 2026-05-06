@@ -1,12 +1,12 @@
 ---
 source_file: "common/storage/initialize.go"
 type: "code"
-community: "Community 4"
+community: "Community 34"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_4
+  - community/Community_34
 ---
 
 # initialize.go
@@ -17,4 +17,4 @@ tags:
 - [[setupCaptcha()]] - `contains` [EXTRACTED]
 - [[setupQueue()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_4
+#graphify/code #graphify/EXTRACTED #community/Community_34

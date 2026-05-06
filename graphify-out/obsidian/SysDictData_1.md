@@ -1,12 +1,12 @@
 ---
 source_file: "app/admin/models/sys_dict_data.go"
 type: "code"
-community: "Community 8"
+community: "Community 70"
 location: "L7"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_8
+  - community/Community_70
 ---
 
 # SysDictData
@@ -17,4 +17,4 @@ tags:
 - [[.TableName()_4]] - `method` [EXTRACTED]
 - [[sys_dict_data.go_1]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_8
+#graphify/code #graphify/EXTRACTED #community/Community_70

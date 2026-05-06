@@ -1,19 +1,29 @@
 ---
 type: community
-cohesion: 0.50
-members: 4
+cohesion: 0.14
+members: 14
 ---
 
 # Community 37
 
-**Cohesion:** 0.50 - moderately connected
-**Members:** 4 nodes
+**Cohesion:** 0.14 - loosely connected
+**Members:** 14 nodes
 
 ## Members
-- [[.AfterFind()_1]] - code - common/middleware/handler/user.go
-- [[.TableName()_22]] - code - common/middleware/handler/user.go
-- [[SysUser_3]] - code - common/middleware/handler/user.go
-- [[user.go]] - code - common/middleware/handler/user.go
+- [[.Generate()_17]] - code - app/admin/service/dto/sys_dict_data.go
+- [[.Generate()_18]] - code - app/admin/service/dto/sys_dict_data.go
+- [[.GetId()_25]] - code - app/admin/service/dto/sys_dict_data.go
+- [[.GetId()_24]] - code - app/admin/service/dto/sys_dict_data.go
+- [[.GetId()_22]] - code - app/admin/service/dto/sys_dict_data.go
+- [[.GetId()_23]] - code - app/admin/service/dto/sys_dict_data.go
+- [[.GetNeedSearch()_5]] - code - app/admin/service/dto/sys_dict_data.go
+- [[SysDictDataDeleteReq]] - code - app/admin/service/dto/sys_dict_data.go
+- [[SysDictDataGetAllResp]] - code - app/admin/service/dto/sys_dict_data.go
+- [[SysDictDataGetPageReq]] - code - app/admin/service/dto/sys_dict_data.go
+- [[SysDictDataGetReq]] - code - app/admin/service/dto/sys_dict_data.go
+- [[SysDictDataInsertReq]] - code - app/admin/service/dto/sys_dict_data.go
+- [[SysDictDataUpdateReq]] - code - app/admin/service/dto/sys_dict_data.go
+- [[sys_dict_data.go_3]] - code - app/admin/service/dto/sys_dict_data.go
 
 ## Live Query (requires Dataview plugin)
 

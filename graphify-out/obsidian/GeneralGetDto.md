@@ -1,12 +1,12 @@
 ---
 source_file: "common/dto/search.go"
 type: "code"
-community: "Community 3"
+community: "Pagination & Search DTOs"
 location: "L37"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_3
+  - community/Pagination__Search_DTOs
 ---
 
 # GeneralGetDto
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[search.go]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_3
+#graphify/code #graphify/EXTRACTED #community/Pagination__Search_DTOs

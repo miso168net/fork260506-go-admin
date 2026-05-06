@@ -1,12 +1,12 @@
 ---
 source_file: "cmd/migrate/migration/models/sys_job.go"
 type: "code"
-community: "Community 11"
+community: "Job Scheduling Module"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_11
+  - community/Job_Scheduling_Module
 ---
 
 # sys_job.go
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[SysJob_1]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_11
+#graphify/code #graphify/EXTRACTED #community/Job_Scheduling_Module

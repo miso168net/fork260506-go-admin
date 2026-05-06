@@ -1,12 +1,12 @@
 ---
 source_file: "config/READMEN.md"
 type: "document"
-community: "Community 10"
+community: "Project Documentation & License"
 location: "lines 16-18"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Community_10
+  - community/Project_Documentation__License
 ---
 
 # settings.log section (log dir)
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[settings.yml configuration schema (Chinese annotated)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_10
+#graphify/document #graphify/EXTRACTED #community/Project_Documentation__License

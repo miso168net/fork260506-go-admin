@@ -1,17 +1,24 @@
 ---
 type: community
-cohesion: 1.00
-members: 2
+cohesion: 0.25
+members: 9
 ---
 
 # Community 50
 
-**Cohesion:** 1.00 - tightly connected
-**Members:** 2 nodes
+**Cohesion:** 0.25 - loosely connected
+**Members:** 9 nodes
 
 ## Members
-- [[SysTableSearch]] - code - app/other/service/dto/sys_tables.go
-- [[sys_tables.go_2]] - code - app/other/service/dto/sys_tables.go
+- [[DemoEvn()]] - code - common/middleware/demo.go
+- [[GetClientIP()]] - code - common/ip.go
+- [[InitMiddleware()]] - code - common/middleware/init.go
+- [[LoggerToFile()]] - code - common/middleware/logger.go
+- [[SetDBOperLog()]] - code - common/middleware/logger.go
+- [[demo.go]] - code - common/middleware/demo.go
+- [[init.go_1]] - code - common/middleware/init.go
+- [[ip.go]] - code - common/ip.go
+- [[logger.go]] - code - common/middleware/logger.go
 
 ## Live Query (requires Dataview plugin)
 
@@ -19,3 +26,20 @@ members: 2
 TABLE source_file, type FROM #community/Community_50
 SORT file.name ASC
 ```
+
+## Connections to other communities
+- 2 edges to [[_COMMUNITY_Community 30]]
+- 2 edges to [[_COMMUNITY_Common API & Service Layer]]
+- 2 edges to [[_COMMUNITY_Frontend Babel Flow Declaration]]
+- 1 edge to [[_COMMUNITY_Community 28]]
+- 1 edge to [[_COMMUNITY_Community 59]]
+- 1 edge to [[_COMMUNITY_Community 42]]
+- 1 edge to [[_COMMUNITY_Community 31]]
+- 1 edge to [[_COMMUNITY_Community 40]]
+
+## Top bridge nodes
+- [[LoggerToFile()]] - degree 8, connects to 4 communities
+- [[InitMiddleware()]] - degree 6, connects to 3 communities
+- [[GetClientIP()]] - degree 4, connects to 2 communities
+- [[DemoEvn()]] - degree 3, connects to 1 community
+- [[SetDBOperLog()]] - degree 3, connects to 1 community

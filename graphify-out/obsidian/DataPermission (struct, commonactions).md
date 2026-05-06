@@ -1,12 +1,12 @@
 ---
 source_file: "common/actions/permission.go"
 type: "code"
-community: "Community 6"
+community: "Community 42"
 location: "L15"
 tags:
   - graphify/code
   - graphify/INFERRED
-  - community/Community_6
+  - community/Community_42
 ---
 
 # DataPermission (struct, common/actions)
@@ -16,4 +16,4 @@ tags:
 - [[Permission()]] - `rationale_for` [INFERRED]
 - [[PermissionAction()]] - `rationale_for` [INFERRED]
 
-#graphify/code #graphify/INFERRED #community/Community_6
+#graphify/code #graphify/INFERRED #community/Community_42

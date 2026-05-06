@@ -1,18 +1,25 @@
 ---
 type: community
-cohesion: 0.67
-members: 3
+cohesion: 0.38
+members: 10
 ---
 
 # Community 47
 
-**Cohesion:** 0.67 - moderately connected
-**Members:** 3 nodes
+**Cohesion:** 0.38 - loosely connected
+**Members:** 10 nodes
 
 ## Members
-- [[TestGoApiTemplate()]] - code - test/gen_test.go
-- [[TestGoModelTemplate()]] - code - test/gen_test.go
-- [[gen_test.go]] - code - test/gen_test.go
+- [[F()]] - code - static/form-generator/js/index.8e6d9f8f.js
+- [[InitExamplesRouter()]] - code - app/admin/router/router.go
+- [[checkRoleRouter()]] - code - app/other/router/router.go
+- [[examplesCheckRoleRouter()]] - code - app/admin/router/router.go
+- [[examplesNoCheckRoleRouter()]] - code - app/admin/router/router.go
+- [[initRouter()]] - code - app/other/router/router.go
+- [[noCheckRoleRouter()]] - code - app/other/router/router.go
+- [[router.go]] - code - app/admin/router/router.go
+- [[router.go_1]] - code - app/jobs/router/router.go
+- [[router.go_2]] - code - app/other/router/router.go
 
 ## Live Query (requires Dataview plugin)
 
@@ -20,3 +27,14 @@ members: 3
 TABLE source_file, type FROM #community/Community_47
 SORT file.name ASC
 ```
+
+## Connections to other communities
+- 1 edge to [[_COMMUNITY_Community 60]]
+- 1 edge to [[_COMMUNITY_Community 28]]
+- 1 edge to [[_COMMUNITY_Pagination & Search DTOs]]
+- 1 edge to [[_COMMUNITY_Common API & Service Layer]]
+- 1 edge to [[_COMMUNITY_TinyMCE Form Generator Bundle]]
+
+## Top bridge nodes
+- [[F()]] - degree 8, connects to 4 communities
+- [[InitExamplesRouter()]] - degree 4, connects to 1 community

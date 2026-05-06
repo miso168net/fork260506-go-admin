@@ -1,12 +1,12 @@
 ---
 source_file: "app/admin/router/init_router.go"
 type: "code"
-community: "Community 4"
+community: "Community 60"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_4
+  - community/Community_60
 ---
 
 # init_router.go
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[InitRouter()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_4
+#graphify/code #graphify/EXTRACTED #community/Community_60

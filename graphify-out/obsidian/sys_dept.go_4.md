@@ -1,12 +1,12 @@
 ---
 source_file: "app/admin/service/dto/sys_dept.go"
 type: "code"
-community: "Community 20"
+community: "Community 36"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_20
+  - community/Community_36
 ---
 
 # sys_dept.go
@@ -19,4 +19,4 @@ tags:
 - [[SysDeptInsertReq]] - `contains` [EXTRACTED]
 - [[SysDeptUpdateReq]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_20
+#graphify/code #graphify/EXTRACTED #community/Community_36

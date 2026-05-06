@@ -1,12 +1,12 @@
 ---
 source_file: "app/admin/service/sys_dict_type.go"
 type: "code"
-community: "Community 3"
+community: "Community 66"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_3
+  - community/Community_66
 ---
 
 # sys_dict_type.go
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[SysDictType_2]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_3
+#graphify/code #graphify/EXTRACTED #community/Community_66

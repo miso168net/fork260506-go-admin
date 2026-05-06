@@ -1,23 +1,34 @@
 ---
 type: community
-cohesion: 0.25
-members: 8
+cohesion: 0.11
+members: 19
 ---
 
 # Community 27
 
-**Cohesion:** 0.25 - loosely connected
-**Members:** 8 nodes
+**Cohesion:** 0.11 - loosely connected
+**Members:** 19 nodes
 
 ## Members
-- [[buildListeners()]] - code - static/form-generator/js/parser-example.ce55fa09.js
-- [[formBtns()]] - code - static/form-generator/js/parser-example.ce55fa09.js
-- [[o()]] - code - static/form-generator/js/parser-example.ce55fa09.js
-- [[parser-example.ce55fa09.js]] - code - static/form-generator/js/parser-example.ce55fa09.js
-- [[renderChildren()]] - code - static/form-generator/js/parser-example.ce55fa09.js
-- [[renderFormItem()]] - code - static/form-generator/js/parser-example.ce55fa09.js
-- [[renderFrom()]] - code - static/form-generator/js/parser-example.ce55fa09.js
-- [[setValue()]] - code - static/form-generator/js/parser-example.ce55fa09.js
+- [[.Generate()_14]] - code - app/admin/service/dto/sys_config.go
+- [[.Generate()_13]] - code - app/admin/service/dto/sys_config.go
+- [[.GetId()_15]] - code - app/admin/service/dto/sys_config.go
+- [[.GetId()_17]] - code - app/admin/service/dto/sys_config.go
+- [[.GetId()_16]] - code - app/admin/service/dto/sys_config.go
+- [[.GetNeedSearch()_3]] - code - app/admin/service/dto/sys_config.go
+- [[.GetNeedSearch()_1]] - code - app/admin/service/dto/sys_config.go
+- [[.GetNeedSearch()_2]] - code - app/admin/service/dto/sys_config.go
+- [[GetSetSysConfigReq]] - code - app/admin/service/dto/sys_config.go
+- [[GetSysConfigByKEYForServiceResp]] - code - app/admin/service/dto/sys_config.go
+- [[SysConfigByKeyReq]] - code - app/admin/service/dto/sys_config.go
+- [[SysConfigControl]] - code - app/admin/service/dto/sys_config.go
+- [[SysConfigDeleteReq]] - code - app/admin/service/dto/sys_config.go
+- [[SysConfigGetPageReq]] - code - app/admin/service/dto/sys_config.go
+- [[SysConfigGetReq]] - code - app/admin/service/dto/sys_config.go
+- [[SysConfigGetToSysAppReq]] - code - app/admin/service/dto/sys_config.go
+- [[SysConfigOrder]] - code - app/admin/service/dto/sys_config.go
+- [[UpdateSetSysConfigReq]] - code - app/admin/service/dto/sys_config.go
+- [[sys_config.go_4]] - code - app/admin/service/dto/sys_config.go
 
 ## Live Query (requires Dataview plugin)
 

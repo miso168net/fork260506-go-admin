@@ -1,12 +1,12 @@
 ---
 source_file: "app/admin/service/sys_post.go"
 type: "code"
-community: "Community 3"
+community: "Community 67"
 location: "L14"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_3
+  - community/Community_67
 ---
 
 # SysPost
@@ -19,4 +19,4 @@ tags:
 - [[.Update()_15]] - `method` [EXTRACTED]
 - [[sys_post.go_3]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_3
+#graphify/code #graphify/EXTRACTED #community/Community_67

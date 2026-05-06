@@ -1,12 +1,12 @@
 ---
 source_file: "app/jobs/type.go"
 type: "code"
-community: "Community 11"
+community: "Job Scheduling Module"
 location: "L5"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_11
+  - community/Job_Scheduling_Module
 ---
 
 # Job
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[type.go]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_11
+#graphify/code #graphify/EXTRACTED #community/Job_Scheduling_Module

@@ -1,12 +1,12 @@
 ---
 source_file: "app/jobs/jobbase.go"
 type: "code"
-community: "Community 11"
+community: "Job Scheduling Module"
 location: "L156"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_11
+  - community/Job_Scheduling_Module
 ---
 
 # AddJob()
@@ -15,4 +15,4 @@ tags:
 - [[.addJob()_1]] - `calls` [EXTRACTED]
 - [[jobbase.go]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_11
+#graphify/code #graphify/EXTRACTED #community/Job_Scheduling_Module

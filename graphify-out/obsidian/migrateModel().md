@@ -1,12 +1,12 @@
 ---
 source_file: "cmd/migrate/server.go"
 type: "code"
-community: "Community 4"
+community: "Community 33"
 location: "L61"
 tags:
   - graphify/code
   - graphify/INFERRED
-  - community/Community_4
+  - community/Community_33
 ---
 
 # migrateModel()
@@ -19,4 +19,4 @@ tags:
 - [[initDB()]] - `calls` [EXTRACTED]
 - [[server.go_3]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/Community_4
+#graphify/code #graphify/INFERRED #community/Community_33

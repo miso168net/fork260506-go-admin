@@ -1,12 +1,12 @@
 ---
 source_file: "app/jobs/service/sys_job.go"
 type: "code"
-community: "Community 11"
+community: "Job Scheduling Module"
 location: "L15"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_11
+  - community/Job_Scheduling_Module
 ---
 
 # SysJob
@@ -16,4 +16,4 @@ tags:
 - [[.StartJob()]] - `method` [EXTRACTED]
 - [[sys_job.go_3]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_11
+#graphify/code #graphify/EXTRACTED #community/Job_Scheduling_Module

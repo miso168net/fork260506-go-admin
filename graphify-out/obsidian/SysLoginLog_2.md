@@ -1,12 +1,12 @@
 ---
 source_file: "app/admin/service/sys_login_log.go"
 type: "code"
-community: "Community 6"
+community: "Community 41"
 location: "L14"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_6
+  - community/Community_41
 ---
 
 # SysLoginLog
@@ -17,4 +17,4 @@ tags:
 - [[.Remove()_5]] - `method` [EXTRACTED]
 - [[sys_login_log.go_3]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_6
+#graphify/code #graphify/EXTRACTED #community/Community_41

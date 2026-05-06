@@ -1,12 +1,12 @@
 ---
 source_file: "common/file_store/oss_test.go"
 type: "code"
-community: "Community 4"
+community: "Community 34"
 location: "L7"
 tags:
   - graphify/code
   - graphify/INFERRED
-  - community/Community_4
+  - community/Community_34
 ---
 
 # TestOSSUpload()
@@ -17,4 +17,4 @@ tags:
 - [[Setup()_1]] - `calls` [INFERRED]
 - [[oss_test.go]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/Community_4
+#graphify/code #graphify/INFERRED #community/Community_34

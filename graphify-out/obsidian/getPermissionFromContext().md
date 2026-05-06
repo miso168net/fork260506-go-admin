@@ -1,12 +1,12 @@
 ---
 source_file: "common/actions/permission.go"
 type: "code"
-community: "Community 1"
+community: "Common API & Service Layer"
 location: "L82"
 tags:
   - graphify/code
   - graphify/INFERRED
-  - community/Community_1
+  - community/Common_API__Service_Layer
 ---
 
 # getPermissionFromContext()
@@ -34,4 +34,4 @@ tags:
 - [[ViewAction()]] - `calls` [INFERRED]
 - [[permission.go]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/Community_1
+#graphify/code #graphify/INFERRED #community/Common_API__Service_Layer

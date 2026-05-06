@@ -1,12 +1,12 @@
 ---
 source_file: "cmd/migrate/migration/models/by.go"
 type: "code"
-community: "Community 3"
+community: "Community 84"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_3
+  - community/Community_84
 ---
 
 # by.go
@@ -16,4 +16,4 @@ tags:
 - [[Model]] - `contains` [EXTRACTED]
 - [[ModelTime]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_3
+#graphify/code #graphify/EXTRACTED #community/Community_84

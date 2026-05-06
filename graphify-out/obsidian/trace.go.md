@@ -1,12 +1,12 @@
 ---
 source_file: "common/middleware/trace.go"
 type: "code"
-community: "Community 7"
+community: "Community 26"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_7
+  - community/Community_26
 ---
 
 # trace.go
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[Trace()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_7
+#graphify/code #graphify/EXTRACTED #community/Community_26

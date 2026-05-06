@@ -1,12 +1,12 @@
 ---
 source_file: "common/middleware/handler/auth.go"
 type: "code"
-community: "Community 16"
+community: "Community 59"
 location: "L162"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_16
+  - community/Community_59
 ---
 
 # Authorizator()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[auth.go_1]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_16
+#graphify/code #graphify/EXTRACTED #community/Community_59

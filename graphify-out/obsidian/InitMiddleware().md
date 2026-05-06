@@ -1,12 +1,12 @@
 ---
 source_file: "common/middleware/init.go"
 type: "code"
-community: "Community 6"
+community: "Community 50"
 location: "L16"
 tags:
   - graphify/code
   - graphify/INFERRED
-  - community/Community_6
+  - community/Community_50
 ---
 
 # InitMiddleware()
@@ -19,4 +19,4 @@ tags:
 - [[init.go_1]] - `contains` [EXTRACTED]
 - [[initRouter()_1]] - `calls` [INFERRED]
 
-#graphify/code #graphify/INFERRED #community/Community_6
+#graphify/code #graphify/INFERRED #community/Community_50

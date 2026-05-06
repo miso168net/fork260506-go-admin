@@ -1,12 +1,12 @@
 ---
 source_file: "common/middleware/auth.go"
 type: "code"
-community: "Community 4"
+community: "Community 60"
 location: "L12"
 tags:
   - graphify/code
   - graphify/INFERRED
-  - community/Community_4
+  - community/Community_60
 ---
 
 # AuthInit()
@@ -16,4 +16,4 @@ tags:
 - [[InitRouter()_1]] - `calls` [INFERRED]
 - [[auth.go]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/Community_4
+#graphify/code #graphify/INFERRED #community/Community_60

@@ -1,11 +1,11 @@
 ---
 source_file: "README.md"
 type: "document"
-community: "Community 10"
+community: "Project Documentation & License"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Community_10
+  - community/Project_Documentation__License
 ---
 
 # RBAC Authority Management Concept
@@ -14,4 +14,4 @@ tags:
 - [[Casbin RBAC Access Control]] - `implements` [EXTRACTED]
 - [[go-admin Project (English README)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_10
+#graphify/document #graphify/EXTRACTED #community/Project_Documentation__License

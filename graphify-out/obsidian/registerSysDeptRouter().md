@@ -1,12 +1,12 @@
 ---
 source_file: "app/admin/router/sys_dept.go"
 type: "code"
-community: "Community 6"
+community: "Community 93"
 location: "L15"
 tags:
   - graphify/code
   - graphify/INFERRED
-  - community/Community_6
+  - community/Community_93
 ---
 
 # registerSysDeptRouter()
@@ -18,4 +18,4 @@ tags:
 - [[PermissionAction()]] - `uses_middleware` [EXTRACTED]
 - [[sys_dept.go_2]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/Community_6
+#graphify/code #graphify/INFERRED #community/Community_93

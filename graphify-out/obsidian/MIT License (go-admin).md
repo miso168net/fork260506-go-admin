@@ -1,11 +1,11 @@
 ---
 source_file: "LICENSE.md"
 type: "document"
-community: "Community 10"
+community: "Project Documentation & License"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Community_10
+  - community/Project_Documentation__License
 ---
 
 # MIT License (go-admin)
@@ -14,4 +14,4 @@ tags:
 - [[go-admin Project (English README)]] - `references` [EXTRACTED]
 - [[go-admin-team (copyright holder)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_10
+#graphify/document #graphify/EXTRACTED #community/Project_Documentation__License

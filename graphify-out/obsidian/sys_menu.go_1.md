@@ -1,12 +1,12 @@
 ---
 source_file: "app/admin/models/sys_menu.go"
 type: "code"
-community: "Community 3"
+community: "Community 83"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_3
+  - community/Community_83
 ---
 
 # sys_menu.go
@@ -15,4 +15,4 @@ tags:
 - [[SysMenu_1]] - `contains` [EXTRACTED]
 - [[SysMenuSlice]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_3
+#graphify/code #graphify/EXTRACTED #community/Community_83

@@ -1,12 +1,12 @@
 ---
 source_file: "common/middleware/logger.go"
 type: "code"
-community: "Community 6"
+community: "Community 50"
 location: "L104"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_6
+  - community/Community_50
 ---
 
 # SetDBOperLog()
@@ -16,4 +16,4 @@ tags:
 - [[LoggerToFile()]] - `calls` [EXTRACTED]
 - [[logger.go]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_6
+#graphify/code #graphify/EXTRACTED #community/Community_50

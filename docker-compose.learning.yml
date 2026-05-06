@@ -1,0 +1,15 @@
+services:
+  go-admin-learning:
+    build:
+      context: .
+      dockerfile: Dockerfile.learning
+    container_name: go-admin-learning
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./temp:/temp     # log path bind-mount per FR-001
+    # --- OPT-IN: persist the SQLite database across `down`/`up --build` cycles ---
+    # Uncomment the line below if you want sys_login_log and other rows to survive
+    # container recreates. Default behaviour (commented) gives a clean DB each run,
+    # which is what the US3-3 verification recipe assumes.
+    #  - ./go-admin-db.db:/go-admin-db.db

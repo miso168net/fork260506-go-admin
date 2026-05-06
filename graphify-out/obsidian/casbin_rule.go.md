@@ -1,12 +1,12 @@
 ---
 source_file: "app/admin/models/casbin_rule.go"
 type: "code"
-community: "Community 33"
+community: "Community 79"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_33
+  - community/Community_79
 ---
 
 # casbin_rule.go
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[CasbinRule]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_33
+#graphify/code #graphify/EXTRACTED #community/Community_79

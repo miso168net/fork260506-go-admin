@@ -1,12 +1,12 @@
 ---
 source_file: "common/actions/update.go"
 type: "code"
-community: "Community 1"
+community: "Common API & Service Layer"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_1
+  - community/Common_API__Service_Layer
 ---
 
 # update.go
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[UpdateAction()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_1
+#graphify/code #graphify/EXTRACTED #community/Common_API__Service_Layer

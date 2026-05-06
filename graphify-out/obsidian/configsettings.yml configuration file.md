@@ -1,11 +1,11 @@
 ---
 source_file: "README.md"
 type: "document"
-community: "Community 10"
+community: "Project Documentation & License"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Community_10
+  - community/Project_Documentation__License
 ---
 
 # config/settings.yml configuration file
@@ -16,4 +16,4 @@ tags:
 - [[server CLI command]] - `references` [EXTRACTED]
 - [[settings.yml configuration schema (Chinese annotated)]] - `semantically_similar_to` [INFERRED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_10
+#graphify/document #graphify/EXTRACTED #community/Project_Documentation__License
