@@ -53,18 +53,26 @@ fails normally.
 
 ## Response — success (HTTP 200)
 
+> **T012/T017 finding**: this contract was originally drafted at planning time
+> with a 3-key shape. The actual response has **5 top-level keys**. The shape
+> is produced by gin-jwt SDK's default `LoginResponse` callback (the fork
+> does not override it), NOT by `auth.go:155` (which is the unrelated `LogOut`
+> handler). See `docs/learning/login-trace.md` §3.2 + §5.11 for the full
+> trace.
+
 ```json
 {
-  "code": 200,
-  "expire": "2026-05-07T16:00:00Z",
-  "token": "eyJhbGciOiJIUzI1NiIs..."
+  "code":             200,
+  "currentAuthority": "eyJhbGciOiJIUzI1NiIs...",
+  "expire":           "2126-04-13T12:08:37+08:00",
+  "success":          true,
+  "token":            "eyJhbGciOiJIUzI1NiIs..."
 }
 ```
 
-(Exact wrapper field names — `code` / `expire` / `token` — are produced by
-`common/middleware/handler/auth.go:155` `c.JSON(http.StatusOK, gin.H{...})`.
-Implementer to confirm exact field names by reading the function body when
-producing the learning doc.)
+`currentAuthority` and `token` carry the same JWT — `currentAuthority` exists
+for antd-pro front-end compatibility. Use `token` for `Authorization: Bearer
+...` headers.
 
 ### JWT claims inside `token`
 
@@ -87,14 +95,27 @@ Signed HS256 with `settings.jwt.secret` (default `"go-admin"`).
 
 ## Response — failure modes
 
-| HTTP | Trigger | Response shape (informally) |
-|------|---------|------------------------------|
-| 400 | Any of the four required fields missing or empty | gin binding error JSON |
-| 401 | Captcha invalid (and not bypassed) | `{"code": 401, "msg": "验证码错误"}` (exact text from auth.go) |
-| 401 | Username not found OR `status != '2'` | Generic auth failure — does not leak whether user exists |
-| 401 | Password mismatch (bcrypt fails) | Generic auth failure |
-| 401 | Role lookup fails (rare — implies seed inconsistency) | Auth failure |
-| 500 | DB unreachable / unexpected error | Generic 500 |
+> **T017 finding**: go-admin / gin-jwt wrap auth failures in **HTTP 200**
+> with a body `{code, msg}` that carries the actual numeric error code in the
+> body's `code` field (NOT the HTTP status). The failure-mode `msg` strings
+> in the HTTP response come from gin-jwt SDK's English defaults (e.g.
+> `"incorrect Username or Password"`); the in-process Simplified Chinese
+> strings from `auth.go` (`"登录失败"`, `"数据解析失败"`, `"验证码错误"`)
+> appear ONLY in `sys_login_log` rows, not in HTTP responses.
+
+| HTTP | Body `code` | Trigger | Body `msg` (HTTP) | sys_login_log `msg` |
+|------|-------------|---------|--------------------|---------------------|
+| 400 | — | Any of the four required fields missing/empty | gin binding error | (no row written: failure pre-Authenticator) |
+| 200 | 400 | Captcha invalid (non-bypass path) | (SDK string) | `"验证码错误"` |
+| 200 | 400 | Username not found, password mismatch, or role lookup fails | `"incorrect Username or Password"` | `"登录失败"` |
+| 200 | 400 | JSON binding fails inside `Authenticator` | (SDK string) | `"数据解析失败"` |
+| 500 | — | DB unreachable / unexpected error | Generic 500 | (no row written) |
+
+For the failure paths that do produce a `sys_login_log` row, the row also
+carries `status='1'` (vs `'2'` for success) and `username=''` (empty —
+`Authenticator`'s default-then-conditional-assign pattern leaves it empty
+on most failure branches; see `docs/learning/login-trace.md` §6.4 for the
+trace).
 
 The learning doc's negative-path recipe (FR-013) MUST exercise at least one
 of: wrong password, missing captcha field (forces 400 from binding), or

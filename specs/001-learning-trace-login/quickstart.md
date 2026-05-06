@@ -57,18 +57,23 @@ curl -s -X POST http://localhost:8000/api/v1/login \
   -d '{"username":"admin","password":"123456","code":"0","uuid":"0"}'
 ```
 
-Expected response shape (token elided):
+Expected response shape (5 top-level keys; token elided):
 
 ```json
 {
-  "code":   200,
-  "expire": "2026-05-07T16:00:00Z",
-  "token":  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...payload...signature"
+  "code":             200,
+  "currentAuthority": "eyJ...JWT...",
+  "expire":           "2126-04-13T12:08:37+08:00",
+  "success":          true,
+  "token":            "eyJ...JWT..."
 }
 ```
 
+(`currentAuthority` and `token` carry the same JWT — antd-pro front-end
+compatibility. Use `token` for `Authorization: Bearer ...` headers.)
+
 The `code:"0", uuid:"0"` pair triggers the dev-mode captcha bypass — see the
-swagger comment block at `common/middleware/handler/auth.go:51–66`. It only
+swagger comment block at `common/middleware/handler/auth.go:49–62`. It only
 works when `settings.application.mode: dev`, which is the default in
 `docker-compose.learning.yml`'s baked config.
 
@@ -81,20 +86,24 @@ echo "$TOKEN" | cut -d. -f2 | base64 -d 2>/dev/null
 
 (Or paste at https://jwt.io.)
 
-Expected claims:
+Expected claims (8 keys; observed values):
 
 ```json
 {
+  "datascope": "",
+  "exp":       4931726917,
   "identity":  1,
+  "nice":      "admin",
+  "orig_iat":  1778090917,
   "roleid":    1,
   "rolekey":   "admin",
-  "nice":      "admin",
-  "datascope": "1",
-  "rolename":  "系统管理员",
-  "exp":       1746636000,
-  "orig_iat":  1746632400
+  "rolename":  "系统管理员"
 }
 ```
+
+Note `datascope` is the empty string for the seeded `admin` role — the
+`data_scope` column in `sys_role` is empty in the seed data, and the
+data-scope filter middleware treats empty as "no restriction."
 
 Field meanings → see `data-model.md` §E4.
 

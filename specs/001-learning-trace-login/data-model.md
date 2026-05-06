@@ -77,7 +77,7 @@ final `gorm.DB.Create`.
 | Field | Type | Set from |
 |-------|------|----------|
 | `Username` | `string` | The submitted `Login.Username` (even on auth failure) |
-| `Status` | `string` | `'1'` for success, `'2'` for failure (or vice versa — implementer to verify when reading auth.go for the doc; see R1 step 3) |
+| `Status` | `string` | `'2'` for success, `'1'` for failure (verified: `auth.go:73` `var status = "2"` is the optimistic default; failure branches at lines 83, 91, 103 flip it to `"1"`) |
 | `Msg` | `string` | Human-readable result string (e.g. `"登录成功"`, `"密码错误"`) |
 | `Ipaddr` | `string` | From `c.ClientIP()` |
 | `LoginLocation` | `string` | Geo-IP lookup of `Ipaddr` (best-effort; may be empty in dev) |
@@ -97,7 +97,7 @@ either `sleep 1` or re-poll the table.
 
 ## E4 — JWT claims (in-memory only — NOT a database entity)
 
-**Path**: `common/middleware/handler/auth.go:21–37`, function `PayloadFunc`.
+**Path**: `common/middleware/handler/auth.go:21–35`, function `PayloadFunc`.
 **Lifetime**: Built per-login, embedded in the signed JWT, decoded on each
 authenticated subsequent request.
 **Storage**: None. Lives in the JWT's signed body and in `gin.Context` after
