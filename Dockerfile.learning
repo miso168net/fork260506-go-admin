@@ -1,0 +1,29 @@
+# Dockerfile.learning — zero-Go-host bring-up for the login-trace learning artifact.
+# Spec: specs/001-learning-trace-login/spec.md (FR-002, FR-003)
+# Layout: research.md §R5. Toggle: research.md §R3 (sed-in-place after COPY).
+# Coexists with the existing Dockerfile (FR-016 / SC-006); do not consolidate.
+
+# ---------- builder ----------
+FROM golang:1.24-alpine AS builder
+RUN apk add --no-cache gcc g++ libc6-compat
+WORKDIR /src
+# go.sum is gitignored in this repo and not present on disk; `go mod download`
+# will materialise it from go.mod during the build. Copy go.mod alone so the
+# module-download layer still caches across edits to non-module sources.
+COPY go.mod ./
+RUN go mod download
+COPY . .
+RUN CGO_ENABLED=1 go build -tags sqlite3 -ldflags="-w -s" -o /out/go-admin .
+
+# ---------- runtime ----------
+FROM alpine
+RUN apk add --no-cache ca-certificates tzdata libc6-compat
+ENV TZ=Asia/Shanghai
+COPY --from=builder /out/go-admin /go-admin
+COPY config/settings.sqlite.yml /config/settings.yml
+COPY go-admin-db.db /go-admin-db.db
+# research.md §R3: flip enableddb so GORM logs every SQL statement to stdout,
+# which the learning doc's US3 verification recipes rely on.
+RUN sed -i 's/enableddb: false/enableddb: true/' /config/settings.yml
+EXPOSE 8000
+CMD ["/go-admin","server","-c","/config/settings.yml"]
