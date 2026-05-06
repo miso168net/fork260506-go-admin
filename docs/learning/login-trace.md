@@ -245,14 +245,14 @@ sequenceDiagram
     end
 
     Authenticator ->> Authenticator: bind JSON to Login struct (auth.go:63-107)
-    Authenticator ->> Captcha: Verify(uuid, code, true)  %% clear-after-verify
+    Authenticator ->> Captcha: Verify(uuid, code, true) — clear-after-verify
     Captcha -->> Authenticator: pass (dev-mode 0/0 bypass)
     Authenticator ->> GetUser: GetUser(tx *gorm.DB)
 
     Note over GetUser,DB: 兩次獨立的 DB round-trip
     GetUser ->> DB: SELECT * FROM sys_user WHERE username = ? AND status = '2'
     DB -->> GetUser: user row
-    GetUser ->> GetUser: pkg.CompareHashAndPassword(hash, plain)  %% bcrypt, login.go:22
+    GetUser ->> GetUser: pkg.CompareHashAndPassword(hash, plain) — bcrypt (login.go:22)
     GetUser ->> DB: SELECT * FROM sys_role WHERE role_id = ?
     DB -->> GetUser: role row
 
