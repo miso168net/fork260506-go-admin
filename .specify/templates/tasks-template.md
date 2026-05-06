@@ -8,7 +8,7 @@ description: "Task list template for feature implementation"
 **Input**: Design documents from `/specs/[###-feature-name]/`
 **Prerequisites**: plan.md (required), spec.md (required for user stories), research.md, data-model.md, contracts/
 
-**Tests**: The examples below include test tasks. Tests are OPTIONAL - only include them if explicitly requested in the feature specification.
+**Tests**: The examples below include test tasks. Tests are OPTIONAL — only include them if explicitly requested in the feature specification, **with one carve-out**: per Constitution Principle III (`.specify/memory/constitution.md`), any task touching authentication, authorization (Casbin), data scope filtering, JWT validation, or persistence MUST include success-path AND rejection-path tests, regardless of whether the spec requested tests overall.
 
 **Organization**: Tasks are grouped by user story to enable independent implementation and testing of each story.
 
