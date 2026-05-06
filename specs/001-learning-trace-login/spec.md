@@ -5,6 +5,14 @@
 **Status**: Draft
 **Input**: Distilled from a `superpowers:brainstorming` session whose intent was *"build initial spec-kit documents for this fork; learner does not maintain the project"*. Selections: learning-oriented (not customization), depth = one full request chain, chain = login (`POST /api/v1/login`), method = run-and-read, runtime = custom Docker Compose with multi-stage Dockerfile (host needs zero Go).
 
+## Clarifications
+
+### Session 2026-05-07
+
+- Q: What language should the learning document `docs/learning/login-trace.md` be written in? → A: Full zh-TW (zh-TW prose; code excerpts and comments preserved verbatim regardless of their original language).
+- Q: How should the actual GORM SQL be captured for US3 verification? → A: Toggle the project's existing `enableddb: true` flag in `settings.sqlite.yml` so GORM logs all SQL to server stdout; learner reads it via `docker compose logs`. No code changes, no proxy tools.
+- Q: How should the SQLite database file be persisted across Docker Compose restarts? → A: No volume mount by default — DB resets to a clean state on each container recreate (clearer cause-and-effect for `sys_login_log` verification). `docker-compose.learning.yml` ships with a commented-out volume block that learners can uncomment if they want persistence.
+
 ## User Scenarios & Testing *(mandatory)*
 
 ### User Story 1 — Bring the backend up with one Docker command and obtain a JWT (Priority: P1) — MVP
@@ -72,7 +80,7 @@ As a learner who has read the walkthrough (US2 is complete), I want to confirm m
 
 #### Runtime artifacts (deliverables that produce a runnable system)
 
-- **FR-001**: A new file `docker-compose.learning.yml` MUST be added at the repository root, defining a single service `go-admin-learning` that builds from `Dockerfile.learning`, exposes port `8000:8000`, and bind-mounts at minimum a writable log path (e.g. `./temp:/temp`).
+- **FR-001**: A new file `docker-compose.learning.yml` MUST be added at the repository root, defining a single service `go-admin-learning` that builds from `Dockerfile.learning`, exposes port `8000:8000`, and bind-mounts at minimum a writable log path (e.g. `./temp:/temp`). The compose file MUST NOT mount a volume for the SQLite database by default — the DB resets to a clean state on each container recreate. The compose file MUST include a commented-out volume block (with a one-line comment explaining when to uncomment it) that learners can opt into for persistence across restarts.
 - **FR-002**: A new file `Dockerfile.learning` MUST be added at the repository root as a multi-stage build: a `builder` stage based on `golang:1.24-alpine` with `gcc`, `g++`, and `libc6-compat` available, running `CGO_ENABLED=1 go build -tags sqlite3 -ldflags="-w -s" -o /out/go-admin .`; and a `runtime` stage based on `alpine` with `ca-certificates`, `tzdata`, and `libc6-compat` only, copying the built binary, `config/settings.sqlite.yml` as `/config/settings.yml`, and `go-admin-db.db` into the image.
 - **FR-003**: The runtime container MUST start the API server with `["/go-admin", "server", "-c", "/config/settings.yml"]` and listen on `0.0.0.0:8000`.
 - **FR-004**: The existing `docker-compose.yml` and `Dockerfile` MUST remain unmodified. The new artifacts MUST coexist alongside them without breaking `make build`, `make build-linux`, or `make run`.
@@ -86,7 +94,7 @@ As a learner who has read the walkthrough (US2 is complete), I want to confirm m
 - **FR-009**: Section 5 (Layer-by-layer trace) MUST list every layer named in FR-008 as its own subsection, each containing: a single-paragraph plain-language role description, an exact `file:line` reference, and a minimal code excerpt (≤15 lines) from that file.
 - **FR-010**: Section 5 MUST mark gin-jwt `LoginHandler` and JWT `TokenGenerator` as SDK boundaries, naming the sibling-repo path `fork260506-go-admin-core/sdk/pkg/jwtauth/` and stating explicitly that this spec does not trace into the SDK; learners wanting more depth must open a separate spec.
 - **FR-011**: Section 5 MUST identify the line where the login log is emitted and verify (in the verification section) that a row appears in `sys_login_log` after a successful login, satisfying Constitution Principle V for the login path.
-- **FR-012**: Section 6 (Verification) MUST include three concrete recipes: (a) capture the actual SQL emitted by GORM and compare to predicted SQL, (b) decode the issued JWT and compare claims to predicted claims, (c) inspect `sys_login_log` after a successful login.
+- **FR-012**: Section 6 (Verification) MUST include three concrete recipes: (a) capture the actual SQL emitted by GORM by setting `enableddb: true` in the active `settings.yml` (the SQLite-based config baked into `Dockerfile.learning`) so GORM logs every statement to stdout, then read via `docker compose logs go-admin-learning | grep -E 'SELECT|UPDATE|INSERT'` and compare to predicted SQL; (b) decode the issued JWT and compare claims to predicted claims; (c) inspect `sys_login_log` after a successful login. Recipe (c) is performed against a freshly-recreated container (no volume mount) so an empty-then-one-row transition is the unambiguous expected outcome.
 - **FR-013**: Section 6 MUST include at least one negative-path recipe (wrong password, missing captcha field, or expired token) showing the predicted vs actual error response and log line.
 - **FR-014**: Section 8 (Next steps) MUST point at two follow-on chains as separate future specs: (a) a typical authenticated GET CRUD chain (e.g. `GET /api/v1/sys-user`) which exposes Casbin and data-scope filtering, (b) a typical write-path CRUD which exposes operation log emission.
 - **FR-015**: The document MUST identify the built-in Swagger UI route (`http://localhost:8000/swagger/admin/index.html`) as an alternative interactive endpoint explorer, but MUST NOT make Swagger UI the primary teaching surface — the curl path remains canonical.
@@ -94,6 +102,7 @@ As a learner who has read the walkthrough (US2 is complete), I want to confirm m
 #### Boundary discipline
 
 - **FR-016**: The learning document MUST NOT modify, replace, or instruct the learner to modify any existing source file. It is read-only with respect to `app/`, `common/`, `cmd/`, `config/`, `main.go`, and the existing Docker artifacts. The only new files this spec authorizes are: `docker-compose.learning.yml` and `Dockerfile.learning` at the repository root, the document itself under `docs/learning/`, and the SpecKit artifacts under `specs/001-learning-trace-login/` (spec.md, plan.md, tasks.md, etc.).
+- **FR-017**: The learning document MUST be written in zh-TW prose. Code excerpts, file paths, configuration keys, command lines, and comments quoted from the source MUST be preserved verbatim in their original language (typically a mix of English identifiers and Simplified/Traditional Chinese comments) — they MUST NOT be translated.
 
 ### Key Entities
 
