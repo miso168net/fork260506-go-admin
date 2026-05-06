@@ -1,12 +1,12 @@
 ---
 source_file: "common/middleware/handler/role.go"
 type: "code"
-community: "Community 45"
+community: "Community 101"
 location: "L5"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_45
+  - community/Community_101
 ---
 
 # SysRole
@@ -15,4 +15,4 @@ tags:
 - [[.TableName()_21]] - `method` [EXTRACTED]
 - [[role.go]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_45
+#graphify/code #graphify/EXTRACTED #community/Community_101

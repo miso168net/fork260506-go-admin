@@ -1,12 +1,12 @@
 ---
 source_file: "cmd/migrate/migration/models/sys_config.go"
 type: "code"
-community: "Community 8"
+community: "Community 63"
 location: "L3"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_8
+  - community/Community_63
 ---
 
 # SysConfig
@@ -18,4 +18,4 @@ tags:
 - [[sys_config.go_1]] - `contains` [EXTRACTED]
 - [[sys_config.go_5]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_8
+#graphify/code #graphify/EXTRACTED #community/Community_63

@@ -1,12 +1,12 @@
 ---
 source_file: "common/middleware/customerror.go"
 type: "code"
-community: "Community 3"
+community: "Sys Dept Service & General Del DTO"
 location: "L14"
 tags:
   - graphify/code
   - graphify/INFERRED
-  - community/Community_3
+  - community/Sys_Dept_Service__General_Del_DTO
 ---
 
 # CustomError()
@@ -17,4 +17,4 @@ tags:
 - [[.next()]] - `calls` [INFERRED]
 - [[customerror.go]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/Community_3
+#graphify/code #graphify/INFERRED #community/Sys_Dept_Service__General_Del_DTO

@@ -1,12 +1,12 @@
 ---
 source_file: "common/actions/permission.go"
 type: "code"
-community: "Community 6"
+community: "Community 42"
 location: "L15"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_6
+  - community/Community_42
 ---
 
 # DataPermission
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[permission.go]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_6
+#graphify/code #graphify/EXTRACTED #community/Community_42

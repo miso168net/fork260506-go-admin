@@ -1,17 +1,23 @@
 ---
 type: community
-cohesion: 1.00
-members: 2
+cohesion: 0.25
+members: 8
 ---
 
 # Community 55
 
-**Cohesion:** 1.00 - tightly connected
-**Members:** 2 nodes
+**Cohesion:** 0.25 - loosely connected
+**Members:** 8 nodes
 
 ## Members
-- [[UrlInfo]] - code - common/middleware/settings.go
-- [[settings.go]] - code - common/middleware/settings.go
+- [[buildListeners()]] - code - static/form-generator/js/parser-example.ce55fa09.js
+- [[formBtns()]] - code - static/form-generator/js/parser-example.ce55fa09.js
+- [[o()]] - code - static/form-generator/js/parser-example.ce55fa09.js
+- [[parser-example.ce55fa09.js]] - code - static/form-generator/js/parser-example.ce55fa09.js
+- [[renderChildren()]] - code - static/form-generator/js/parser-example.ce55fa09.js
+- [[renderFormItem()]] - code - static/form-generator/js/parser-example.ce55fa09.js
+- [[renderFrom()]] - code - static/form-generator/js/parser-example.ce55fa09.js
+- [[setValue()]] - code - static/form-generator/js/parser-example.ce55fa09.js
 
 ## Live Query (requires Dataview plugin)
 

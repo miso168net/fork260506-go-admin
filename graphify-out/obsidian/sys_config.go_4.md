@@ -1,12 +1,12 @@
 ---
 source_file: "app/admin/service/dto/sys_config.go"
 type: "code"
-community: "Community 15"
+community: "Community 27"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_15
+  - community/Community_27
 ---
 
 # sys_config.go
@@ -23,4 +23,4 @@ tags:
 - [[SysConfigOrder]] - `contains` [EXTRACTED]
 - [[UpdateSetSysConfigReq]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_15
+#graphify/code #graphify/EXTRACTED #community/Community_27

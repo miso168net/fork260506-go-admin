@@ -1,11 +1,11 @@
 ---
 source_file: "README.md"
 type: "document"
-community: "Community 10"
+community: "Project Documentation & License"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Community_10
+  - community/Project_Documentation__License
 ---
 
 # spf13/viper Configuration
@@ -14,4 +14,4 @@ tags:
 - [[go-admin Project (English README)]] - `cites` [EXTRACTED]
 - [[settings.yml configuration schema (Chinese annotated)]] - `conceptually_related_to` [INFERRED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_10
+#graphify/document #graphify/EXTRACTED #community/Project_Documentation__License

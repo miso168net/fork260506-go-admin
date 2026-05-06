@@ -1,12 +1,12 @@
 ---
 source_file: "common/actions/permission.go"
 type: "code"
-community: "Community 6"
+community: "Community 42"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_6
+  - community/Community_42
 ---
 
 # permission.go
@@ -18,4 +18,4 @@ tags:
 - [[getPermissionFromContext()]] - `contains` [EXTRACTED]
 - [[newDataPermission()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_6
+#graphify/code #graphify/EXTRACTED #community/Community_42

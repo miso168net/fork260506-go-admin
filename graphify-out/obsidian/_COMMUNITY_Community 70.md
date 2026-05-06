@@ -1,16 +1,20 @@
 ---
 type: community
-cohesion: 1.00
-members: 1
+cohesion: 0.40
+members: 5
 ---
 
 # Community 70
 
-**Cohesion:** 1.00 - tightly connected
-**Members:** 1 nodes
+**Cohesion:** 0.40 - moderately connected
+**Members:** 5 nodes
 
 ## Members
-- [[ObjectById (DTO)]] - code - common/dto/generate.go
+- [[.Generate()_3]] - code - app/admin/models/sys_dict_data.go
+- [[.GetId()_3]] - code - app/admin/models/sys_dict_data.go
+- [[.TableName()_4]] - code - app/admin/models/sys_dict_data.go
+- [[SysDictData_1]] - code - app/admin/models/sys_dict_data.go
+- [[sys_dict_data.go_1]] - code - app/admin/models/sys_dict_data.go
 
 ## Live Query (requires Dataview plugin)
 
@@ -18,3 +22,9 @@ members: 1
 TABLE source_file, type FROM #community/Community_70
 SORT file.name ASC
 ```
+
+## Connections to other communities
+- 1 edge to [[_COMMUNITY_Community 52]]
+
+## Top bridge nodes
+- [[.Generate()_3]] - degree 2, connects to 1 community

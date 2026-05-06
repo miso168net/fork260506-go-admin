@@ -1,12 +1,12 @@
 ---
 source_file: "app/admin/models/datascope.go"
 type: "code"
-community: "Community 3"
+community: "Community 25"
 location: "L19"
 tags:
   - graphify/code
   - graphify/INFERRED
-  - community/Community_3
+  - community/Community_25
 ---
 
 # GetDataScope (method, dead code)
@@ -15,4 +15,4 @@ tags:
 - [[GetDataScope (method, dead code)]] - `rationale_for` [AMBIGUOUS]
 - [[Permission()]] - `duplicates` [INFERRED]
 
-#graphify/code #graphify/INFERRED #community/Community_3
+#graphify/code #graphify/INFERRED #community/Community_25

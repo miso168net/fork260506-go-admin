@@ -1,12 +1,12 @@
 ---
 source_file: "common/middleware/handler/auth.go"
 type: "code"
-community: "Community 16"
+community: "Community 59"
 location: "L110"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_16
+  - community/Community_59
 ---
 
 # LoginLogToDB()
@@ -18,4 +18,4 @@ tags:
 - [[LogOut()]] - `calls` [EXTRACTED]
 - [[auth.go_1]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_16
+#graphify/code #graphify/EXTRACTED #community/Community_59

@@ -1,16 +1,21 @@
 ---
 type: community
-cohesion: 1.00
-members: 1
+cohesion: 0.33
+members: 6
 ---
 
 # Community 63
 
-**Cohesion:** 1.00 - tightly connected
-**Members:** 1 nodes
+**Cohesion:** 0.33 - loosely connected
+**Members:** 6 nodes
 
 ## Members
-- [[adm.go]] - code - common/global/adm.go
+- [[.Generate()_1]] - code - app/admin/models/sys_config.go
+- [[.GetId()_1]] - code - app/admin/models/sys_config.go
+- [[.TableName()_2]] - code - cmd/migrate/migration/models/sys_config.go
+- [[SysConfig_1]] - code - cmd/migrate/migration/models/sys_config.go
+- [[sys_config.go_1]] - code - app/admin/models/sys_config.go
+- [[sys_config.go_5]] - code - cmd/migrate/migration/models/sys_config.go
 
 ## Live Query (requires Dataview plugin)
 
@@ -18,3 +23,9 @@ members: 1
 TABLE source_file, type FROM #community/Community_63
 SORT file.name ASC
 ```
+
+## Connections to other communities
+- 1 edge to [[_COMMUNITY_Community 52]]
+
+## Top bridge nodes
+- [[.Generate()_1]] - degree 2, connects to 1 community

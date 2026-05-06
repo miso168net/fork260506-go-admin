@@ -1,12 +1,12 @@
 ---
 source_file: "app/admin/router/sys_opera_log.go"
 type: "code"
-community: "Community 6"
+community: "Community 89"
 location: "L15"
 tags:
   - graphify/code
   - graphify/INFERRED
-  - community/Community_6
+  - community/Community_89
 ---
 
 # registerSysOperaLogRouter()
@@ -18,4 +18,4 @@ tags:
 - [[PermissionAction()]] - `uses_middleware` [EXTRACTED]
 - [[sys_opera_log.go_2]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/Community_6
+#graphify/code #graphify/INFERRED #community/Community_89

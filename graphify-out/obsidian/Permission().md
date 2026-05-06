@@ -1,12 +1,12 @@
 ---
 source_file: "common/actions/permission.go"
 type: "code"
-community: "Community 3"
+community: "Community 25"
 location: "L62"
 tags:
   - graphify/code
   - graphify/INFERRED
-  - community/Community_3
+  - community/Community_25
 ---
 
 # Permission()
@@ -24,12 +24,12 @@ tags:
 - [[.UpdatePwd()_1]] - `calls` [INFERRED]
 - [[.UpdateStatus()_2]] - `calls` [INFERRED]
 - [[DataPermission (struct, commonactions)]] - `rationale_for` [INFERRED]
-- [[DeleteAction()]] - `shares_data_with` [INFERRED]
+- [[DeleteAction()]] - `calls` [INFERRED]
 - [[GetDataScope (method, dead code)]] - `duplicates` [INFERRED]
-- [[IndexAction()]] - `shares_data_with` [INFERRED]
-- [[UpdateAction()]] - `shares_data_with` [INFERRED]
-- [[ViewAction()]] - `shares_data_with` [INFERRED]
+- [[IndexAction()]] - `calls` [INFERRED]
+- [[UpdateAction()]] - `calls` [INFERRED]
+- [[ViewAction()]] - `calls` [INFERRED]
 - [[getPermissionFromContext()]] - `shares_data_with` [INFERRED]
 - [[permission.go]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/Community_3
+#graphify/code #graphify/INFERRED #community/Community_25

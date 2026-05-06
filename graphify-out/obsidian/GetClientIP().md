@@ -1,12 +1,12 @@
 ---
 source_file: "common/ip.go"
 type: "code"
-community: "Community 6"
+community: "Community 50"
 location: "L8"
 tags:
   - graphify/code
   - graphify/INFERRED
-  - community/Community_6
+  - community/Community_50
 ---
 
 # GetClientIP()
@@ -17,4 +17,4 @@ tags:
 - [[LoginLogToDB()]] - `calls` [INFERRED]
 - [[ip.go]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/Community_6
+#graphify/code #graphify/INFERRED #community/Community_50

@@ -1,12 +1,12 @@
 ---
 source_file: "common/file_store/kodo.go"
 type: "code"
-community: "Community 3"
+community: "Community 53"
 location: "L25"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_3
+  - community/Community_53
 ---
 
 # QiNiuKODO
@@ -19,4 +19,4 @@ tags:
 - [[.setZoneORDefault()]] - `method` [EXTRACTED]
 - [[kodo.go]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_3
+#graphify/code #graphify/EXTRACTED #community/Community_53

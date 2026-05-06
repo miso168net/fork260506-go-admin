@@ -1,12 +1,12 @@
 ---
 source_file: "static/form-generator/js/chunk-vendors.971555db.js"
 type: "code"
-community: "Community 0"
+community: "Community 103"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_0
+  - community/Community_103
 ---
 
 # getArrowLikeExpressions()
@@ -17,4 +17,4 @@ tags:
 - [[parseConditional()]] - `calls` [EXTRACTED]
 - [[zt()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_0
+#graphify/code #graphify/EXTRACTED #community/Community_103

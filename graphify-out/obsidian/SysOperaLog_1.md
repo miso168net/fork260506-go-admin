@@ -1,12 +1,12 @@
 ---
 source_file: "cmd/migrate/migration/models/sys_opera_log.go"
 type: "code"
-community: "Community 8"
+community: "Community 57"
 location: "L7"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_8
+  - community/Community_57
 ---
 
 # SysOperaLog
@@ -18,4 +18,4 @@ tags:
 - [[sys_opera_log.go_1]] - `contains` [EXTRACTED]
 - [[sys_opera_log.go_5]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_8
+#graphify/code #graphify/EXTRACTED #community/Community_57

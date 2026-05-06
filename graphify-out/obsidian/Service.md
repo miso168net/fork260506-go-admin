@@ -1,12 +1,12 @@
 ---
 source_file: "common/service/service.go"
 type: "code"
-community: "Community 9"
+community: "TinyMCE Form Generator Bundle"
 location: "L10"
 tags:
   - graphify/code
   - graphify/INFERRED
-  - community/Community_9
+  - community/TinyMCE_Form_Generator_Bundle
 ---
 
 # Service
@@ -19,4 +19,4 @@ tags:
 - [[service.go]] - `contains` [EXTRACTED]
 - [[ue()]] - `calls` [INFERRED]
 
-#graphify/code #graphify/INFERRED #community/Community_9
+#graphify/code #graphify/INFERRED #community/TinyMCE_Form_Generator_Bundle

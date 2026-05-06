@@ -1,12 +1,12 @@
 ---
 source_file: "app/admin/router/sys_api.go"
 type: "code"
-community: "Community 6"
+community: "Community 40"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_6
+  - community/Community_40
 ---
 
 # sys_api.go
@@ -15,4 +15,4 @@ tags:
 - [[init()]] - `contains` [EXTRACTED]
 - [[registerSysApiRouter()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_6
+#graphify/code #graphify/EXTRACTED #community/Community_40

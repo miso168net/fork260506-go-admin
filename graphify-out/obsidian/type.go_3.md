@@ -1,12 +1,12 @@
 ---
 source_file: "common/models/type.go"
 type: "code"
-community: "Community 8"
+community: "Community 52"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_8
+  - community/Community_52
 ---
 
 # type.go
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[ActiveRecord]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_8
+#graphify/code #graphify/EXTRACTED #community/Community_52

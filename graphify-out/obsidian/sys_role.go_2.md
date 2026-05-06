@@ -1,12 +1,12 @@
 ---
 source_file: "app/admin/router/sys_role.go"
 type: "code"
-community: "Community 6"
+community: "Community 90"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_6
+  - community/Community_90
 ---
 
 # sys_role.go
@@ -15,4 +15,4 @@ tags:
 - [[init()_8]] - `contains` [EXTRACTED]
 - [[registerSysRoleRouter()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_6
+#graphify/code #graphify/EXTRACTED #community/Community_90

@@ -1,12 +1,12 @@
 ---
 source_file: "common/models/by.go"
 type: "code"
-community: "Community 3"
+community: "Sys Menu Service & Order DTOs"
 location: "L24"
 tags:
   - graphify/code
   - graphify/INFERRED
-  - community/Community_3
+  - community/Sys_Menu_Service__Order_DTOs
 ---
 
 # Model
@@ -60,4 +60,4 @@ tags:
 - [[by.go]] - `contains` [EXTRACTED]
 - [[by.go_1]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/Community_3
+#graphify/code #graphify/INFERRED #community/Sys_Menu_Service__Order_DTOs

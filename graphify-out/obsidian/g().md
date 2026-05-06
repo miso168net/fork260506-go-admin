@@ -1,12 +1,12 @@
 ---
 source_file: "static/form-generator/js/chunk-vendors.971555db.js"
 type: "code"
-community: "Community 7"
+community: "Community 26"
 location: "L5"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_7
+  - community/Community_26
 ---
 
 # g()
@@ -19,4 +19,4 @@ tags:
 - [[p()]] - `calls` [EXTRACTED]
 - [[s()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_7
+#graphify/code #graphify/EXTRACTED #community/Community_26

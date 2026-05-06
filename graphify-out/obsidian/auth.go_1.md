@@ -1,12 +1,12 @@
 ---
 source_file: "common/middleware/handler/auth.go"
 type: "code"
-community: "Community 16"
+community: "Community 59"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_16
+  - community/Community_59
 ---
 
 # auth.go
@@ -20,4 +20,4 @@ tags:
 - [[PayloadFunc()]] - `contains` [EXTRACTED]
 - [[Unauthorized()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_16
+#graphify/code #graphify/EXTRACTED #community/Community_59

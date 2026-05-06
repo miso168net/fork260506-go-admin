@@ -1,12 +1,12 @@
 ---
 source_file: "common/actions/view.go"
 type: "code"
-community: "Community 1"
+community: "Common API & Service Layer"
 location: "L18"
 tags:
   - graphify/code
   - graphify/INFERRED
-  - community/Community_1
+  - community/Common_API__Service_Layer
 ---
 
 # ViewAction()
@@ -24,9 +24,9 @@ tags:
 - [[F()]] - `calls` [INFERRED]
 - [[GetPermissionFromContext (exported)]] - `shares_data_with` [EXTRACTED]
 - [[Model]] - `calls` [INFERRED]
-- [[Permission()]] - `shares_data_with` [INFERRED]
+- [[Permission()]] - `calls` [INFERRED]
 - [[getPermissionFromContext()]] - `calls` [INFERRED]
 - [[registerSysJobRouter()]] - `calls` [INFERRED]
 - [[view.go]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/Community_1
+#graphify/code #graphify/INFERRED #community/Common_API__Service_Layer

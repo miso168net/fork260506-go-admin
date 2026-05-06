@@ -1,12 +1,12 @@
 ---
 source_file: "common/middleware/permission.go"
 type: "code"
-community: "Community 6"
+community: "Community 40"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_6
+  - community/Community_40
 ---
 
 # permission.go
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[AuthCheckRole()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_6
+#graphify/code #graphify/EXTRACTED #community/Community_40

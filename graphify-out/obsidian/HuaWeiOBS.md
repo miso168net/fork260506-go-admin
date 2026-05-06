@@ -1,12 +1,12 @@
 ---
 source_file: "common/file_store/obs.go"
 type: "code"
-community: "Community 29"
+community: "Community 73"
 location: "L9"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_29
+  - community/Community_73
 ---
 
 # HuaWeiOBS
@@ -17,4 +17,4 @@ tags:
 - [[.UpLoad()_1]] - `method` [EXTRACTED]
 - [[obs.go]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_29
+#graphify/code #graphify/EXTRACTED #community/Community_73

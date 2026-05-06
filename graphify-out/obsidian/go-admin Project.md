@@ -1,11 +1,11 @@
 ---
 source_file: "static/uploadfile/77cfc1dd-535c-4e60-b34a-5909e2cf5ed0.jpg"
 type: "image"
-community: "Community 32"
+community: "Community 78"
 tags:
   - graphify/image
   - graphify/INFERRED
-  - community/Community_32
+  - community/Community_78
 ---
 
 # go-admin Project
@@ -15,4 +15,4 @@ tags:
 - [[Go Programming Language]] - `built_with` [INFERRED]
 - [[Static Uploadfile Assets]] - `belongs_to` [INFERRED]
 
-#graphify/image #graphify/INFERRED #community/Community_32
+#graphify/image #graphify/INFERRED #community/Community_78

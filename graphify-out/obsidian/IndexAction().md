@@ -1,12 +1,12 @@
 ---
 source_file: "common/actions/index.go"
 type: "code"
-community: "Community 3"
+community: "Pagination & Search DTOs"
 location: "L18"
 tags:
   - graphify/code
   - graphify/INFERRED
-  - community/Community_3
+  - community/Pagination__Search_DTOs
 ---
 
 # IndexAction()
@@ -25,12 +25,12 @@ tags:
 - [[ActiveRecord]] - `rationale_for` [INFERRED]
 - [[F()]] - `calls` [INFERRED]
 - [[GetPermissionFromContext (exported)]] - `shares_data_with` [EXTRACTED]
-- [[MakeCondition()]] - `shares_data_with` [EXTRACTED]
+- [[MakeCondition()]] - `calls` [INFERRED]
 - [[Model]] - `calls` [INFERRED]
-- [[Paginate()]] - `shares_data_with` [EXTRACTED]
-- [[Permission()]] - `shares_data_with` [INFERRED]
+- [[Paginate()]] - `calls` [INFERRED]
+- [[Permission()]] - `calls` [INFERRED]
 - [[getPermissionFromContext()]] - `calls` [INFERRED]
 - [[index.go]] - `contains` [EXTRACTED]
 - [[registerSysJobRouter()]] - `calls` [INFERRED]
 
-#graphify/code #graphify/INFERRED #community/Community_3
+#graphify/code #graphify/INFERRED #community/Pagination__Search_DTOs

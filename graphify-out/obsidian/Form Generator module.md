@@ -1,11 +1,11 @@
 ---
 source_file: "static/form-generator/img/logo.e1bc3747.png"
 type: "image"
-community: "Community 31"
+community: "Community 77"
 tags:
   - graphify/image
   - graphify/INFERRED
-  - community/Community_31
+  - community/Community_77
 ---
 
 # Form Generator module
@@ -14,4 +14,4 @@ tags:
 - [[Form Generator Logo (V mark)]] - `branding_for` [INFERRED]
 - [[vue-form-making  form-generator project]] - `derived_from` [AMBIGUOUS]
 
-#graphify/image #graphify/INFERRED #community/Community_31
+#graphify/image #graphify/INFERRED #community/Community_77

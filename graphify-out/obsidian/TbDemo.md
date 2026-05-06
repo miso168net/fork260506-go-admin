@@ -1,12 +1,12 @@
 ---
 source_file: "cmd/migrate/migration/models/tb_demo.go"
 type: "code"
-community: "Community 44"
+community: "Community 100"
 location: "L3"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_44
+  - community/Community_100
 ---
 
 # TbDemo
@@ -15,4 +15,4 @@ tags:
 - [[.TableName()_20]] - `method` [EXTRACTED]
 - [[tb_demo.go]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_44
+#graphify/code #graphify/EXTRACTED #community/Community_100

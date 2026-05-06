@@ -1,12 +1,12 @@
 ---
 source_file: "app/admin/service/sys_opera_log.go"
 type: "code"
-community: "Community 1"
+community: "Common API & Service Layer"
 location: "L14"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_1
+  - community/Common_API__Service_Layer
 ---
 
 # SysOperaLog
@@ -18,4 +18,4 @@ tags:
 - [[.Remove()_7]] - `method` [EXTRACTED]
 - [[sys_opera_log.go_3]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_1
+#graphify/code #graphify/EXTRACTED #community/Common_API__Service_Layer

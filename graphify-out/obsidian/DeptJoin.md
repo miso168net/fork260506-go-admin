@@ -1,12 +1,12 @@
 ---
 source_file: "app/admin/service/dto/sys_user.go"
 type: "code"
-community: "Community 12"
+community: "Sys User DTOs"
 location: "L32"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_12
+  - community/Sys_User_DTOs
 ---
 
 # DeptJoin
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[sys_user.go_4]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_12
+#graphify/code #graphify/EXTRACTED #community/Sys_User_DTOs

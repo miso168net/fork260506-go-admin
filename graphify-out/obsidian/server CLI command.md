@@ -1,11 +1,11 @@
 ---
 source_file: "README.md"
 type: "document"
-community: "Community 10"
+community: "Project Documentation & License"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Community_10
+  - community/Project_Documentation__License
 ---
 
 # server CLI command
@@ -15,4 +15,4 @@ tags:
 - [[go-admin Project (English README)]] - `references` [EXTRACTED]
 - [[sys_api auto-population via -a true flag]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_10
+#graphify/document #graphify/EXTRACTED #community/Project_Documentation__License

@@ -1,12 +1,12 @@
 ---
 source_file: "app/admin/router/router.go"
 type: "code"
-community: "Community 4"
+community: "Community 47"
 location: "L15"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_4
+  - community/Community_47
 ---
 
 # InitExamplesRouter()
@@ -17,4 +17,4 @@ tags:
 - [[examplesNoCheckRoleRouter()]] - `calls` [EXTRACTED]
 - [[router.go]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_4
+#graphify/code #graphify/EXTRACTED #community/Community_47

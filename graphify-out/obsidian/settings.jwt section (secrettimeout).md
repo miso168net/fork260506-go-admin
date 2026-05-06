@@ -1,12 +1,12 @@
 ---
 source_file: "config/READMEN.md"
 type: "document"
-community: "Community 10"
+community: "Project Documentation & License"
 location: "lines 19-23"
 tags:
   - graphify/document
   - graphify/INFERRED
-  - community/Community_10
+  - community/Project_Documentation__License
 ---
 
 # settings.jwt section (secret/timeout)
@@ -15,4 +15,4 @@ tags:
 - [[JWT Authentication (jwt-go)]] - `shares_data_with` [INFERRED]
 - [[settings.yml configuration schema (Chinese annotated)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/INFERRED #community/Community_10
+#graphify/document #graphify/INFERRED #community/Project_Documentation__License

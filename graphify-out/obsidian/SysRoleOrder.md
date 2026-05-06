@@ -1,12 +1,12 @@
 ---
 source_file: "app/admin/service/dto/sys_role.go"
 type: "code"
-community: "Community 14"
+community: "Sys Role DTOs"
 location: "L24"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_14
+  - community/Sys_Role_DTOs
 ---
 
 # SysRoleOrder
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[sys_role.go_4]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_14
+#graphify/code #graphify/EXTRACTED #community/Sys_Role_DTOs

@@ -1,12 +1,12 @@
 ---
 source_file: "app/admin/apis/sys_dict_type.go"
 type: "code"
-community: "Community 1"
+community: "Common API & Service Layer"
 location: "L16"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_1
+  - community/Common_API__Service_Layer
 ---
 
 # SysDictType
@@ -20,4 +20,4 @@ tags:
 - [[.Update()_4]] - `method` [EXTRACTED]
 - [[sys_dict_type.go]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_1
+#graphify/code #graphify/EXTRACTED #community/Common_API__Service_Layer

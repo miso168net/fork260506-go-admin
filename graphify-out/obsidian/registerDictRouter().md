@@ -1,12 +1,12 @@
 ---
 source_file: "app/admin/router/sys_dict.go"
 type: "code"
-community: "Community 6"
+community: "Community 91"
 location: "L14"
 tags:
   - graphify/code
   - graphify/INFERRED
-  - community/Community_6
+  - community/Community_91
 ---
 
 # registerDictRouter()
@@ -18,4 +18,4 @@ tags:
 - [[PermissionAction()]] - `uses_middleware` [EXTRACTED]
 - [[sys_dict.go]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/Community_6
+#graphify/code #graphify/INFERRED #community/Community_91

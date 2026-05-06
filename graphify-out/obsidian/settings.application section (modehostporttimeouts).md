@@ -1,12 +1,12 @@
 ---
 source_file: "config/READMEN.md"
 type: "document"
-community: "Community 10"
+community: "Project Documentation & License"
 location: "lines 6-15"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Community_10
+  - community/Project_Documentation__License
 ---
 
 # settings.application section (mode/host/port/timeouts)
@@ -16,4 +16,4 @@ tags:
 - [[readtimeout  writertimeout config keys]] - `references` [EXTRACTED]
 - [[settings.yml configuration schema (Chinese annotated)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_10
+#graphify/document #graphify/EXTRACTED #community/Project_Documentation__License

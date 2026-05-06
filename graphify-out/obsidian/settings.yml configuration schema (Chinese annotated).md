@@ -1,11 +1,11 @@
 ---
 source_file: "config/READMEN.md"
 type: "document"
-community: "Community 10"
+community: "Project Documentation & License"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Community_10
+  - community/Project_Documentation__License
 ---
 
 # settings.yml configuration schema (Chinese annotated)
@@ -18,4 +18,4 @@ tags:
 - [[settings.log section (log dir)]] - `references` [EXTRACTED]
 - [[spf13viper Configuration]] - `conceptually_related_to` [INFERRED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_10
+#graphify/document #graphify/EXTRACTED #community/Project_Documentation__License

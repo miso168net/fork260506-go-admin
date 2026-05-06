@@ -1,12 +1,12 @@
 ---
 source_file: "app/admin/router/sys_post.go"
 type: "code"
-community: "Community 6"
+community: "Community 42"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_6
+  - community/Community_42
 ---
 
 # sys_post.go
@@ -15,4 +15,4 @@ tags:
 - [[init()_7]] - `contains` [EXTRACTED]
 - [[registerSyPostRouter()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_6
+#graphify/code #graphify/EXTRACTED #community/Community_42

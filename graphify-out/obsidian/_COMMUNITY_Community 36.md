@@ -1,19 +1,29 @@
 ---
 type: community
-cohesion: 0.50
-members: 4
+cohesion: 0.14
+members: 14
 ---
 
 # Community 36
 
-**Cohesion:** 0.50 - moderately connected
-**Members:** 4 nodes
+**Cohesion:** 0.14 - loosely connected
+**Members:** 14 nodes
 
 ## Members
-- [[ClientOption]] - code - common/file_store/interface.go
-- [[DriverType]] - code - common/file_store/interface.go
-- [[FileStoreType]] - code - common/file_store/interface.go
-- [[interface.go]] - code - common/file_store/interface.go
+- [[.Generate()_15]] - code - app/admin/service/dto/sys_dept.go
+- [[.Generate()_16]] - code - app/admin/service/dto/sys_dept.go
+- [[.GetId()_21]] - code - app/admin/service/dto/sys_dept.go
+- [[.GetId()_20]] - code - app/admin/service/dto/sys_dept.go
+- [[.GetId()_18]] - code - app/admin/service/dto/sys_dept.go
+- [[.GetId()_19]] - code - app/admin/service/dto/sys_dept.go
+- [[.GetNeedSearch()_4]] - code - app/admin/service/dto/sys_dept.go
+- [[DeptLabel]] - code - app/admin/service/dto/sys_dept.go
+- [[SysDeptDeleteReq]] - code - app/admin/service/dto/sys_dept.go
+- [[SysDeptGetPageReq]] - code - app/admin/service/dto/sys_dept.go
+- [[SysDeptGetReq]] - code - app/admin/service/dto/sys_dept.go
+- [[SysDeptInsertReq]] - code - app/admin/service/dto/sys_dept.go
+- [[SysDeptUpdateReq]] - code - app/admin/service/dto/sys_dept.go
+- [[sys_dept.go_4]] - code - app/admin/service/dto/sys_dept.go
 
 ## Live Query (requires Dataview plugin)
 
