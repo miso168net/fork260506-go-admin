@@ -583,7 +583,132 @@ func Unauthorized(c *gin.Context, code int, message string) {
 
 ## 6. Runtime 驗證 recipe
 
-> 本節將在 T016 由 `[US3]` 任務填寫。
+讀完第 5 節 11 層的「程式碼預測」之後，本節要把它跑起來、用 runtime 證據反向驗證每一段預測對不對。每一個 recipe 都依「**先預測、再執行、最後比對**」三步走：先把預期觀察到的形狀寫下來，再貼指令到 shell 跑，最後拿輸出對齊預測——cosmetic 差異（timestamp、空白、render 過的參數值）OK，substantive 差異（多／少一條 SQL、JWT claim 數量不對、`sys_login_log` 沒落 row）就要回頭重讀對應的 5.x 子節找原因。四個 recipe 全綠就達成 SC-003 的「預測－實證閉環」。
+
+### 6.1 Recipe (a) — GORM SQL capture（FR-012a）
+
+第一條 runtime 證據是 GORM 印出來的 SQL log，用來驗證 5.5（`sys_user` 查詢）與 5.7（`sys_role` lookup）這兩發 SELECT 真的有打到 DB。要看到 SQL，得先確認 logger 的 `enableddb` 開關是 `true`——本 fork 的 `config/settings.sqlite.yml` 預設值是 `false`，是 `Dockerfile.learning` 第 31 行的 `RUN sed -i 's/enableddb: false/enableddb: true/' /config/settings.yml` 在 build 時把它改成 `true`，烤進 runtime image。換句話說只要你跑的是 `docker-compose.learning.yml`，這個開關就一定是開的，不需要自己改設定。
+
+**預測**：第 5.5 與 5.7 兩層說過，`Login.GetUser` 會打**兩發**獨立的 SELECT，對應的 SQL 大致長這樣（保留 5.5、5.7 verbatim 引用的 WHERE 子句寫法，包括 `username = ?` 後面那個雙空白與 `'2'` literal）：
+
+```
+SELECT * FROM sys_user WHERE username = ?  AND status = '2'
+SELECT * FROM sys_role WHERE role_id = ?
+```
+
+另外還會看到 5.10 那一發 `INSERT INTO sys_login_log (...)`，是 deferred 的 async write 落地（同一條 queue，consumer 把 row 寫進來）。
+
+**執行**：在另一個 terminal 跑一次 `curl` 登入（第 3 節的指令）之後，回到 host 端打：
+
+```bash
+docker compose -f docker-compose.learning.yml logs go-admin-learning | grep -E 'SELECT|INSERT|UPDATE'
+```
+
+**比對**：實務上 GORM logger 會把 `?` placeholder 連同 rendered 後的字面值一起印出來——你可能看到 `username = "admin"` 直接寫死，也可能看到 `username = ?` 加另一行 args；兩種形狀都算 match，只要 **table name + WHERE 欄位** 對得上 5.5 / 5.7 預測即可。請把預測 SQL 抄一份在筆記，把 `grep` 出來的實際 SQL 貼旁邊一條一條打勾；任何「預測有但實際沒看到」（例如 `sys_role` 的 SELECT 不見）都代表你對 5.5 / 5.7 的拆解有缺口，回去重讀。
+
+### 6.2 Recipe (b) — JWT claim decode（FR-012b）
+
+第二條 runtime 證據是把 JWT 的 payload 段 base64 解出來，用來驗證 5.8 `PayloadFunc` 真的吐了 6 個業務 claim、加上 5.9 SDK 補的 2 個 envelope claim，總共 8 個 key。
+
+**預測**：依 5.8 程式碼節錄，`PayloadFunc` 會從 `(user, role)` 攤出 `identity` / `roleid` / `rolekey` / `nice` / `datascope` / `rolename` 六個業務 claim；5.9 SDK 簽 token 時補上 `exp` 與 `orig_iat` envelope claim。最終 payload 應該長成第 3.4 節記錄的 8-key shape：
+
+```json
+{
+  "datascope": "",
+  "exp": 4931726917,
+  "identity": 1,
+  "nice": "admin",
+  "orig_iat": 1778090917,
+  "roleid": 1,
+  "rolekey": "admin",
+  "rolename": "系统管理员"
+}
+```
+
+**執行**：先抓 token：
+
+```bash
+TOKEN=$(curl -s -X POST http://localhost:8000/api/v1/login \
+  -H 'Content-Type: application/json' \
+  -d '{"username":"admin","password":"123456","code":"0","uuid":"0"}' | jq -r .token)
+```
+
+再 decode payload 段（JWT 用 URL-safe base64，標準 `base64 -d` 在某些 token 上會因 `-` / `_` 字元或缺 padding 失敗——先試簡單版，失敗時用容錯版）：
+
+```bash
+echo "$TOKEN" | cut -d. -f2 | base64 -d 2>/dev/null
+```
+
+如果上面那行解不出 JSON（多半是 padding 問題，補上 `=` 補到長度為 4 的倍數即可，或用下面這條 python 容錯版把 URL-safe 字元也轉好）：
+
+```bash
+echo "$TOKEN" | cut -d. -f2 | tr '_-' '/+' | python3 -c "import sys,base64,json; d=sys.stdin.read().strip(); d+='='*(-len(d)%4); print(json.dumps(json.loads(base64.b64decode(d)), indent=2, ensure_ascii=False))"
+```
+
+**比對**：拿輸出的 JSON 對照預測，特別檢查 (1) 共 8 個 key、不多不少；(2) `datascope` 是空字串 `""` 不是 `"1"` 或 `null`（5.8 那層說明過：admin seed 的 `data_scope` 就是空）。要交叉對照產生這份 claim 的程式碼請看 `common/middleware/handler/auth.go:21–35` 的 `PayloadFunc`（T010 勘誤：函式在第 35 行 `}` 結束，不是任務簡報原寫的 37）。
+
+### 6.3 Recipe (c) — `sys_login_log` row 檢查（FR-012c / FR-011）
+
+第三條 runtime 證據是 `sys_login_log` 真的會出現一筆對應這次登入的 row，用來驗證 5.10 那條「`Authenticator → memory queue → SaveLoginLog consumer → DB`」async chain 走完。這條 row 也是 Constitution Principle V「login log 是 product feature 不是 debug aid」在 runtime 層的硬證據。
+
+**Async wrinkle（research.md §R2）**：5.10 是 deferred 的非同步寫——`Authenticator` 在 return 之後 defer 才把 message append 進 in-memory queue，consumer goroutine 才在後面把它 flush 到 SQLite。實測 client 收到 200 response 與 row 落 DB 之間有 50–500ms 競賽窗：HTTP 端已經拿到 token 了，DB 端 row 可能還沒寫進去。所以**先 `sleep 1` 再查**、或者用一個短的 retry loop 重試最多 3 次，是這條 recipe 不能省的步驟。
+
+**預測**：對一個剛剛 `docker compose down -v && up -d` 重啟過、只跑了一次 `curl` 登入的 container，最近一筆 row 應該長這樣（status `'2'` 表示成功、msg 是 `auth.go:74` 寫的 `var msg = "登录成功"` 那個 string literal）：
+
+```
+id=1, username='admin', status='2', msg='登录成功', login_time=<近一秒內的 timestamp>
+```
+
+**執行**：登入完之後在 host 端打：
+
+```bash
+docker compose -f docker-compose.learning.yml exec -T go-admin-learning \
+  sqlite3 /go-admin-db.db \
+  'SELECT id, username, status, msg, login_time FROM sys_login_log ORDER BY id DESC LIMIT 1;'
+```
+
+如果出現 `0 rows` 或得到舊 row，用下面這段 retry：
+
+```bash
+for i in 1 2 3; do
+  ROW=$(docker compose -f docker-compose.learning.yml exec -T go-admin-learning sqlite3 /go-admin-db.db 'SELECT COUNT(*) FROM sys_login_log;')
+  if [ "$ROW" -gt 0 ]; then break; fi
+  sleep 1
+done
+```
+
+**比對**：`username='admin'`、`status='2'`、`msg='登录成功'` 三件事同時成立，就證實 5.10 的 async write 跑通了——這條 row 本身就是 Principle V 的 runtime 落地證據。如果 retry 三次都沒 row，回去檢查 `enableddb` 是不是真的 `true`、queue consumer goroutine 是不是真的有起來（5.10 子節有指出 `cmd/api/server.go:70` 那行）。
+
+### 6.4 Recipe (d) — 失敗路徑（FR-013）：密碼錯誤
+
+正向 recipe 全綠之後，還要至少一條反向證據驗證「**失敗路徑也會留 log**」——這是 Principle V 的另一半（不只成功要 log、失敗更要 log）。
+
+**預測**：把 5.3 `Authenticator` 的失敗分支讀完可以歸納出三條 string literal：bind 失敗 `msg = "数据解析失败"`（`auth.go:82`）、captcha 失敗 `msg = "验证码错误"`（`auth.go:90`）、`GetUser` 失敗（含使用者不存在、bcrypt 比錯、role 找不到任一情況）`msg = "登录失败"`（`auth.go:102`）。`status` 在三條失敗路徑都會被改成 `"1"`。HTTP response 由 5.11 那道 SDK 邊界（gin-jwt 預設 `Unauthorized` callback）產出，shape 是 `auth.go:177–182` 那個 2-key `{code, msg}`，**不會帶 token**。
+
+**執行**（密碼錯誤——`code:"0",uuid:"0"` 仍然 dev-mode 通過 captcha，所以失敗點在 `Login.GetUser` 內部 bcrypt compare）：
+
+```bash
+curl -s -X POST http://localhost:8000/api/v1/login \
+  -H 'Content-Type: application/json' \
+  -d '{"username":"admin","password":"wrong","code":"0","uuid":"0"}'
+```
+
+response 預測為 `{"code":401,"msg":"<SDK 預設 Unauthorized 訊息>"}` 形狀（具體訊息來自 gin-jwt SDK 的 `Unauthorized` callback 寫進去的 `message` 參數，本 repo `Unauthorized` 只是把它 echo 回 JSON，不會看到 token 欄位）。等 1 秒之後查 log row：
+
+```bash
+sleep 1
+docker compose -f docker-compose.learning.yml exec -T go-admin-learning \
+  sqlite3 /go-admin-db.db \
+  'SELECT id, username, status, msg FROM sys_login_log ORDER BY id DESC LIMIT 1;'
+```
+
+**比對**：最近一筆 row 應該是 `username='admin'`、`status='1'`、`msg='登录失败'`（verbatim 從 `auth.go:102` 來——是 Simplified Chinese「登录失败」不是 Traditional「登錄失敗」）。看到這條 row 就證實「失敗也會 log」——Principle V 的負向半邊也成立。
+
+**選配第二條負向**：故意漏 `code` 欄位送出 `{"username":"admin","password":"123456","uuid":"0"}`，會在 5.3 的 `c.ShouldBind` 那一行先觸發 gin binding error（因為 `Login` struct 四個欄位都有 `binding:"required"`），對應 row 應為 `status='1'`、`msg='数据解析失败'`（`auth.go:82` verbatim）。
+
+### 6.5 小結
+
+四個 recipe 全綠（GORM SQL 兩條 SELECT match、JWT decode 出 8 個 key、`sys_login_log` 成功 row + 失敗 row 都落地）就達成 SC-003 的「runtime 證據完整對齊預測」。下一步請進第 8 節挑一條後續 trace 鏈路——把同樣的「逐層追蹤 + runtime 驗證」工法套到 GET CRUD 或寫入 CRUD 上。
 
 ---
 
