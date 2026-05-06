@@ -344,10 +344,9 @@ func Authenticator(c *gin.Context) (interface{}, error) {
 	var username = ""
 	defer func() {
 		LoginLogToDB(c, status, msg, username)
-	}()
 ```
 
-（…完整定義見 `common/middleware/handler/auth.go:63–107`，包含 `c.ShouldBind`、captcha 分支、`loginVals.GetUser` 呼叫與最終 `return`。）
+（…完整定義見 `common/middleware/handler/auth.go:63–107`，包含 deferred `}()` 收尾、`c.ShouldBind`、captcha 分支、`loginVals.GetUser` 呼叫與最終 `return`。）
 
 注意 `status` 預設 `"2"`、`msg` 預設 `"登录成功"`——**樂觀預設**：只有失敗分支才會把它們改成 `"1"` / 失敗訊息（如 `"数据解析失败"`、`"验证码错误"`、`"登录失败"`），這代表所有成功路徑可以「什麼都不寫」就讓 deferred 的 `LoginLogToDB` 寫對。
 
