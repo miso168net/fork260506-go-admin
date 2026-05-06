@@ -135,7 +135,86 @@ docker compose -f docker-compose.learning.yml down
 
 ## 3. 用 curl 登入並拿到 JWT
 
-> 本節將在 T008 由 `[US1]` 任務填寫。
+### 3.1 標準登入 curl（dev-mode captcha bypass）
+
+容器跑起來後用這條 **canonical curl** 拿 token——`code:"0"` 與 `uuid:"0"` 是 dev-mode 的 captcha bypass sentinel（FR-007），不需要先打 `GET /api/v1/captcha`；四個欄位都是 `binding:"required"`，少一個 gin 會在進 authenticator 前回 `400`：
+
+```bash
+curl -s -X POST http://localhost:8000/api/v1/login \
+  -H "Content-Type: application/json" \
+  -d '{"username":"admin","password":"123456","code":"0","uuid":"0"}'
+```
+
+### 3.2 實際 response shape（5 個 top-level keys）
+
+`contracts/post-login.md` 只列了 `code` / `expire` / `token`；實測（T004 證據）還多出 `currentAuthority` 與 `success`，**共 5 個 top-level keys**，本節以實測為準：
+
+```json
+{
+  "code": 200,
+  "currentAuthority": "<JWT>",
+  "expire": "2126-04-13T12:08:37+08:00",
+  "success": true,
+  "token": "<JWT>"
+}
+```
+
+`currentAuthority` 與 `token` 內容相同（antd-pro 風格前端的相容欄位）。**後續所有 `Authorization: Bearer ...` 一律用 `token`**——它是 contract 唯一保證會有的欄位，也是第 5、第 6 節追的對象。
+
+### 3.3 把 JWT 拆開來看 claims
+
+JWT 是三段 base64url 字串用 `.` 連接（header / payload / signature），把第二段解 base64 即可。注意 JWT 用 **URL-safe base64**（`-`/`_` 取代 `+`/`/`，不補 `=`），`base64 -d` 偶爾會抱怨，必要時自己補 `=` 或改用 `tr '_-' '/+' | base64 -d`：
+
+```bash
+TOKEN=$(curl -s -X POST http://localhost:8000/api/v1/login \
+  -H "Content-Type: application/json" \
+  -d '{"username":"admin","password":"123456","code":"0","uuid":"0"}' | jq -r .token)
+echo "$TOKEN" | cut -d. -f2 | base64 -d 2>/dev/null
+```
+
+### 3.4 實際 claim shape（8 個 keys）
+
+實測解出來的 payload 如下（claim 對照見 `data-model.md §E4`，6 個業務 claim + 2 個 gin-jwt envelope claim）：
+
+```json
+{
+  "datascope": "",
+  "exp": 4931726917,
+  "identity": 1,
+  "nice": "admin",
+  "orig_iat": 1778090917,
+  "roleid": 1,
+  "rolekey": "admin",
+  "rolename": "系统管理员"
+}
+```
+
+特別注意 `datascope` 是**空字串**（不是 quickstart 預測的 `"1"`）——`admin` role 的 `data_scope` 欄位在 seed data 裡就是空，下游 data-scope filter 會當「無限制」處理。
+
+### 3.5 為什麼 `code:"0", uuid:"0"` 會通過？
+
+source-of-truth 是 `common/middleware/handler/auth.go:51–66` 的 swagger 註解（FR-017 verbatim）：
+
+```go
+// Authenticator 获取token
+// @Summary 登陆
+// @Description 获取token
+// @Description LoginHandler can be used by clients to get a jwt token.
+// @Description Payload needs to be json in the form of {"username": "USERNAME", "password": "PASSWORD"}.
+// @Description Reply will be of the form {"token": "TOKEN"}.
+// @Description dev mode：It should be noted that all fields cannot be empty, and a value of 0 can be passed in addition to the account password
+// @Description 注意：开发模式：需要注意全部字段不能为空，账号密码外可以传入0值
+// @Tags 登陆
+// @Accept  application/json
+// @Product application/json
+// @Param account body Login  true "account"
+// @Success 200 {string} string "{"code": 200, "expire": "2019-08-07T12:45:48+08:00", "token": ".eyJleHAiOjE1NjUxNTMxNDgsImlkIjoiYWRtaW4iLCJvcmlnX2lhdCI6MTU2NTE0OTU0OH0.-zvzHvbg0A" }"
+// @Router /api/v1/login [post]
+```
+
+兩個條件同時成立才有 bypass：(a) `config/settings.yml` 的 `application.mode` 是 `dev`（compose 檔內嵌設定就是 `dev`）；(b) request 同時帶 `code:"0"` 與 `uuid:"0"`。只中一個會走正常 captcha 驗證並失敗。production 部署請改 `mode: prod`，bypass 自動關閉。
+
+> 想看這條 login 背後打了哪些 SQL（`sys_user` 查詢、`sys_role` lookup、`sys_login_log` 寫入）？第 6 節 `Runtime 驗證 recipe` 會用 GORM SQL log 反向驗證。
 
 ---
 
