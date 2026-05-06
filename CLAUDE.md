@@ -9,7 +9,7 @@ Companion artifacts in the same feature directory:
 - `data-model.md` — sys_user / sys_role / sys_login_log fields read by login + JWT claim shape
 - `contracts/post-login.md`, `contracts/get-captcha.md` — REST contracts (documented existing behaviour)
 - `quickstart.md` — 5-minute "clone → JWT" path
-- `tasks.md` — created by `/speckit-tasks` (not yet present)
+- `tasks.md` — Phase 2 task list (T001–T022, present and executed)
 <!-- SPECKIT END -->
 
 ## graphify
