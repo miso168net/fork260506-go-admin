@@ -1,17 +1,23 @@
 ---
 type: community
-cohesion: 1.00
-members: 2
+cohesion: 0.36
+members: 8
 ---
 
 # Community 56
 
-**Cohesion:** 1.00 - tightly connected
-**Members:** 2 nodes
+**Cohesion:** 0.36 - loosely connected
+**Members:** 8 nodes
 
 ## Members
-- [[Ping()]] - code - common/middleware/handler/ping.go
-- [[ping.go]] - code - common/middleware/handler/ping.go
+- [[.GetTempToken()]] - code - common/file_store/kodo.go
+- [[.Setup()_1]] - code - common/file_store/kodo.go
+- [[.UpLoad()]] - code - common/file_store/kodo.go
+- [[.getToken()]] - code - common/file_store/kodo.go
+- [[.setZoneORDefault()]] - code - common/file_store/kodo.go
+- [[QiNiuKODO]] - code - common/file_store/kodo.go
+- [[Zone]] - code - common/file_store/kodo.go
+- [[kodo.go]] - code - common/file_store/kodo.go
 
 ## Live Query (requires Dataview plugin)
 
@@ -19,3 +25,10 @@ members: 2
 TABLE source_file, type FROM #community/Community_56
 SORT file.name ASC
 ```
+
+## Connections to other communities
+- 2 edges to [[_COMMUNITY_Sys Menu Service & Order DTOs]]
+
+## Top bridge nodes
+- [[.getToken()]] - degree 4, connects to 1 community
+- [[.setZoneORDefault()]] - degree 3, connects to 1 community

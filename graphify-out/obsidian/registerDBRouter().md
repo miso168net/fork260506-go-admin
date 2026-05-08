@@ -1,12 +1,12 @@
 ---
 source_file: "app/other/router/gen_router.go"
 type: "code"
-community: "Community 6"
+community: "Community 41"
 location: "L33"
 tags:
   - graphify/code
   - graphify/INFERRED
-  - community/Community_6
+  - community/Community_41
 ---
 
 # registerDBRouter()
@@ -15,4 +15,4 @@ tags:
 - [[.Get()_24]] - `calls` [INFERRED]
 - [[gen_router.go]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/Community_6
+#graphify/code #graphify/INFERRED #community/Community_41

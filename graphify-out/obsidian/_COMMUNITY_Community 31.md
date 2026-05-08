@@ -1,20 +1,30 @@
 ---
 type: community
-cohesion: 0.60
-members: 5
+cohesion: 0.28
+members: 15
 ---
 
 # Community 31
 
-**Cohesion:** 0.60 - moderately connected
-**Members:** 5 nodes
+**Cohesion:** 0.28 - loosely connected
+**Members:** 15 nodes
 
 ## Members
-- [[Form Generator Logo (V mark)]] - image - static/form-generator/img/logo.e1bc3747.png
-- [[Form Generator module]] - image - static/form-generator/img/logo.e1bc3747.png
-- [[Green rounded pebble background]] - image - static/form-generator/img/logo.e1bc3747.png
-- [[Stylized letter V]] - image - static/form-generator/img/logo.e1bc3747.png
-- [[vue-form-making  form-generator project]] - image - static/form-generator/img/logo.e1bc3747.png
+- [[.UpLoad()_2]] - code - common/file_store/oss.go
+- [[.UploadFile()]] - code - app/other/apis/file.go
+- [[.baseImg()]] - code - app/other/apis/file.go
+- [[.buildFileResponse()]] - code - app/other/apis/file.go
+- [[.handleBase64File()]] - code - app/other/apis/file.go
+- [[.handleMultipleFiles()]] - code - app/other/apis/file.go
+- [[.handleSingleFile()]] - code - app/other/apis/file.go
+- [[.multipleFile()]] - code - app/other/apis/file.go
+- [[.singleFile()]] - code - app/other/apis/file.go
+- [[File]] - code - app/other/apis/file.go
+- [[FileResponse]] - code - app/other/apis/file.go
+- [[file.go]] - code - app/other/apis/file.go
+- [[ossUpload()]] - code - app/other/apis/file.go
+- [[qiniuUpload()]] - code - app/other/apis/file.go
+- [[thirdUpload()]] - code - app/other/apis/file.go
 
 ## Live Query (requires Dataview plugin)
 
@@ -22,3 +32,15 @@ members: 5
 TABLE source_file, type FROM #community/Community_31
 SORT file.name ASC
 ```
+
+## Connections to other communities
+- 7 edges to [[_COMMUNITY_Common API & Service Layer]]
+- 2 edges to [[_COMMUNITY_Community 63]]
+- 2 edges to [[_COMMUNITY_Database Init & File Storage]]
+
+## Top bridge nodes
+- [[.UpLoad()_2]] - degree 7, connects to 2 communities
+- [[.UploadFile()]] - degree 6, connects to 1 community
+- [[.baseImg()]] - degree 5, connects to 1 community
+- [[.multipleFile()]] - degree 5, connects to 1 community
+- [[.handleBase64File()]] - degree 4, connects to 1 community

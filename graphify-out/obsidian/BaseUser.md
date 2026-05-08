@@ -1,12 +1,12 @@
 ---
 source_file: "common/models/user.go"
 type: "code"
-community: "Community 16"
+community: "Community 68"
 location: "L10"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_16
+  - community/Community_68
 ---
 
 # BaseUser
@@ -18,4 +18,4 @@ tags:
 - [[.generateSalt()]] - `method` [EXTRACTED]
 - [[user.go_1]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_16
+#graphify/code #graphify/EXTRACTED #community/Community_68

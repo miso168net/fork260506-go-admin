@@ -1,12 +1,12 @@
 ---
 source_file: "cmd/migrate/migration/init.go"
 type: "code"
-community: "Community 4"
+community: "Community 52"
 location: "L63"
 tags:
   - graphify/code
   - graphify/INFERRED
-  - community/Community_4
+  - community/Community_52
 ---
 
 # GetFilename()
@@ -16,4 +16,4 @@ tags:
 - [[init()_20]] - `calls` [INFERRED]
 - [[init.go]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/Community_4
+#graphify/code #graphify/INFERRED #community/Community_52

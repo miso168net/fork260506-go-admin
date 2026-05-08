@@ -1,12 +1,12 @@
 ---
 source_file: "common/middleware/trace.go"
 type: "code"
-community: "Community 7"
+community: "Frontend Babel Top-Level Letters"
 location: "L9"
 tags:
   - graphify/code
   - graphify/INFERRED
-  - community/Community_7
+  - community/Frontend_Babel_Top-Level_Letters
 ---
 
 # Trace()
@@ -16,4 +16,4 @@ tags:
 - [[n()]] - `calls` [INFERRED]
 - [[trace.go]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/Community_7
+#graphify/code #graphify/INFERRED #community/Frontend_Babel_Top-Level_Letters

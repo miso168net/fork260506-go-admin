@@ -1,12 +1,12 @@
 ---
 source_file: "cmd/migrate/migration/models/sys_role.go"
 type: "code"
-community: "Community 8"
+community: "Community 67"
 location: "L3"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_8
+  - community/Community_67
 ---
 
 # SysRole
@@ -18,4 +18,4 @@ tags:
 - [[sys_role.go_1]] - `contains` [EXTRACTED]
 - [[sys_role.go_5]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_8
+#graphify/code #graphify/EXTRACTED #community/Community_67

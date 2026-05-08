@@ -1,12 +1,12 @@
 ---
 source_file: "config/extend.go"
 type: "code"
-community: "Community 46"
+community: "Community 99"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_46
+  - community/Community_99
 ---
 
 # extend.go
@@ -15,4 +15,4 @@ tags:
 - [[AMap]] - `contains` [EXTRACTED]
 - [[Extend]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_46
+#graphify/code #graphify/EXTRACTED #community/Community_99

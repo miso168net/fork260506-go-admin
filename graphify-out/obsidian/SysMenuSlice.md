@@ -1,12 +1,12 @@
 ---
 source_file: "app/admin/models/sys_menu.go"
 type: "code"
-community: "Community 3"
+community: "Sys Menu Service & Order DTOs"
 location: "L33"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_3
+  - community/Sys_Menu_Service__Order_DTOs
 ---
 
 # SysMenuSlice
@@ -18,4 +18,4 @@ tags:
 - [[.getByRoleName()]] - `calls` [INFERRED]
 - [[sys_menu.go_1]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_3
+#graphify/code #graphify/EXTRACTED #community/Sys_Menu_Service__Order_DTOs

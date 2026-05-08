@@ -1,12 +1,12 @@
 ---
 source_file: "app/admin/service/dto/sys_opera_log.go"
 type: "code"
-community: "Community 25"
+community: "Community 45"
 location: "L29"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_25
+  - community/Community_45
 ---
 
 # SysOperaLogOrder
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[sys_opera_log.go_4]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_25
+#graphify/code #graphify/EXTRACTED #community/Community_45

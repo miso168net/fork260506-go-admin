@@ -1,11 +1,11 @@
 ---
 source_file: "static/uploadfile/77cfc1dd-535c-4e60-b34a-5909e2cf5ed0.jpg"
 type: "image"
-community: "Community 32"
+community: "Community 77"
 tags:
   - graphify/image
   - graphify/EXTRACTED
-  - community/Community_32
+  - community/Community_77
 ---
 
 # Go Gopher Mascot Image
@@ -15,4 +15,4 @@ tags:
 - [[Static Uploadfile Assets]] - `stored_in` [EXTRACTED]
 - [[go-admin Project]] - `used_as_sample_upload_in` [AMBIGUOUS]
 
-#graphify/image #graphify/EXTRACTED #community/Community_32
+#graphify/image #graphify/EXTRACTED #community/Community_77

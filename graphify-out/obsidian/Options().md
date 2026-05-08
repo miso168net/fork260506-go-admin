@@ -1,12 +1,12 @@
 ---
 source_file: "common/middleware/header.go"
 type: "code"
-community: "Community 4"
+community: "Database Init & File Storage"
 location: "L22"
 tags:
   - graphify/code
   - graphify/INFERRED
-  - community/Community_4
+  - community/Database_Init__File_Storage
 ---
 
 # Options()
@@ -16,4 +16,4 @@ tags:
 - [[header.go]] - `contains` [EXTRACTED]
 - [[setupSimpleDatabase()]] - `calls` [INFERRED]
 
-#graphify/code #graphify/INFERRED #community/Community_4
+#graphify/code #graphify/INFERRED #community/Database_Init__File_Storage

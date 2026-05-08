@@ -1,12 +1,12 @@
 ---
 source_file: "app/other/router/gen_router.go"
 type: "code"
-community: "Community 6"
+community: "Community 41"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_6
+  - community/Community_41
 ---
 
 # gen_router.go
@@ -17,4 +17,4 @@ tags:
 - [[registerSysTableRouter()]] - `contains` [EXTRACTED]
 - [[sysNoCheckRoleRouter()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_6
+#graphify/code #graphify/EXTRACTED #community/Community_41

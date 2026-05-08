@@ -1,12 +1,12 @@
 ---
 source_file: "app/admin/service/sys_role.go"
 type: "code"
-community: "Community 3"
+community: "Sys Role Service & Audit ControlBy"
 location: "L19"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_3
+  - community/Sys_Role_Service__Audit_ControlBy
 ---
 
 # SysRole
@@ -24,4 +24,4 @@ tags:
 - [[.UpdateStatus()_1]] - `method` [EXTRACTED]
 - [[sys_role.go_3]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_3
+#graphify/code #graphify/EXTRACTED #community/Sys_Role_Service__Audit_ControlBy

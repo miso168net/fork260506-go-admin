@@ -1,12 +1,12 @@
 ---
 source_file: "app/other/models/tools/sys_columns.go"
 type: "code"
-community: "Community 6"
+community: "Community 61"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_6
+  - community/Community_61
 ---
 
 # sys_columns.go
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[SysColumns]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_6
+#graphify/code #graphify/EXTRACTED #community/Community_61

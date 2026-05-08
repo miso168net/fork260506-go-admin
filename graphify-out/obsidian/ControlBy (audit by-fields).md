@@ -1,12 +1,12 @@
 ---
 source_file: "common/models/by.go"
 type: "code"
-community: "Community 8"
+community: "Community 55"
 location: "L9"
 tags:
   - graphify/code
   - graphify/INFERRED
-  - community/Community_8
+  - community/Community_55
 ---
 
 # ControlBy (audit by-fields)
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[ActiveRecord]] - `implements` [INFERRED]
 
-#graphify/code #graphify/INFERRED #community/Community_8
+#graphify/code #graphify/INFERRED #community/Community_55

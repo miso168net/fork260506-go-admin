@@ -1,12 +1,12 @@
 ---
 source_file: "cmd/migrate/migration/init.go"
 type: "code"
-community: "Community 4"
+community: "Community 52"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_4
+  - community/Community_52
 ---
 
 # init.go
@@ -15,4 +15,4 @@ tags:
 - [[GetFilename()]] - `contains` [EXTRACTED]
 - [[Migration]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_4
+#graphify/code #graphify/EXTRACTED #community/Community_52

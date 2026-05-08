@@ -1,12 +1,12 @@
 ---
 source_file: "cmd/migrate/migration/models/initdb.go"
 type: "code"
-community: "Community 4"
+community: "Community 62"
 location: "L39"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_4
+  - community/Community_62
 ---
 
 # ExecSql()
@@ -20,4 +20,4 @@ tags:
 - [[initdb.go]] - `contains` [EXTRACTED]
 - [[initdb.go_1]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_4
+#graphify/code #graphify/EXTRACTED #community/Community_62

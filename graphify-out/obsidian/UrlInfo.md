@@ -1,12 +1,12 @@
 ---
 source_file: "common/middleware/settings.go"
 type: "code"
-community: "Community 55"
+community: "Community 109"
 location: "L3"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_55
+  - community/Community_109
 ---
 
 # UrlInfo
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[settings.go]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_55
+#graphify/code #graphify/EXTRACTED #community/Community_109

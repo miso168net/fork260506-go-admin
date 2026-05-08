@@ -1,12 +1,12 @@
 ---
 source_file: "app/admin/models/sys_opera_log.go"
 type: "code"
-community: "Community 8"
+community: "Community 58"
 location: "L54"
 tags:
   - graphify/code
   - graphify/INFERRED
-  - community/Community_8
+  - community/Community_58
 ---
 
 # SaveOperaLog()
@@ -17,4 +17,4 @@ tags:
 - [[.Len()]] - `calls` [INFERRED]
 - [[sys_opera_log.go_1]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/Community_8
+#graphify/code #graphify/INFERRED #community/Community_58

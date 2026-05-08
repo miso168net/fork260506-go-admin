@@ -1,12 +1,12 @@
 ---
 source_file: "app/admin/router/sys_dept.go"
 type: "code"
-community: "Community 6"
+community: "Community 87"
 location: "L10"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_6
+  - community/Community_87
 ---
 
 # init()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[sys_dept.go_2]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_6
+#graphify/code #graphify/EXTRACTED #community/Community_87

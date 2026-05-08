@@ -1,12 +1,12 @@
 ---
 source_file: "app/admin/service/dto/sys_menu.go"
 type: "code"
-community: "Community 17"
+community: "Community 29"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_17
+  - community/Community_29
 ---
 
 # sys_menu.go
@@ -21,4 +21,4 @@ tags:
 - [[SysMenuInsertReq]] - `contains` [EXTRACTED]
 - [[SysMenuUpdateReq]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_17
+#graphify/code #graphify/EXTRACTED #community/Community_29

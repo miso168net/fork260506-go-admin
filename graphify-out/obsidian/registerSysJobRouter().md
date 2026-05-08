@@ -1,12 +1,12 @@
 ---
 source_file: "app/jobs/router/sys_job.go"
 type: "code"
-community: "Community 6"
+community: "Community 42"
 location: "L18"
 tags:
   - graphify/code
   - graphify/INFERRED
-  - community/Community_6
+  - community/Community_42
 ---
 
 # registerSysJobRouter()
@@ -23,4 +23,4 @@ tags:
 - [[ViewAction()]] - `calls` [INFERRED]
 - [[sys_job.go_2]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/Community_6
+#graphify/code #graphify/INFERRED #community/Community_42

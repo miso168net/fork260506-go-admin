@@ -1,12 +1,12 @@
 ---
 source_file: "app/other/models/tools/sys_tables.go"
 type: "code"
-community: "Community 6"
+community: "Community 33"
 location: "L10"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_6
+  - community/Community_33
 ---
 
 # SysTables
@@ -22,4 +22,4 @@ tags:
 - [[.Update()_21]] - `method` [EXTRACTED]
 - [[sys_tables.go_1]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_6
+#graphify/code #graphify/EXTRACTED #community/Community_33

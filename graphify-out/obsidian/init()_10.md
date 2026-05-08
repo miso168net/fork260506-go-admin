@@ -1,12 +1,12 @@
 ---
 source_file: "app/jobs/router/sys_job.go"
 type: "code"
-community: "Community 6"
+community: "Community 42"
 location: "L13"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_6
+  - community/Community_42
 ---
 
 # init()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[sys_job.go_2]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_6
+#graphify/code #graphify/EXTRACTED #community/Community_42

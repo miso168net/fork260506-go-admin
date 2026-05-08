@@ -1,12 +1,12 @@
 ---
 source_file: "app/admin/service/dto/sys_user.go"
 type: "code"
-community: "Community 12"
+community: "Sys User DTOs"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_12
+  - community/Sys_User_DTOs
 ---
 
 # sys_user.go
@@ -23,4 +23,4 @@ tags:
 - [[UpdateSysUserAvatarReq]] - `contains` [EXTRACTED]
 - [[UpdateSysUserStatusReq]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_12
+#graphify/code #graphify/EXTRACTED #community/Sys_User_DTOs

@@ -1,12 +1,12 @@
 ---
 source_file: "common/actions/delete.go"
 type: "code"
-community: "Community 1"
+community: "Common API & Service Layer"
 location: "L17"
 tags:
   - graphify/code
   - graphify/INFERRED
-  - community/Community_1
+  - community/Common_API__Service_Layer
 ---
 
 # DeleteAction()
@@ -24,9 +24,9 @@ tags:
 - [[.TableName()_23]] - `calls` [INFERRED]
 - [[.next()]] - `calls` [INFERRED]
 - [[GetPermissionFromContext (exported)]] - `shares_data_with` [EXTRACTED]
-- [[Permission()]] - `shares_data_with` [INFERRED]
+- [[Permission()]] - `calls` [INFERRED]
 - [[delete.go]] - `contains` [EXTRACTED]
 - [[getPermissionFromContext()]] - `calls` [INFERRED]
 - [[registerSysJobRouter()]] - `calls` [INFERRED]
 
-#graphify/code #graphify/INFERRED #community/Community_1
+#graphify/code #graphify/INFERRED #community/Common_API__Service_Layer

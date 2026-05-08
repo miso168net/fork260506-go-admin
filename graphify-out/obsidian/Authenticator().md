@@ -1,12 +1,12 @@
 ---
 source_file: "common/middleware/handler/auth.go"
 type: "code"
-community: "Community 16"
+community: "Common API & Service Layer"
 location: "L63"
 tags:
   - graphify/code
   - graphify/INFERRED
-  - community/Community_16
+  - community/Common_API__Service_Layer
 ---
 
 # Authenticator()
@@ -19,4 +19,4 @@ tags:
 - [[LoginLogToDB()]] - `calls` [EXTRACTED]
 - [[auth.go_1]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/Community_16
+#graphify/code #graphify/INFERRED #community/Common_API__Service_Layer

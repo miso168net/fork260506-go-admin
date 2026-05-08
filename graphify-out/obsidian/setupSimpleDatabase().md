@@ -1,12 +1,12 @@
 ---
 source_file: "common/database/initialize.go"
 type: "code"
-community: "Community 4"
+community: "Database Init & File Storage"
 location: "L27"
 tags:
   - graphify/code
   - graphify/INFERRED
-  - community/Community_4
+  - community/Database_Init__File_Storage
 ---
 
 # setupSimpleDatabase()
@@ -19,4 +19,4 @@ tags:
 - [[init()_23]] - `calls` [INFERRED]
 - [[initialize.go]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/Community_4
+#graphify/code #graphify/INFERRED #community/Database_Init__File_Storage

@@ -1,12 +1,12 @@
 ---
 source_file: "common/dto/auto_form.go"
 type: "code"
-community: "Community 18"
+community: "Community 30"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_18
+  - community/Community_30
 ---
 
 # auto_form.go
@@ -19,4 +19,4 @@ tags:
 - [[Slot]] - `contains` [EXTRACTED]
 - [[Style]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_18
+#graphify/code #graphify/EXTRACTED #community/Community_30

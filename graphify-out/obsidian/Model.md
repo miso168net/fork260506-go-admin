@@ -1,12 +1,12 @@
 ---
 source_file: "common/models/by.go"
 type: "code"
-community: "Community 3"
+community: "Sys Role Service & Audit ControlBy"
 location: "L24"
 tags:
   - graphify/code
   - graphify/INFERRED
-  - community/Community_3
+  - community/Sys_Role_Service__Audit_ControlBy
 ---
 
 # Model
@@ -60,4 +60,4 @@ tags:
 - [[by.go]] - `contains` [EXTRACTED]
 - [[by.go_1]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/Community_3
+#graphify/code #graphify/INFERRED #community/Sys_Role_Service__Audit_ControlBy

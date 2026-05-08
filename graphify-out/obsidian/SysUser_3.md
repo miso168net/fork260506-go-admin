@@ -1,12 +1,12 @@
 ---
 source_file: "common/middleware/handler/user.go"
 type: "code"
-community: "Community 37"
+community: "Community 83"
 location: "L8"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_37
+  - community/Community_83
 ---
 
 # SysUser
@@ -16,4 +16,4 @@ tags:
 - [[.TableName()_22]] - `method` [EXTRACTED]
 - [[user.go]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_37
+#graphify/code #graphify/EXTRACTED #community/Community_83

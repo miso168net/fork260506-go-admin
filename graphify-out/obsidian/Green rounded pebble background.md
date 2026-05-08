@@ -1,11 +1,11 @@
 ---
 source_file: "static/form-generator/img/logo.e1bc3747.png"
 type: "image"
-community: "Community 31"
+community: "Community 76"
 tags:
   - graphify/image
   - graphify/EXTRACTED
-  - community/Community_31
+  - community/Community_76
 ---
 
 # Green rounded pebble background
@@ -14,4 +14,4 @@ tags:
 - [[Form Generator Logo (V mark)]] - `contains` [EXTRACTED]
 - [[Stylized letter V]] - `placed_on` [EXTRACTED]
 
-#graphify/image #graphify/EXTRACTED #community/Community_31
+#graphify/image #graphify/EXTRACTED #community/Community_76

@@ -1,12 +1,12 @@
 ---
 source_file: "common/dto/search.go"
 type: "code"
-community: "Community 3"
+community: "Sys Menu Service & Order DTOs"
 location: "L9"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_3
+  - community/Sys_Menu_Service__Order_DTOs
 ---
 
 # GeneralDelDto
@@ -15,4 +15,4 @@ tags:
 - [[.GetIds()]] - `method` [EXTRACTED]
 - [[search.go]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_3
+#graphify/code #graphify/EXTRACTED #community/Sys_Menu_Service__Order_DTOs

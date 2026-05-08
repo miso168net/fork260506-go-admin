@@ -1,11 +1,11 @@
 ---
 source_file: "static/form-generator/img/logo.e1bc3747.png"
 type: "image"
-community: "Community 31"
+community: "Community 76"
 tags:
   - graphify/image
   - graphify/EXTRACTED
-  - community/Community_31
+  - community/Community_76
 ---
 
 # Stylized letter V
@@ -15,4 +15,4 @@ tags:
 - [[Green rounded pebble background]] - `placed_on` [EXTRACTED]
 - [[vue-form-making  form-generator project]] - `likely_initial_of` [INFERRED]
 
-#graphify/image #graphify/EXTRACTED #community/Community_31
+#graphify/image #graphify/EXTRACTED #community/Community_76

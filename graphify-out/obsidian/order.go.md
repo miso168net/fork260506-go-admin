@@ -1,12 +1,12 @@
 ---
 source_file: "common/dto/order.go"
 type: "code"
-community: "Community 3"
+community: "Sys Menu Service & Order DTOs"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_3
+  - community/Sys_Menu_Service__Order_DTOs
 ---
 
 # order.go
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[OrderDest()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_3
+#graphify/code #graphify/EXTRACTED #community/Sys_Menu_Service__Order_DTOs

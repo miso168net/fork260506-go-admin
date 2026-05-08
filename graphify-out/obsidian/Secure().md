@@ -1,12 +1,12 @@
 ---
 source_file: "common/middleware/header.go"
 type: "code"
-community: "Community 4"
+community: "Database Init & File Storage"
 location: "L37"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_4
+  - community/Database_Init__File_Storage
 ---
 
 # Secure()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[header.go]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_4
+#graphify/code #graphify/EXTRACTED #community/Database_Init__File_Storage

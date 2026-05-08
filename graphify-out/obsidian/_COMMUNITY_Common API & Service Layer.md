@@ -1,0 +1,237 @@
+---
+type: community
+cohesion: 0.05
+members: 174
+---
+
+# Common API & Service Layer
+
+**Cohesion:** 0.05 - loosely connected
+**Members:** 174 nodes
+
+## Members
+- [[.AddError()]] - code - common/apis/api.go
+- [[.Bind()_2]] - code - common/apis/api.go
+- [[.Bind()_5]] - code - common/dto/generate.go
+- [[.Bind()_4]] - code - common/dto/generate.go
+- [[.Custom()]] - code - common/apis/api.go
+- [[.Delete()]] - code - app/admin/apis/sys_config.go
+- [[.Delete()_1]] - code - app/admin/apis/sys_dept.go
+- [[.Delete()_2]] - code - app/admin/apis/sys_dict_data.go
+- [[.Delete()_3]] - code - app/admin/apis/sys_dict_type.go
+- [[.Delete()_4]] - code - app/admin/apis/sys_login_log.go
+- [[.Delete()_5]] - code - app/admin/apis/sys_menu.go
+- [[.Delete()_6]] - code - app/admin/apis/sys_opera_log.go
+- [[.Delete()_7]] - code - app/admin/apis/sys_post.go
+- [[.Delete()_8]] - code - app/admin/apis/sys_role.go
+- [[.Delete()_9]] - code - app/admin/apis/sys_user.go
+- [[.Delete()_10]] - code - app/other/apis/tools/sys_tables.go
+- [[.DeleteSysApi()]] - code - app/admin/apis/sys_api.go
+- [[.Error()]] - code - common/apis/api.go
+- [[.GenApiToFile()]] - code - app/other/apis/tools/gen.go
+- [[.GenCode()]] - code - app/other/apis/tools/gen.go
+- [[.GenMenuAndApi()]] - code - app/other/apis/tools/gen.go
+- [[.GenerateCaptchaHandler()]] - code - app/admin/apis/captcha.go
+- [[.GenerateM()_2]] - code - app/jobs/service/dto/sys_job.go
+- [[.Get()]] - code - app/admin/apis/sys_api.go
+- [[.Get()_1]] - code - app/admin/apis/sys_config.go
+- [[.Get()_2]] - code - app/admin/apis/sys_dept.go
+- [[.Get()_3]] - code - app/admin/apis/sys_dict_data.go
+- [[.Get()_4]] - code - app/admin/apis/sys_dict_type.go
+- [[.Get()_5]] - code - app/admin/apis/sys_login_log.go
+- [[.Get()_6]] - code - app/admin/apis/sys_menu.go
+- [[.Get()_7]] - code - app/admin/apis/sys_opera_log.go
+- [[.Get()_8]] - code - app/admin/apis/sys_post.go
+- [[.Get()_9]] - code - app/admin/apis/sys_role.go
+- [[.Get()_10]] - code - app/admin/apis/sys_user.go
+- [[.Get()_18]] - code - app/admin/service/sys_opera_log.go
+- [[.Get()_22]] - code - app/other/apis/tools/sys_tables.go
+- [[.Get2Set()]] - code - app/admin/apis/sys_config.go
+- [[.Get2SysApp()]] - code - app/admin/apis/sys_config.go
+- [[.Get2Tree()]] - code - app/admin/apis/sys_dept.go
+- [[.GetAll()]] - code - app/admin/apis/sys_dict_data.go
+- [[.GetAll()_1]] - code - app/admin/apis/sys_dict_type.go
+- [[.GetDBColumnList()]] - code - app/other/apis/tools/db_columns.go
+- [[.GetDBTableList()]] - code - app/other/apis/tools/db_tables.go
+- [[.GetDataScope()]] - code - app/admin/models/datascope.go
+- [[.GetDeptTreeRoleSelect()]] - code - app/admin/apis/sys_dept.go
+- [[.GetId()_58]] - code - common/dto/generate.go
+- [[.GetId()_57]] - code - common/dto/generate.go
+- [[.GetInfo()]] - code - app/admin/apis/sys_user.go
+- [[.GetLogger()]] - code - common/apis/api.go
+- [[.GetMenuRole()]] - code - app/admin/apis/sys_menu.go
+- [[.GetMenuTreeSelect()]] - code - app/admin/apis/sys_menu.go
+- [[.GetOrm()]] - code - common/apis/api.go
+- [[.GetPage()]] - code - app/admin/apis/sys_api.go
+- [[.GetPage()_1]] - code - app/admin/apis/sys_config.go
+- [[.GetPage()_2]] - code - app/admin/apis/sys_dept.go
+- [[.GetPage()_3]] - code - app/admin/apis/sys_dict_data.go
+- [[.GetPage()_4]] - code - app/admin/apis/sys_dict_type.go
+- [[.GetPage()_5]] - code - app/admin/apis/sys_login_log.go
+- [[.GetPage()_6]] - code - app/admin/apis/sys_menu.go
+- [[.GetPage()_7]] - code - app/admin/apis/sys_opera_log.go
+- [[.GetPage()_8]] - code - app/admin/apis/sys_post.go
+- [[.GetPage()_9]] - code - app/admin/apis/sys_role.go
+- [[.GetPage()_10]] - code - app/admin/apis/sys_user.go
+- [[.GetPage()_21]] - code - app/other/apis/tools/sys_tables.go
+- [[.GetPage()_24]] - code - app/other/models/tools/sys_tables.go
+- [[.GetProfile()]] - code - app/admin/apis/sys_user.go
+- [[.GetProfile()_1]] - code - app/admin/service/sys_user.go
+- [[.GetSysConfigByKEYForService()]] - code - app/admin/apis/sys_config.go
+- [[.GetSysTablesInfo()]] - code - app/other/apis/tools/sys_tables.go
+- [[.GetSysTablesTree()]] - code - app/other/apis/tools/sys_tables.go
+- [[.GetUser()]] - code - common/middleware/handler/login.go
+- [[.Insert()]] - code - app/admin/apis/sys_config.go
+- [[.Insert()_1]] - code - app/admin/apis/sys_dept.go
+- [[.Insert()_2]] - code - app/admin/apis/sys_dict_data.go
+- [[.Insert()_3]] - code - app/admin/apis/sys_dict_type.go
+- [[.Insert()_4]] - code - app/admin/apis/sys_menu.go
+- [[.Insert()_5]] - code - app/admin/apis/sys_post.go
+- [[.Insert()_6]] - code - app/admin/apis/sys_role.go
+- [[.Insert()_7]] - code - app/admin/apis/sys_user.go
+- [[.Insert()_13]] - code - app/admin/service/sys_opera_log.go
+- [[.Insert()_17]] - code - app/other/apis/tools/sys_tables.go
+- [[.InsetAvatar()]] - code - app/admin/apis/sys_user.go
+- [[.MakeContext()]] - code - common/apis/api.go
+- [[.MakeOrm()]] - code - common/apis/api.go
+- [[.MakeService()]] - code - common/apis/api.go
+- [[.NOActionsGen()]] - code - app/other/apis/tools/gen.go
+- [[.OK()]] - code - common/apis/api.go
+- [[.PageOK()]] - code - common/apis/api.go
+- [[.Preview()]] - code - app/other/apis/tools/gen.go
+- [[.Remove()_7]] - code - app/admin/service/sys_opera_log.go
+- [[.RemoveJob()]] - code - app/jobs/service/sys_job.go
+- [[.RemoveJobForService()]] - code - app/jobs/apis/sys_job.go
+- [[.ResetPwd()]] - code - app/admin/apis/sys_user.go
+- [[.SetCreateBy()_1]] - code - common/models/by.go
+- [[.SetUpdateBy()_1]] - code - common/models/by.go
+- [[.StartJobForService()]] - code - app/jobs/apis/sys_job.go
+- [[.Update()]] - code - app/admin/apis/sys_api.go
+- [[.Update()_1]] - code - app/admin/apis/sys_config.go
+- [[.Update()_2]] - code - app/admin/apis/sys_dept.go
+- [[.Update()_3]] - code - app/admin/apis/sys_dict_data.go
+- [[.Update()_4]] - code - app/admin/apis/sys_dict_type.go
+- [[.Update()_5]] - code - app/admin/apis/sys_menu.go
+- [[.Update()_6]] - code - app/admin/apis/sys_post.go
+- [[.Update()_7]] - code - app/admin/apis/sys_role.go
+- [[.Update()_8]] - code - app/admin/apis/sys_user.go
+- [[.Update()_19]] - code - app/other/apis/tools/sys_tables.go
+- [[.Update()_21]] - code - app/other/models/tools/sys_tables.go
+- [[.Update2DataScope()]] - code - app/admin/apis/sys_role.go
+- [[.Update2Set()]] - code - app/admin/apis/sys_config.go
+- [[.Update2Status()]] - code - app/admin/apis/sys_role.go
+- [[.UpdatePwd()]] - code - app/admin/apis/sys_user.go
+- [[.UpdateStatus()]] - code - app/admin/apis/sys_user.go
+- [[Api]] - code - common/apis/api.go
+- [[Authenticator()]] - code - common/middleware/handler/auth.go
+- [[CreateAction()]] - code - common/actions/create.go
+- [[DataPermission]] - code - app/admin/models/datascope.go
+- [[DeleteAction()]] - code - common/actions/delete.go
+- [[Execute()]] - code - cmd/cobra.go
+- [[Gen]] - code - app/other/apis/tools/gen.go
+- [[GetPermissionFromContext (exported)]] - code - common/actions/permission.go
+- [[LoadPolicy()]] - code - common/global/casbin.go
+- [[Login]] - code - common/middleware/handler/login.go
+- [[ObjectDeleteReq]] - code - common/dto/generate.go
+- [[ObjectGetReq]] - code - common/dto/generate.go
+- [[Remove()]] - code - app/jobs/jobbase.go
+- [[SysApi]] - code - app/admin/apis/sys_api.go
+- [[SysConfig]] - code - app/admin/apis/sys_config.go
+- [[SysDept]] - code - app/admin/apis/sys_dept.go
+- [[SysDictData]] - code - app/admin/apis/sys_dict_data.go
+- [[SysDictType]] - code - app/admin/apis/sys_dict_type.go
+- [[SysJob]] - code - app/jobs/apis/sys_job.go
+- [[SysLoginLog]] - code - app/admin/apis/sys_login_log.go
+- [[SysMenu]] - code - app/admin/apis/sys_menu.go
+- [[SysOperaLog]] - code - app/admin/apis/sys_opera_log.go
+- [[SysOperaLog_2]] - code - app/admin/service/sys_opera_log.go
+- [[SysPost]] - code - app/admin/apis/sys_post.go
+- [[SysRole]] - code - app/admin/apis/sys_role.go
+- [[SysTable]] - code - app/other/apis/tools/sys_tables.go
+- [[SysUser]] - code - app/admin/apis/sys_user.go
+- [[System]] - code - app/admin/apis/captcha.go
+- [[UpdateAction()]] - code - common/actions/update.go
+- [[ViewAction()]] - code - common/actions/view.go
+- [[api.go]] - code - common/apis/api.go
+- [[captcha.go]] - code - app/admin/apis/captcha.go
+- [[casbin.go]] - code - common/global/casbin.go
+- [[cobra.go]] - code - cmd/cobra.go
+- [[create.go]] - code - common/actions/create.go
+- [[datascope.go]] - code - app/admin/models/datascope.go
+- [[delete.go]] - code - common/actions/delete.go
+- [[gen.go]] - code - app/other/apis/tools/gen.go
+- [[genTableInit()]] - code - app/other/apis/tools/sys_tables.go
+- [[generate.go]] - code - common/dto/generate.go
+- [[getPermissionFromContext()]] - code - common/actions/permission.go
+- [[init()_15]] - code - cmd/cobra.go
+- [[login.go]] - code - common/middleware/handler/login.go
+- [[main()]] - code - main.go
+- [[main.go]] - code - main.go
+- [[sys_api.go]] - code - app/admin/apis/sys_api.go
+- [[sys_config.go]] - code - app/admin/apis/sys_config.go
+- [[sys_dept.go]] - code - app/admin/apis/sys_dept.go
+- [[sys_dict_data.go]] - code - app/admin/apis/sys_dict_data.go
+- [[sys_dict_type.go]] - code - app/admin/apis/sys_dict_type.go
+- [[sys_job.go]] - code - app/jobs/apis/sys_job.go
+- [[sys_login_log.go]] - code - app/admin/apis/sys_login_log.go
+- [[sys_menu.go]] - code - app/admin/apis/sys_menu.go
+- [[sys_opera_log.go]] - code - app/admin/apis/sys_opera_log.go
+- [[sys_opera_log.go_3]] - code - app/admin/service/sys_opera_log.go
+- [[sys_post.go]] - code - app/admin/apis/sys_post.go
+- [[sys_role.go]] - code - app/admin/apis/sys_role.go
+- [[sys_tables.go]] - code - app/other/apis/tools/sys_tables.go
+- [[sys_user.go]] - code - app/admin/apis/sys_user.go
+- [[tip()]] - code - cmd/cobra.go
+- [[update.go]] - code - common/actions/update.go
+- [[view.go]] - code - common/actions/view.go
+
+## Live Query (requires Dataview plugin)
+
+```dataview
+TABLE source_file, type FROM #community/Common_API__Service_Layer
+SORT file.name ASC
+```
+
+## Connections to other communities
+- 29 edges to [[_COMMUNITY_Pagination & Search DTOs]]
+- 25 edges to [[_COMMUNITY_Sys APIUser Service & DataScope]]
+- 18 edges to [[_COMMUNITY_Sys Config  Dict  Post Services]]
+- 18 edges to [[_COMMUNITY_Sys Role Service & Audit ControlBy]]
+- 17 edges to [[_COMMUNITY_Community 41]]
+- 12 edges to [[_COMMUNITY_Sys Menu Service & Order DTOs]]
+- 9 edges to [[_COMMUNITY_Frontend Babel Top-Level Letters]]
+- 9 edges to [[_COMMUNITY_Community 42]]
+- 8 edges to [[_COMMUNITY_Community 40]]
+- 8 edges to [[_COMMUNITY_Frontend Babel Identifier Validation]]
+- 7 edges to [[_COMMUNITY_Community 33]]
+- 7 edges to [[_COMMUNITY_Community 31]]
+- 4 edges to [[_COMMUNITY_Job Scheduling Module]]
+- 4 edges to [[_COMMUNITY_Frontend Babel Async-Arrow Edge Cases]]
+- 4 edges to [[_COMMUNITY_Database Init & File Storage]]
+- 3 edges to [[_COMMUNITY_Community 25]]
+- 3 edges to [[_COMMUNITY_Community 60]]
+- 2 edges to [[_COMMUNITY_Community 39]]
+- 2 edges to [[_COMMUNITY_Community 61]]
+- 2 edges to [[_COMMUNITY_Community 50]]
+- 2 edges to [[_COMMUNITY_Frontend Babel Template & Lookahead]]
+- 2 edges to [[_COMMUNITY_TinyMCE Form Generator Bundle]]
+- 1 edge to [[_COMMUNITY_Community 62]]
+- 1 edge to [[_COMMUNITY_Community 59]]
+- 1 edge to [[_COMMUNITY_Community 58]]
+- 1 edge to [[_COMMUNITY_Community 46]]
+- 1 edge to [[_COMMUNITY_Community 43]]
+- 1 edge to [[_COMMUNITY_Community 52]]
+- 1 edge to [[_COMMUNITY_Frontend Babel Function Parser]]
+- 1 edge to [[_COMMUNITY_Community 48]]
+- 1 edge to [[_COMMUNITY_Community 63]]
+- 1 edge to [[_COMMUNITY_Community 32]]
+- 1 edge to [[_COMMUNITY_Frontend Babel Flow Declaration]]
+- 1 edge to [[_COMMUNITY_Frontend Babel Expression & Eat]]
+- 1 edge to [[_COMMUNITY_Community 68]]
+
+## Top bridge nodes
+- [[.Error()]] - degree 134, connects to 18 communities
+- [[.Bind()_5]] - degree 90, connects to 8 communities
+- [[ViewAction()]] - degree 16, connects to 6 communities
+- [[.GetId()_58]] - degree 70, connects to 5 communities
+- [[DeleteAction()]] - degree 16, connects to 5 communities

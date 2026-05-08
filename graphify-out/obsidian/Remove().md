@@ -1,12 +1,12 @@
 ---
 source_file: "app/jobs/jobbase.go"
 type: "code"
-community: "Community 1"
+community: "Common API & Service Layer"
 location: "L185"
 tags:
   - graphify/code
   - graphify/INFERRED
-  - community/Community_1
+  - community/Common_API__Service_Layer
 ---
 
 # Remove()
@@ -26,4 +26,4 @@ tags:
 - [[.RemoveJob()]] - `calls` [INFERRED]
 - [[jobbase.go]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/Community_1
+#graphify/code #graphify/INFERRED #community/Common_API__Service_Layer

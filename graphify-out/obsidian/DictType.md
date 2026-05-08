@@ -1,12 +1,12 @@
 ---
 source_file: "cmd/migrate/migration/models/sys_dict_type.go"
 type: "code"
-community: "Community 42"
+community: "Community 95"
 location: "L3"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_42
+  - community/Community_95
 ---
 
 # DictType
@@ -15,4 +15,4 @@ tags:
 - [[.TableName()_18]] - `method` [EXTRACTED]
 - [[sys_dict_type.go_4]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_42
+#graphify/code #graphify/EXTRACTED #community/Community_95

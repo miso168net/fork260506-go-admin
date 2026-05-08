@@ -1,12 +1,12 @@
 ---
 source_file: "common/response/binding.go"
 type: "code"
-community: "Community 18"
+community: "Community 30"
 location: "L22"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_18
+  - community/Community_30
 ---
 
 # bindConstructor
@@ -18,4 +18,4 @@ tags:
 - [[.setBinding()]] - `method` [EXTRACTED]
 - [[binding.go]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_18
+#graphify/code #graphify/EXTRACTED #community/Community_30

@@ -1,88 +1,124 @@
-# Graph Report - .  (2026-05-06)
+# Graph Report - .  (2026-05-08)
 
 ## Corpus Check
-- 196 files · ~62,915 words
-- Verdict: corpus is large enough that graph structure adds value.
+- Large corpus: 216 files · ~87,628 words. Semantic extraction will be expensive (many Claude tokens). Consider running on a subfolder, or use --no-semantic to run AST-only.
 
 ## Summary
-- 1725 nodes · 5422 edges · 73 communities detected
-- Extraction: 77% EXTRACTED · 23% INFERRED · 0% AMBIGUOUS · INFERRED: 1256 edges (avg confidence: 0.8)
-- Token cost: 15,100 input · 5,000 output
+- 1818 nodes · 5565 edges · 129 communities (81 shown, 48 thin omitted)
+- Extraction: 77% EXTRACTED · 23% INFERRED · 0% AMBIGUOUS · INFERRED: 1264 edges (avg confidence: 0.8)
+- Token cost: 75,000 input · 15,000 output
 
 ## Community Hubs (Navigation)
-- [[_COMMUNITY_Frontend Parser Internals|Frontend Parser Internals]]
-- [[_COMMUNITY_Admin REST APIs|Admin REST APIs]]
-- [[_COMMUNITY_Expression Parser Helpers|Expression Parser Helpers]]
-- [[_COMMUNITY_Admin Models & Service Layer|Admin Models & Service Layer]]
-- [[_COMMUNITY_Init & File Routing|Init & File Routing]]
-- [[_COMMUNITY_Comment & Declaration Parser|Comment & Declaration Parser]]
-- [[_COMMUNITY_Admin Routers & Permission|Admin Routers & Permission]]
-- [[_COMMUNITY_Expression Operator Parser|Expression Operator Parser]]
-- [[_COMMUNITY_Admin Sys Models|Admin Sys Models]]
-- [[_COMMUNITY_Common Service & Form Builder|Common Service & Form Builder]]
-- [[_COMMUNITY_Project Documentation|Project Documentation]]
-- [[_COMMUNITY_Job Scheduling|Job Scheduling]]
-- [[_COMMUNITY_User DTOs|User DTOs]]
-- [[_COMMUNITY_Scope Tracker Parser|Scope Tracker Parser]]
-- [[_COMMUNITY_Role DTOs|Role DTOs]]
-- [[_COMMUNITY_Config DTOs|Config DTOs]]
-- [[_COMMUNITY_Auth & Login Middleware|Auth & Login Middleware]]
-- [[_COMMUNITY_Menu DTOs|Menu DTOs]]
-- [[_COMMUNITY_Common DTO Forms|Common DTO Forms]]
-- [[_COMMUNITY_API DTOs|API DTOs]]
-- [[_COMMUNITY_Department DTOs|Department DTOs]]
-- [[_COMMUNITY_Dict Data DTOs|Dict Data DTOs]]
-- [[_COMMUNITY_Dict Type DTOs|Dict Type DTOs]]
-- [[_COMMUNITY_Post DTOs|Post DTOs]]
-- [[_COMMUNITY_Server Monitor|Server Monitor]]
-- [[_COMMUNITY_Operation Log DTOs|Operation Log DTOs]]
-- [[_COMMUNITY_Login Log DTOs|Login Log DTOs]]
-- [[_COMMUNITY_Form Parser Example|Form Parser Example]]
-- [[_COMMUNITY_Comment Processor|Comment Processor]]
-- [[_COMMUNITY_Huawei OBS Storage|Huawei OBS Storage]]
-- [[_COMMUNITY_Response Helpers|Response Helpers]]
-- [[_COMMUNITY_Form Generator Logo|Form Generator Logo]]
-- [[_COMMUNITY_Go Gopher Asset|Go Gopher Asset]]
-- [[_COMMUNITY_Casbin Rule Model|Casbin Rule Model]]
-- [[_COMMUNITY_DB Columns Tool|DB Columns Tool]]
-- [[_COMMUNITY_DB Tables Tool|DB Tables Tool]]
-- [[_COMMUNITY_File Store Interface|File Store Interface]]
-- [[_COMMUNITY_Middleware User Handler|Middleware User Handler]]
-- [[_COMMUNITY_File Router|File Router]]
-- [[_COMMUNITY_RoleDept Migration|RoleDept Migration]]
-- [[_COMMUNITY_SysColumns Migration|SysColumns Migration]]
-- [[_COMMUNITY_DictData Migration|DictData Migration]]
-- [[_COMMUNITY_DictType Migration|DictType Migration]]
-- [[_COMMUNITY_SysTables Migration|SysTables Migration]]
-- [[_COMMUNITY_TbDemo Migration|TbDemo Migration]]
-- [[_COMMUNITY_Role Middleware|Role Middleware]]
-- [[_COMMUNITY_Config Extend|Config Extend]]
-- [[_COMMUNITY_Code Generation Tests|Code Generation Tests]]
-- [[_COMMUNITY_GoAdmin Banner Endpoint|GoAdmin Banner Endpoint]]
-- [[_COMMUNITY_RoleMenu Service|RoleMenu Service]]
-- [[_COMMUNITY_SysTable Service DTO|SysTable Service DTO]]
-- [[_COMMUNITY_API Jobs Init|API Jobs Init]]
-- [[_COMMUNITY_API Other Init|API Other Init]]
-- [[_COMMUNITY_Migration BaseModel|Migration BaseModel]]
-- [[_COMMUNITY_Migrations Local Init|Migrations Local Init]]
-- [[_COMMUNITY_Settings UrlInfo|Settings UrlInfo]]
-- [[_COMMUNITY_Ping Handler|Ping Handler]]
-- [[_COMMUNITY_Swagger Docs Init|Swagger Docs Init]]
-- [[_COMMUNITY_DB Columns API|DB Columns API]]
-- [[_COMMUNITY_DB Tables API|DB Tables API]]
-- [[_COMMUNITY_Actions Type|Actions Type]]
-- [[_COMMUNITY_Database Open|Database Open]]
-- [[_COMMUNITY_SQLite Open|SQLite Open]]
-- [[_COMMUNITY_Global Admin|Global Admin]]
-- [[_COMMUNITY_Global Logo|Global Logo]]
-- [[_COMMUNITY_Global Topic|Global Topic]]
-- [[_COMMUNITY_Common Menu Model|Common Menu Model]]
-- [[_COMMUNITY_TinyMCE Example Bundle|TinyMCE Example Bundle]]
-- [[_COMMUNITY_CGO SQLite Build Note|CGO SQLite Build Note]]
-- [[_COMMUNITY_Empty Upload Log|Empty Upload Log]]
-- [[_COMMUNITY_Generate ObjectById DTO|Generate ObjectById DTO]]
-- [[_COMMUNITY_Pagination Struct|Pagination Struct]]
-- [[_COMMUNITY_Model Audit Base|Model Audit Base]]
+- [[_COMMUNITY_Common API & Service Layer|Common API & Service Layer]]
+- [[_COMMUNITY_Frontend Babel Function Parser|Frontend Babel Function Parser]]
+- [[_COMMUNITY_Frontend Babel Comments & Decorators|Frontend Babel Comments & Decorators]]
+- [[_COMMUNITY_Frontend Babel Top-Level Letters|Frontend Babel Top-Level Letters]]
+- [[_COMMUNITY_Frontend Babel Identifier Validation|Frontend Babel Identifier Validation]]
+- [[_COMMUNITY_Frontend Babel Async-Arrow Edge Cases|Frontend Babel Async-Arrow Edge Cases]]
+- [[_COMMUNITY_TinyMCE Form Generator Bundle|TinyMCE Form Generator Bundle]]
+- [[_COMMUNITY_Frontend Babel Template & Lookahead|Frontend Babel Template & Lookahead]]
+- [[_COMMUNITY_Frontend Babel Expression & Eat|Frontend Babel Expression & Eat]]
+- [[_COMMUNITY_Project Documentation & License|Project Documentation & License]]
+- [[_COMMUNITY_Frontend Babel Reserved Word Check|Frontend Babel Reserved Word Check]]
+- [[_COMMUNITY_Sys Config  Dict  Post Services|Sys Config / Dict / Post Services]]
+- [[_COMMUNITY_Frontend Babel Flow Declaration|Frontend Babel Flow Declaration]]
+- [[_COMMUNITY_Job Scheduling Module|Job Scheduling Module]]
+- [[_COMMUNITY_Sys Menu Service & Order DTOs|Sys Menu Service & Order DTOs]]
+- [[_COMMUNITY_Frontend Babel Object & Async Property|Frontend Babel Object & Async Property]]
+- [[_COMMUNITY_Frontend Babel Local Export & Scope Check|Frontend Babel Local Export & Scope Check]]
+- [[_COMMUNITY_Sys User DTOs|Sys User DTOs]]
+- [[_COMMUNITY_Pagination & Search DTOs|Pagination & Search DTOs]]
+- [[_COMMUNITY_Sys Role Service & Audit ControlBy|Sys Role Service & Audit ControlBy]]
+- [[_COMMUNITY_Sys Role DTOs|Sys Role DTOs]]
+- [[_COMMUNITY_Sys APIUser Service & DataScope|Sys API/User Service & DataScope]]
+- [[_COMMUNITY_Frontend Babel Arrow & JSX Parser|Frontend Babel Arrow & JSX Parser]]
+- [[_COMMUNITY_Sys Config DTOs|Sys Config DTOs]]
+- [[_COMMUNITY_Database Init & File Storage|Database Init & File Storage]]
+- [[_COMMUNITY_Community 25|Community 25]]
+- [[_COMMUNITY_Community 26|Community 26]]
+- [[_COMMUNITY_Community 27|Community 27]]
+- [[_COMMUNITY_Community 28|Community 28]]
+- [[_COMMUNITY_Community 29|Community 29]]
+- [[_COMMUNITY_Community 30|Community 30]]
+- [[_COMMUNITY_Community 31|Community 31]]
+- [[_COMMUNITY_Community 32|Community 32]]
+- [[_COMMUNITY_Community 33|Community 33]]
+- [[_COMMUNITY_Community 34|Community 34]]
+- [[_COMMUNITY_Community 35|Community 35]]
+- [[_COMMUNITY_Community 36|Community 36]]
+- [[_COMMUNITY_Community 37|Community 37]]
+- [[_COMMUNITY_Community 38|Community 38]]
+- [[_COMMUNITY_Community 39|Community 39]]
+- [[_COMMUNITY_Community 40|Community 40]]
+- [[_COMMUNITY_Community 41|Community 41]]
+- [[_COMMUNITY_Community 42|Community 42]]
+- [[_COMMUNITY_Community 43|Community 43]]
+- [[_COMMUNITY_Community 44|Community 44]]
+- [[_COMMUNITY_Community 45|Community 45]]
+- [[_COMMUNITY_Community 46|Community 46]]
+- [[_COMMUNITY_Community 47|Community 47]]
+- [[_COMMUNITY_Community 48|Community 48]]
+- [[_COMMUNITY_Community 49|Community 49]]
+- [[_COMMUNITY_Community 50|Community 50]]
+- [[_COMMUNITY_Community 51|Community 51]]
+- [[_COMMUNITY_Community 52|Community 52]]
+- [[_COMMUNITY_Community 53|Community 53]]
+- [[_COMMUNITY_Community 54|Community 54]]
+- [[_COMMUNITY_Community 55|Community 55]]
+- [[_COMMUNITY_Community 56|Community 56]]
+- [[_COMMUNITY_Community 58|Community 58]]
+- [[_COMMUNITY_Community 59|Community 59]]
+- [[_COMMUNITY_Community 60|Community 60]]
+- [[_COMMUNITY_Community 61|Community 61]]
+- [[_COMMUNITY_Community 62|Community 62]]
+- [[_COMMUNITY_Community 63|Community 63]]
+- [[_COMMUNITY_Community 64|Community 64]]
+- [[_COMMUNITY_Community 65|Community 65]]
+- [[_COMMUNITY_Community 66|Community 66]]
+- [[_COMMUNITY_Community 67|Community 67]]
+- [[_COMMUNITY_Community 68|Community 68]]
+- [[_COMMUNITY_Community 69|Community 69]]
+- [[_COMMUNITY_Community 70|Community 70]]
+- [[_COMMUNITY_Community 71|Community 71]]
+- [[_COMMUNITY_Community 72|Community 72]]
+- [[_COMMUNITY_Community 73|Community 73]]
+- [[_COMMUNITY_Community 74|Community 74]]
+- [[_COMMUNITY_Community 75|Community 75]]
+- [[_COMMUNITY_Community 76|Community 76]]
+- [[_COMMUNITY_Community 77|Community 77]]
+- [[_COMMUNITY_Community 78|Community 78]]
+- [[_COMMUNITY_Community 79|Community 79]]
+- [[_COMMUNITY_Community 80|Community 80]]
+- [[_COMMUNITY_Community 81|Community 81]]
+- [[_COMMUNITY_Community 82|Community 82]]
+- [[_COMMUNITY_Community 83|Community 83]]
+- [[_COMMUNITY_Community 84|Community 84]]
+- [[_COMMUNITY_Community 85|Community 85]]
+- [[_COMMUNITY_Community 86|Community 86]]
+- [[_COMMUNITY_Community 87|Community 87]]
+- [[_COMMUNITY_Community 88|Community 88]]
+- [[_COMMUNITY_Community 89|Community 89]]
+- [[_COMMUNITY_Community 90|Community 90]]
+- [[_COMMUNITY_Community 92|Community 92]]
+- [[_COMMUNITY_Community 93|Community 93]]
+- [[_COMMUNITY_Community 94|Community 94]]
+- [[_COMMUNITY_Community 95|Community 95]]
+- [[_COMMUNITY_Community 96|Community 96]]
+- [[_COMMUNITY_Community 97|Community 97]]
+- [[_COMMUNITY_Community 98|Community 98]]
+- [[_COMMUNITY_Community 99|Community 99]]
+- [[_COMMUNITY_Community 102|Community 102]]
+- [[_COMMUNITY_Community 103|Community 103]]
+- [[_COMMUNITY_Community 106|Community 106]]
+- [[_COMMUNITY_Community 108|Community 108]]
+- [[_COMMUNITY_Community 109|Community 109]]
+- [[_COMMUNITY_Community 112|Community 112]]
+- [[_COMMUNITY_Community 123|Community 123]]
+- [[_COMMUNITY_Community 124|Community 124]]
+- [[_COMMUNITY_Community 125|Community 125]]
+- [[_COMMUNITY_Community 126|Community 126]]
+- [[_COMMUNITY_Community 127|Community 127]]
+- [[_COMMUNITY_Community 128|Community 128]]
 
 ## God Nodes (most connected - your core abstractions)
 1. `Ke` - 87 edges
@@ -97,315 +133,271 @@
 10. `flowParseTypeParameterDeclaration()` - 21 edges
 
 ## Surprising Connections (you probably didn't know these)
-- `go-admin Project (Chinese README)` --semantically_similar_to--> `go-admin Project (English README)`  [INFERRED] [semantically similar]
-  README.Zh-cn.md → README.md
-- `settings.yml configuration schema (Chinese annotated)` --semantically_similar_to--> `config/settings.yml configuration file`  [INFERRED] [semantically similar]
-  config/READMEN.md → README.md
+- `go-admin Project (English README)` --semantically_similar_to--> `go-admin Project (Chinese README)`  [INFERRED] [semantically similar]
+  README.md → README.Zh-cn.md
+- `config/settings.yml configuration file` --semantically_similar_to--> `settings.yml configuration schema (Chinese annotated)`  [INFERRED] [semantically similar]
+  README.md → config/READMEN.md
+- `docker-compose.yml (upstream production compose; needs make build-linux)` --semantically_similar_to--> `docker-compose.learning.yml (SQLite-backed learning compose, opt-in DB persistence)`  [INFERRED] [semantically similar]
+  x_fork.tree-20260506.md → docs/superpowers/specs/2026-05-07-login-trace.md
 - `main()` --calls--> `Execute()`  [INFERRED]
   main.go → cmd/cobra.go
-- `run()` --calls--> `InitJob()`  [INFERRED]
-  cmd/version/server.go → app/jobs/examples.go
-- `Setup()` --calls--> `Setup()`  [INFERRED]
-  app/jobs/jobbase.go → common/storage/initialize.go
+- `registerSysDeptRouter()` --calls--> `AuthCheckRole()`  [INFERRED]
+  app/admin/router/sys_dept.go → common/middleware/permission.go
 
 ## Hyperedges (group relationships)
-- **go-admin core technology stack** — readme_gin_framework, readme_gorm, readme_casbin, readme_jwt_auth, readme_swaggo, readme_viper_config, readme_vue_frontend [EXTRACTED 0.90]
-- **settings.yml top-level subsections** — readmen_application_section, readmen_log_section, readmen_jwt_section, readmen_database_section [EXTRACTED 1.00]
-- **Fork branch lineage (upstream -> master -> main)** — x_fork_upstream_repo, x_fork_master_branch, x_fork_main_branch, x_fork_head_a5cc0a9 [EXTRACTED 1.00]
+- **LoginLog async chain: enqueue (auth.go:77) -> register (server.go:70) -> consumer (sys_login_log.go:46)** — tree_handler_auth_go, tree_cmd_api_server, tree_sys_login_log_consumer, logintrace_layer510_loginlog_async [EXTRACTED 1.00]
+- **11-layer POST /api/v1/login chain (router -> SDK -> auth -> captcha -> getuser -> bcrypt -> role -> payload -> token -> log -> response)** — logintrace_layer51_router, logintrace_layer52_loginhandler, logintrace_layer53_authenticator, logintrace_layer54_captcha, logintrace_layer55_login_struct_getuser, logintrace_layer56_bcrypt, logintrace_layer57_role_lookup, logintrace_layer58_payloadfunc, logintrace_layer59_tokengen, logintrace_layer510_loginlog_async, logintrace_layer511_response [EXTRACTED 1.00]
+- **Runtime verification quartet (FR-012abc + FR-013): GORM SQL + JWT decode + login_log row + failure path** — logintrace_recipe_a_gorm_sql, logintrace_recipe_b_jwt_decode, logintrace_recipe_c_login_log_row, logintrace_recipe_d_failure_path [EXTRACTED 1.00]
 
-## Communities
+## Communities (129 total, 48 thin omitted)
 
-### Community 0 - "Frontend Parser Internals"
-Cohesion: 0.03
-Nodes (211): assertModuleNodeAllowed(), Be, checkExport(), checkProto(), directiveToStmt(), estreeParseBigIntLiteral(), estreeParseLiteral(), estreeParseRegExpLiteral() (+203 more)
-
-### Community 1 - "Admin REST APIs"
+### Community 0 - "Common API & Service Layer"
 Cohesion: 0.05
-Nodes (31): Api, SysApi, SysConfig, SysDept, SysDictData, SysDictType, SysJob, SysLoginLog (+23 more)
+Nodes (33): Api, SysApi, SysConfig, SysDept, SysDictData, SysDictType, SysJob, SysLoginLog (+25 more)
 
-### Community 2 - "Expression Parser Helpers"
-Cohesion: 0.04
-Nodes (60): canHaveLeadingDecorator(), checkLVal(), checkParams(), checkReservedWord(), eatExportStar(), finishArrowValidation(), finishPlaceholder(), flowParseDeclare() (+52 more)
-
-### Community 3 - "Admin Models & Service Layer"
-Cohesion: 0.03
-Nodes (37): CustomError(), GetDataScope (method, dead code), GeneralDelDto, GeneralGetDto, ObjectById, Pagination, SysJobById, SysJobControl (+29 more)
-
-### Community 4 - "Init & File Routing"
-Cohesion: 0.03
-Nodes (51): _1599190683659Tables(), init(), _1653638869132Test(), init(), File, FileResponse, AuthInit(), InitJob() (+43 more)
-
-### Community 5 - "Comment & Declaration Parser"
+### Community 1 - "Frontend Babel Function Parser"
 Cohesion: 0.05
-Nodes (41): addComment(), at, checkDeclaration(), checkGetterSetterParams(), checkNotUnderscore(), checkReservedType(), ct(), de() (+33 more)
+Nodes (23): assertModuleNodeAllowed(), checkExport(), checkParams(), finishArrowValidation(), finishCallExpression(), he(), ht, initFunction() (+15 more)
 
-### Community 6 - "Admin Routers & Permission"
-Cohesion: 0.04
-Nodes (37): DataPermission, DataPermission (struct, app/admin/models), DemoEvn(), registerDBRouter(), registerSysTableRouter(), sysNoCheckRoleRouter(), InitMiddleware(), GetClientIP() (+29 more)
-
-### Community 7 - "Expression Operator Parser"
+### Community 2 - "Frontend Babel Comments & Decorators"
 Cohesion: 0.06
-Nodes (49): _(), A(), Ae(), b(), C(), ce, D(), _e (+41 more)
+Nodes (39): addComment(), at, checkGetterSetterParams(), ct(), de(), dt, Et(), finishToken() (+31 more)
 
-### Community 8 - "Admin Sys Models"
-Cohesion: 0.03
-Nodes (15): ControlBy (audit by-fields), ActiveRecord, SysApi, SysConfig, SysDept, SysDictData, SysDictType, SysLoginLog (+7 more)
+### Community 3 - "Frontend Babel Top-Level Letters"
+Cohesion: 0.05
+Nodes (58): _(), A(), Ae(), b(), C(), ce, checkDeclaration(), D() (+50 more)
 
-### Community 9 - "Common Service & Form Builder"
+### Community 4 - "Frontend Babel Identifier Validation"
+Cohesion: 0.05
+Nodes (68): checkLVal(), checkProto(), estreeParseBigIntLiteral(), estreeParseLiteral(), estreeParseRegExpLiteral(), flowEnumErrorInvalidExplicitType(), flowEnumParseExplicitType(), flowParseDeclareModuleExports() (+60 more)
+
+### Community 5 - "Frontend Babel Async-Arrow Edge Cases"
+Cohesion: 0.07
+Nodes (11): Be, flowEnumMemberInit(), Me, parseNewArguments(), parseSubscript(), parseSubscripts(), shouldParseTypes(), tsNextTokenCanFollowModifier() (+3 more)
+
+### Community 6 - "TinyMCE Form Generator Bundle"
 Cohesion: 0.05
 Nodes (42): _(), a(), B(), buildAttributes(), buildBeforeUpload(), buildData(), buildexport(), buildOptionMethod() (+34 more)
 
-### Community 10 - "Project Documentation"
+### Community 7 - "Frontend Babel Template & Lookahead"
+Cohesion: 0.09
+Nodes (48): checkNotUnderscore(), flowIdentToTypeAnnotation(), flowParseAnonFunctionWithoutParens(), flowParseGenericType(), flowParseInterfaceExtends(), flowParseInterfaceType(), flowParseIntersectionType(), flowParsePostfixType() (+40 more)
+
+### Community 8 - "Frontend Babel Expression & Eat"
+Cohesion: 0.12
+Nodes (29): flowCheckGetterSetterParams(), flowObjectTypeSemicolon(), flowParseDeclareFunction(), flowParseFunctionTypeParam(), flowParseFunctionTypeParams(), flowParseObjectPropertyKey(), flowParseObjectType(), flowParseObjectTypeCallProperty() (+21 more)
+
+### Community 9 - "Project Documentation & License"
 Cohesion: 0.07
 Nodes (34): go-admin-team (copyright holder), MIT License (go-admin), Casbin RBAC Access Control, Code Generation Tool, Docker Build & Deploy Workflow, Form Builder, Gin Web Framework, go-admin Project (English README) (+26 more)
 
-### Community 11 - "Job Scheduling"
+### Community 10 - "Frontend Babel Reserved Word Check"
+Cohesion: 0.11
+Nodes (19): canHaveLeadingDecorator(), checkReservedWord(), eatExportStar(), flowParseDeclareModule(), flowParseEnumDeclaration(), flowParseInterface(), isAbstractClass(), maybeParseDefaultImportSpecifier() (+11 more)
+
+### Community 11 - "Sys Config / Dict / Post Services"
+Cohesion: 0.08
+Nodes (4): SysConfig, SysDictData, SysDictType, SysPost
+
+### Community 12 - "Frontend Babel Flow Declaration"
+Cohesion: 0.15
+Nodes (25): finishPlaceholder(), flowParseDeclare(), flowParseDeclareClass(), flowParseDeclareExportDeclaration(), flowParseDeclareInterface(), flowParseDeclareOpaqueType(), flowParseDeclareTypeAlias(), flowParseDeclareVariable() (+17 more)
+
+### Community 13 - "Job Scheduling Module"
 Cohesion: 0.09
 Nodes (10): AddJob(), Setup(), ExecJob, HttpJob, Job, JobCore, JobExec, SysJob (+2 more)
 
-### Community 12 - "User DTOs"
+### Community 14 - "Sys Menu Service & Order DTOs"
+Cohesion: 0.13
+Nodes (10): CustomError(), GeneralDelDto, ObjectById, SysMenuSlice, OrderDest(), SysMenu, menuCall(), menuDistinct() (+2 more)
+
+### Community 15 - "Frontend Babel Object & Async Property"
+Cohesion: 0.13
+Nodes (15): flowParseTypeParameter(), flowParseVariance(), isClassProperty(), isNonstaticConstructor(), parseConditional(), parseObjectMethod(), parseObjectProperty(), parsePropertyName() (+7 more)
+
+### Community 17 - "Sys User DTOs"
 Cohesion: 0.08
 Nodes (10): DeptJoin, PassWord, ResetSysUserPwdReq, SysUserById, SysUserGetPageReq, SysUserInsertReq, SysUserOrder, SysUserUpdateReq (+2 more)
 
-### Community 13 - "Scope Tracker Parser"
-Cohesion: 0.13
-Nodes (2): ee, ie
+### Community 18 - "Pagination & Search DTOs"
+Cohesion: 0.25
+Nodes (5): GeneralGetDto, Pagination, IndexAction(), MakeCondition(), Paginate()
 
-### Community 14 - "Role DTOs"
+### Community 19 - "Sys Role Service & Audit ControlBy"
+Cohesion: 0.15
+Nodes (4): ControlBy, Model, ModelTime, SysRole
+
+### Community 20 - "Sys Role DTOs"
 Cohesion: 0.1
 Nodes (10): DeptIdList, RoleDataScopeReq, SysRoleByName, SysRoleDeleteReq, SysRoleGetPageReq, SysRoleGetReq, SysRoleInsertReq, SysRoleOrder (+2 more)
 
-### Community 15 - "Config DTOs"
+### Community 21 - "Sys API/User Service & DataScope"
+Cohesion: 0.18
+Nodes (5): GetDataScope (method, dead code), Migration, Permission(), SysApi, SysUser
+
+### Community 22 - "Frontend Babel Arrow & JSX Parser"
+Cohesion: 0.15
+Nodes (14): directiveToStmt(), jsxParseClosingElementAt(), jsxParseElementAt(), jsxParseElementName(), jsxParseEmptyExpression(), jsxParseIdentifier(), jsxParseNamespacedName(), jsxParseOpeningElementAt() (+6 more)
+
+### Community 23 - "Sys Config DTOs"
 Cohesion: 0.11
 Nodes (10): GetSetSysConfigReq, GetSysConfigByKEYForServiceResp, SysConfigByKeyReq, SysConfigControl, SysConfigDeleteReq, SysConfigGetPageReq, SysConfigGetReq, SysConfigGetToSysAppReq (+2 more)
 
-### Community 16 - "Auth & Login Middleware"
-Cohesion: 0.15
-Nodes (5): Authenticator(), LoginLogToDB(), LogOut(), Login, BaseUser
+### Community 24 - "Database Init & File Storage"
+Cohesion: 0.13
+Nodes (10): OXS, NoCache(), Options(), Setup(), setupCache(), setupCaptcha(), setupQueue(), setupSimpleDatabase() (+2 more)
 
-### Community 17 - "Menu DTOs"
+### Community 25 - "Community 25"
+Cohesion: 0.17
+Nodes (10): InitJob(), ExamplesOne, genFile(), init(), initDB(), migrateModel(), run(), setup() (+2 more)
+
+### Community 26 - "Community 26"
+Cohesion: 0.12
+Nodes (18): Section 2 - Bring up backend with `docker compose -f docker-compose.learning.yml up --build`, docker-compose.learning.yml (SQLite-backed learning compose, opt-in DB persistence), Dockerfile.learning (multi-stage golang:1.24-alpine builder; flips enableddb to true via sed), enableddb flip (Dockerfile.learning sed: false->true) baked into runtime image, config/ (settings.yml family + SQL seed), docker-compose.yml (upstream production compose; needs make build-linux), Dockerfile (upstream single-stage; assumes ./main pre-built), docs/admin/ (swaggo-generated swagger spec embedded in binary) (+10 more)
+
+### Community 27 - "Community 27"
+Cohesion: 0.16
+Nodes (12): checkReservedType(), flowEnumMemberRaw(), flowParseRestrictedIdentifier(), flowParseTypeAnnotatableIdentifier(), parseBindingAtom(), parseFunctionId(), parseIdentifier(), parseImportSource() (+4 more)
+
+### Community 28 - "Community 28"
+Cohesion: 0.24
+Nodes (17): FR-010 - cross-repo SDK code requires separate spec (no deep-trace into core), settings.jwt.secret default literal 'go-admin' (HS256 signing key), Layer 5.11 - Response assembly via SDK default LoginResponse (5-key) vs LogOut/Unauthorized (2-key), Layer 5.2 - gin-jwt LoginHandler SDK boundary (stub, FR-010), Layer 5.3 - Authenticator (auth.go:63-107) - first project callback, defer LoginLogToDB, Layer 5.4 - Captcha verify outer if !=dev (auth.go:88) clear-after-verify flag true, Layer 5.5 - Login struct + Login.GetUser sys_user query (login.go:9-14, :16-33), Layer 5.6 - pkg.CompareHashAndPassword bcrypt compare (login.go:22) - the only CPU-bound step (+9 more)
+
+### Community 29 - "Community 29"
 Cohesion: 0.12
 Nodes (8): MenuLabel, MenuRole, SelectRole, SysMenuDeleteReq, SysMenuGetPageReq, SysMenuGetReq, SysMenuInsertReq, SysMenuUpdateReq
 
-### Community 18 - "Common DTO Forms"
+### Community 30 - "Community 30"
 Cohesion: 0.14
 Nodes (9): AutoForm, Config, Control, Field, Index, Option, Slot, Style (+1 more)
 
-### Community 19 - "API DTOs"
+### Community 31 - "Community 31"
+Cohesion: 0.28
+Nodes (5): File, FileResponse, ossUpload(), qiniuUpload(), thirdUpload()
+
+### Community 32 - "Community 32"
+Cohesion: 0.14
+Nodes (5): AuthCheckRole(), registerSysApiRouter(), registerSysConfigRouter(), registerSysServerMonitorRouter(), registerSysUserRouter()
+
+### Community 33 - "Community 33"
+Cohesion: 0.16
+Nodes (4): SysLoginLog, registerSysRoleRouter(), Params, SysTables
+
+### Community 34 - "Community 34"
 Cohesion: 0.14
 Nodes (6): SysApiDeleteReq, SysApiGetPageReq, SysApiGetReq, SysApiInsertReq, SysApiOrder, SysApiUpdateReq
 
-### Community 20 - "Department DTOs"
+### Community 35 - "Community 35"
 Cohesion: 0.14
 Nodes (6): DeptLabel, SysDeptDeleteReq, SysDeptGetPageReq, SysDeptGetReq, SysDeptInsertReq, SysDeptUpdateReq
 
-### Community 21 - "Dict Data DTOs"
+### Community 36 - "Community 36"
 Cohesion: 0.14
 Nodes (6): SysDictDataDeleteReq, SysDictDataGetAllResp, SysDictDataGetPageReq, SysDictDataGetReq, SysDictDataInsertReq, SysDictDataUpdateReq
 
-### Community 22 - "Dict Type DTOs"
+### Community 37 - "Community 37"
 Cohesion: 0.14
 Nodes (6): SysDictTypeDeleteReq, SysDictTypeGetPageReq, SysDictTypeGetReq, SysDictTypeInsertReq, SysDictTypeOrder, SysDictTypeUpdateReq
 
-### Community 23 - "Post DTOs"
+### Community 38 - "Community 38"
 Cohesion: 0.14
 Nodes (5): SysPostDeleteReq, SysPostGetReq, SysPostInsertReq, SysPostPageReq, SysPostUpdateReq
 
-### Community 24 - "Server Monitor"
+### Community 39 - "Community 39"
+Cohesion: 0.15
+Nodes (7): AuthInit(), TlsHandler(), InitRouter(), InitRouter(), RequestId(), Sentinel(), initRouter()
+
+### Community 40 - "Community 40"
+Cohesion: 0.21
+Nodes (3): SysDept, deptLabelCall(), deptTreeCall()
+
+### Community 41 - "Community 41"
+Cohesion: 0.28
+Nodes (9): registerDBRouter(), registerSysTableRouter(), sysNoCheckRoleRouter(), InitSysRouter(), registerBaseRouter(), sysBaseRouter(), sysCheckRoleRouterInit(), sysStaticFileRouter() (+1 more)
+
+### Community 42 - "Community 42"
+Cohesion: 0.18
+Nodes (7): DataPermission, DataPermission (struct, app/admin/models), DataPermission (struct, common/actions), newDataPermission(), PermissionAction(), registerDictRouter(), registerSysJobRouter()
+
+### Community 43 - "Community 43"
 Cohesion: 0.3
 Nodes (10): ServerMonitor, getCPUInfo(), getDiskInfo(), GetHourDiffer(), getMemoryInfo(), getNetworkInfo(), getOSInfo(), getSwapInfo() (+2 more)
 
-### Community 25 - "Operation Log DTOs"
+### Community 44 - "Community 44"
+Cohesion: 0.2
+Nodes (12): Constitution / current plan reference (in SpecKit block), SpecKit START/END marker block, Critical async wrinkle: 50-500ms gap between HTTP response and sys_login_log row landing, JWT claims 8-key shape: 6 business (identity/roleid/rolekey/nice/datascope/rolename) + 2 envelope (exp/orig_iat), Constitution Principle V - login log is product feature not debug aid (positive + negative path), JWT decode procedure (URL-safe base64; cut -d. -f2), Layer 5.10 - LoginLog async write: 3 files (auth.go:77 enqueue, server.go:70 register, sys_login_log.go:46 consumer), Track B - write-path CRUD with sys_operation_log (global.OperateLog topic) (+4 more)
+
+### Community 45 - "Community 45"
 Cohesion: 0.18
 Nodes (5): SysOperaLogControl, SysOperaLogDeleteReq, SysOperaLogGetPageReq, SysOperaLogGetReq, SysOperaLogOrder
 
-### Community 26 - "Login Log DTOs"
+### Community 46 - "Community 46"
+Cohesion: 0.18
+Nodes (4): SysJobById, SysJobControl, SysJobItem, SysJobSearch
+
+### Community 48 - "Community 48"
+Cohesion: 0.38
+Nodes (7): F(), checkRoleRouter(), examplesCheckRoleRouter(), examplesNoCheckRoleRouter(), InitExamplesRouter(), initRouter(), noCheckRoleRouter()
+
+### Community 49 - "Community 49"
+Cohesion: 0.22
+Nodes (10): common/apis/api.go (base Api struct: MakeContext/Bind/Custom/Error/MakeOrm), common/database/ (DB Setup/open for mysql/postgres/sqlserver/sqlite3), common/ (cross-module infrastructure), common/dto/ (cross-module DTOs: Pagination/Generate/search), common/file_store/ (storage abstraction: local/aliyun/huawei/qiniu), common/global/ (singletons: Admin, Casbin, queue topics), common/middleware/ (Gin middlewares + handler/ login chain core), common/models/ (BaseModel/ControlBy/Model audit + PK base) (+2 more)
+
+### Community 50 - "Community 50"
+Cohesion: 0.25
+Nodes (5): DemoEvn(), InitMiddleware(), GetClientIP(), LoggerToFile(), SetDBOperLog()
+
+### Community 51 - "Community 51"
 Cohesion: 0.22
 Nodes (5): SysLoginLogControl, SysLoginLogDeleteReq, SysLoginLogGetPageReq, SysLoginLogGetReq, SysLoginLogOrder
 
-### Community 27 - "Form Parser Example"
+### Community 52 - "Community 52"
+Cohesion: 0.28
+Nodes (5): init(), _1653638869132Test(), init(), GetFilename(), Migration
+
+### Community 53 - "Community 53"
+Cohesion: 0.28
+Nodes (9): 2026-05-07-login-trace.md (POST /api/v1/login walkthrough, 805 lines), Layer 5.1 - Route registration v1.POST(/login) (sys_router.go:71), Section 1 - Learning goals & prerequisites (Docker-only, no Go/MySQL/Node), Track A - GET /api/v1/sys-user follow-up (Casbin + data-scope filter), SpecKit feature 001-learning-trace-login (parent spec of this doc), cmd/api/server.go (gin/middleware/router/Casbin/queue/JWT wiring; line 70 registers LoginLog queue consumer), main.go (tiny entrypoint, defers to cmd.Execute), Recommended reading path: main.go -> cmd/api/server.go -> sys_router.go -> handler/auth.go (+1 more)
+
+### Community 54 - "Community 54"
+Cohesion: 0.22
+Nodes (9): app/admin/ (13 resources x 4-layer architecture: apis/models/router/service), app/admin/apis/ (gin handler layer: MakeContext->Bind->service->Custom), app/admin/router/ (route registration, mounted by cmd/api/server.go), app/admin/service/ (business logic: GORM query + aggregation), app/admin/service/dto/ (5 Req DTOs per resource), app/ (business modules: admin / jobs / other), app/jobs/ (cron scheduler module: robfig/cron wrapper), app/other/ (file upload / monitor / code-gen) (+1 more)
+
+### Community 55 - "Community 55"
 Cohesion: 0.25
-Nodes (0): 
+Nodes (3): ControlBy (audit by-fields), ActiveRecord, SysDictType
 
-### Community 28 - "Comment Processor"
-Cohesion: 0.4
-Nodes (3): lt(), Mt(), pt
+### Community 62 - "Community 62"
+Cohesion: 0.48
+Nodes (4): _1599190683659Tables(), ExecSql(), InitDb(), Ioutil()
 
-### Community 29 - "Huawei OBS Storage"
-Cohesion: 0.4
-Nodes (1): HuaWeiOBS
+### Community 63 - "Community 63"
+Cohesion: 0.29
+Nodes (3): ALiYunOSS, TestKODOGetTempToken(), TestKODOUpload()
 
-### Community 30 - "Response Helpers"
-Cohesion: 0.4
-Nodes (2): Page, Response
+### Community 69 - "Community 69"
+Cohesion: 0.33
+Nodes (6): app/admin/models/ (GORM models for sys_* tables), cmd/ (Cobra subcommand entry points; main.go enters here), cmd/migrate/ (DB migration command with separate schema models), cmd/migrate/migration/models/ (migration-stage schemas, separate from runtime to avoid import cycles), Convention: runtime model (app/admin/models) vs migration model (cmd/migrate/migration/models) are deliberately separated, app/admin/models/sys_login_log.go SaveLoginLog queue consumer
 
-### Community 31 - "Form Generator Logo"
+### Community 70 - "Community 70"
+Cohesion: 0.33
+Nodes (6): Seed credentials admin/123456 with status='2' (active) and role_id=1 (admin), Dev-mode captcha bypass (FR-007): code:0+uuid:0 only when application.mode=dev, FR-017 - Swagger annotation in auth.go:49-62 is source-of-truth for dev-mode bypass, Section 3 - Canonical login curl with code:0/uuid:0 dev-mode bypass, Login response 5-key shape: code/currentAuthority/expire/success/token, go-admin-db.db (pre-seeded SQLite: admin/123456 + sys_* + Casbin + menu)
+
+### Community 76 - "Community 76"
 Cohesion: 0.6
 Nodes (5): Form Generator module, Green rounded pebble background, Stylized letter V, Form Generator Logo (V mark), vue-form-making / form-generator project
 
-### Community 32 - "Go Gopher Asset"
+### Community 77 - "Community 77"
 Cohesion: 0.6
 Nodes (5): go-admin Project, Go Gopher (Go language mascot), Go Programming Language, Go Gopher Mascot Image, Static Uploadfile Assets
 
-### Community 33 - "Casbin Rule Model"
-Cohesion: 0.5
-Nodes (1): CasbinRule
+### Community 78 - "Community 78"
+Cohesion: 0.4
+Nodes (5): CLAUDE.md (project AI instructions), graphify rule: read GRAPH_REPORT.md before architecture questions, Rule: run `graphify update .` after modifying code (AST-only, no API cost), Rule: navigate graphify-out/wiki/index.md instead of raw files, graphify-out/ (auto-generated knowledge graph output)
 
-### Community 34 - "DB Columns Tool"
-Cohesion: 0.5
-Nodes (1): DBColumns
-
-### Community 35 - "DB Tables Tool"
-Cohesion: 0.5
-Nodes (1): DBTables
-
-### Community 36 - "File Store Interface"
+### Community 82 - "Community 82"
 Cohesion: 0.5
 Nodes (3): ClientOption, DriverType, FileStoreType
-
-### Community 37 - "Middleware User Handler"
-Cohesion: 0.5
-Nodes (1): SysUser
-
-### Community 38 - "File Router"
-Cohesion: 0.67
-Nodes (0): 
-
-### Community 39 - "RoleDept Migration"
-Cohesion: 0.67
-Nodes (1): SysRoleDept
-
-### Community 40 - "SysColumns Migration"
-Cohesion: 0.67
-Nodes (1): SysColumns
-
-### Community 41 - "DictData Migration"
-Cohesion: 0.67
-Nodes (1): DictData
-
-### Community 42 - "DictType Migration"
-Cohesion: 0.67
-Nodes (1): DictType
-
-### Community 43 - "SysTables Migration"
-Cohesion: 0.67
-Nodes (1): SysTables
-
-### Community 44 - "TbDemo Migration"
-Cohesion: 0.67
-Nodes (1): TbDemo
-
-### Community 45 - "Role Middleware"
-Cohesion: 0.67
-Nodes (1): SysRole
-
-### Community 46 - "Config Extend"
-Cohesion: 0.67
-Nodes (2): AMap, Extend
-
-### Community 47 - "Code Generation Tests"
-Cohesion: 0.67
-Nodes (0): 
-
-### Community 48 - "GoAdmin Banner Endpoint"
-Cohesion: 1.0
-Nodes (0): 
-
-### Community 49 - "RoleMenu Service"
-Cohesion: 1.0
-Nodes (1): SysRoleMenu
-
-### Community 50 - "SysTable Service DTO"
-Cohesion: 1.0
-Nodes (1): SysTableSearch
-
-### Community 51 - "API Jobs Init"
-Cohesion: 1.0
-Nodes (0): 
-
-### Community 52 - "API Other Init"
-Cohesion: 1.0
-Nodes (0): 
-
-### Community 53 - "Migration BaseModel"
-Cohesion: 1.0
-Nodes (1): BaseModel
-
-### Community 54 - "Migrations Local Init"
-Cohesion: 1.0
-Nodes (0): 
-
-### Community 55 - "Settings UrlInfo"
-Cohesion: 1.0
-Nodes (1): UrlInfo
-
-### Community 56 - "Ping Handler"
-Cohesion: 1.0
-Nodes (0): 
-
-### Community 57 - "Swagger Docs Init"
-Cohesion: 1.0
-Nodes (0): 
-
-### Community 58 - "DB Columns API"
-Cohesion: 1.0
-Nodes (0): 
-
-### Community 59 - "DB Tables API"
-Cohesion: 1.0
-Nodes (0): 
-
-### Community 60 - "Actions Type"
-Cohesion: 1.0
-Nodes (0): 
-
-### Community 61 - "Database Open"
-Cohesion: 1.0
-Nodes (0): 
-
-### Community 62 - "SQLite Open"
-Cohesion: 1.0
-Nodes (0): 
-
-### Community 63 - "Global Admin"
-Cohesion: 1.0
-Nodes (0): 
-
-### Community 64 - "Global Logo"
-Cohesion: 1.0
-Nodes (0): 
-
-### Community 65 - "Global Topic"
-Cohesion: 1.0
-Nodes (0): 
-
-### Community 66 - "Common Menu Model"
-Cohesion: 1.0
-Nodes (0): 
-
-### Community 67 - "TinyMCE Example Bundle"
-Cohesion: 1.0
-Nodes (0): 
-
-### Community 68 - "CGO SQLite Build Note"
-Cohesion: 1.0
-Nodes (1): CGO + go-sqlite3 build issue (Windows)
-
-### Community 69 - "Empty Upload Log"
-Cohesion: 1.0
-Nodes (1): Empty upload log placeholder (static/uploadfile/log.txt)
-
-### Community 70 - "Generate ObjectById DTO"
-Cohesion: 1.0
-Nodes (1): ObjectById (DTO)
-
-### Community 71 - "Pagination Struct"
-Cohesion: 1.0
-Nodes (1): Pagination (struct)
-
-### Community 72 - "Model Audit Base"
-Cohesion: 1.0
-Nodes (1): Model (PK)
 
 ## Ambiguous Edges - Review These
 - `Form Generator module` → `vue-form-making / form-generator project`  [AMBIGUOUS]
@@ -416,58 +408,9 @@ Nodes (1): Model (PK)
   app/admin/models/datascope.go · relation: rationale_for
 
 ## Knowledge Gaps
-- **63 isolated node(s):** `SysRoleMenu`, `SysApiOrder`, `SysConfigOrder`, `UpdateSetSysConfigReq`, `GetSysConfigByKEYForServiceResp` (+58 more)
+- **92 isolated node(s):** `SysRoleMenu`, `SysApiOrder`, `SysConfigOrder`, `UpdateSetSysConfigReq`, `GetSysConfigByKEYForServiceResp` (+87 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **Thin community `GoAdmin Banner Endpoint`** (2 nodes): `go_admin.go`, `GoAdmin()`
-  Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `RoleMenu Service`** (2 nodes): `sys_role_menu.go`, `SysRoleMenu`
-  Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `SysTable Service DTO`** (2 nodes): `sys_tables.go`, `SysTableSearch`
-  Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `API Jobs Init`** (2 nodes): `jobs.go`, `init()`
-  Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `API Other Init`** (2 nodes): `other.go`, `init()`
-  Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Migration BaseModel`** (2 nodes): `model.go`, `BaseModel`
-  Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Migrations Local Init`** (2 nodes): `doc.go`, `init()`
-  Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Settings UrlInfo`** (2 nodes): `settings.go`, `UrlInfo`
-  Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Ping Handler`** (2 nodes): `ping.go`, `Ping()`
-  Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Swagger Docs Init`** (2 nodes): `init()`, `admin_docs.go`
-  Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `DB Columns API`** (1 nodes): `db_columns.go`
-  Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `DB Tables API`** (1 nodes): `db_tables.go`
-  Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Actions Type`** (1 nodes): `type.go`
-  Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Database Open`** (1 nodes): `open.go`
-  Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `SQLite Open`** (1 nodes): `open_sqlite3.go`
-  Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Global Admin`** (1 nodes): `adm.go`
-  Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Global Logo`** (1 nodes): `logo.go`
-  Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Global Topic`** (1 nodes): `topic.go`
-  Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Common Menu Model`** (1 nodes): `menu.go`
-  Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `TinyMCE Example Bundle`** (1 nodes): `tinymce-example.641995ab.js`
-  Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `CGO SQLite Build Note`** (1 nodes): `CGO + go-sqlite3 build issue (Windows)`
-  Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Empty Upload Log`** (1 nodes): `Empty upload log placeholder (static/uploadfile/log.txt)`
-  Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Generate ObjectById DTO`** (1 nodes): `ObjectById (DTO)`
-  Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Pagination Struct`** (1 nodes): `Pagination (struct)`
-  Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Model Audit Base`** (1 nodes): `Model (PK)`
-  Too small to be a meaningful cluster - may be noise or needs more connections extracted.
+- **48 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
@@ -478,11 +421,11 @@ _Questions this graph is uniquely positioned to answer:_
   _Edge tagged AMBIGUOUS (relation: used_as_sample_upload_in) - confidence is low._
 - **What is the exact relationship between `GetDataScope (method, dead code)` and `GetDataScope (method, dead code)`?**
   _Edge tagged AMBIGUOUS (relation: rationale_for) - confidence is low._
-- **Why does `IndexAction()` connect `Admin Models & Service Layer` to `Admin REST APIs`, `Expression Parser Helpers`, `Init & File Routing`, `Admin Routers & Permission`, `Admin Sys Models`?**
-  _High betweenness centrality (0.090) - this node is a cross-community bridge._
-- **Why does `ActiveRecord` connect `Admin Sys Models` to `Admin Models & Service Layer`?**
-  _High betweenness centrality (0.061) - this node is a cross-community bridge._
-- **Why does `n()` connect `Expression Operator Parser` to `Frontend Parser Internals`, `Admin REST APIs`, `Expression Parser Helpers`?**
-  _High betweenness centrality (0.039) - this node is a cross-community bridge._
+- **Why does `IndexAction()` connect `Pagination & Search DTOs` to `Common API & Service Layer`, `Frontend Babel Async-Arrow Edge Cases`, `Community 42`, `Sys Config / Dict / Post Services`, `Community 48`, `Sys Role Service & Audit ControlBy`, `Sys API/User Service & DataScope`, `Community 55`?**
+  _High betweenness centrality (0.084) - this node is a cross-community bridge._
+- **Why does `ActiveRecord` connect `Community 55` to `Community 64`, `Community 65`, `Community 66`, `Community 67`, `Community 71`, `Community 72`, `Community 73`, `Community 47`, `Pagination & Search DTOs`, `Community 58`, `Community 59`?**
+  _High betweenness centrality (0.054) - this node is a cross-community bridge._
+- **Why does `de()` connect `Frontend Babel Comments & Decorators` to `Frontend Babel Function Parser`, `Frontend Babel Identifier Validation`, `Frontend Babel Async-Arrow Edge Cases`, `Frontend Babel Template & Lookahead`, `Frontend Babel Expression & Eat`, `Frontend Babel Object & Async Property`?**
+  _High betweenness centrality (0.026) - this node is a cross-community bridge._
 - **Are the 45 inferred relationships involving `Model` (e.g. with `.GetPage()` and `.Get()`) actually correct?**
   _`Model` has 45 INFERRED edges - model-reasoned connections that need verification._

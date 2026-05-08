@@ -1,12 +1,12 @@
 ---
 source_file: "app/admin/apis/captcha.go"
 type: "code"
-community: "Community 1"
+community: "Common API & Service Layer"
 location: "L9"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_1
+  - community/Common_API__Service_Layer
 ---
 
 # System
@@ -15,4 +15,4 @@ tags:
 - [[.GenerateCaptchaHandler()]] - `method` [EXTRACTED]
 - [[captcha.go]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_1
+#graphify/code #graphify/EXTRACTED #community/Common_API__Service_Layer

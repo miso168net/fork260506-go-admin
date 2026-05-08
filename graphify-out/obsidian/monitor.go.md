@@ -1,12 +1,12 @@
 ---
 source_file: "app/other/router/monitor.go"
 type: "code"
-community: "Community 6"
+community: "Community 88"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_6
+  - community/Community_88
 ---
 
 # monitor.go
@@ -15,4 +15,4 @@ tags:
 - [[init()_13]] - `contains` [EXTRACTED]
 - [[registerMonitorRouter()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_6
+#graphify/code #graphify/EXTRACTED #community/Community_88

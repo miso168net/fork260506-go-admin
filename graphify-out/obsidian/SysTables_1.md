@@ -1,12 +1,12 @@
 ---
 source_file: "cmd/migrate/migration/models/sys_tables.go"
 type: "code"
-community: "Community 43"
+community: "Community 96"
 location: "L3"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_43
+  - community/Community_96
 ---
 
 # SysTables
@@ -15,4 +15,4 @@ tags:
 - [[.TableName()_19]] - `method` [EXTRACTED]
 - [[sys_tables.go_3]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_43
+#graphify/code #graphify/EXTRACTED #community/Community_96

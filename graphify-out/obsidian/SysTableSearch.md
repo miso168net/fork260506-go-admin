@@ -1,12 +1,12 @@
 ---
 source_file: "app/other/service/dto/sys_tables.go"
 type: "code"
-community: "Community 50"
+community: "Community 103"
 location: "L3"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_50
+  - community/Community_103
 ---
 
 # SysTableSearch
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[sys_tables.go_2]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_50
+#graphify/code #graphify/EXTRACTED #community/Community_103

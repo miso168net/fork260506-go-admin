@@ -1,12 +1,12 @@
 ---
 source_file: "common/dto/type.go"
 type: "code"
-community: "Community 18"
+community: "Community 30"
 location: "L8"
 tags:
   - graphify/code
   - graphify/INFERRED
-  - community/Community_18
+  - community/Community_30
 ---
 
 # Index
@@ -16,4 +16,4 @@ tags:
 - [[LoggerToFile()]] - `calls` [INFERRED]
 - [[type.go_2]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/Community_18
+#graphify/code #graphify/INFERRED #community/Community_30

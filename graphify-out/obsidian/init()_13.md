@@ -1,12 +1,12 @@
 ---
 source_file: "app/other/router/monitor.go"
 type: "code"
-community: "Community 6"
+community: "Community 88"
 location: "L11"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_6
+  - community/Community_88
 ---
 
 # init()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[monitor.go]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_6
+#graphify/code #graphify/EXTRACTED #community/Community_88

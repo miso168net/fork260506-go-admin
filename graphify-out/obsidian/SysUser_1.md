@@ -1,12 +1,12 @@
 ---
 source_file: "cmd/migrate/migration/models/sys_user.go"
 type: "code"
-community: "Community 8"
+community: "Community 47"
 location: "L8"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_8
+  - community/Community_47
 ---
 
 # SysUser
@@ -22,4 +22,4 @@ tags:
 - [[sys_user.go_1]] - `contains` [EXTRACTED]
 - [[sys_user.go_5]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_8
+#graphify/code #graphify/EXTRACTED #community/Community_47

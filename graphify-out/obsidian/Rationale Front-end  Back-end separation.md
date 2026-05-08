@@ -1,12 +1,12 @@
 ---
 source_file: "README.md"
 type: "document"
-community: "Community 10"
+community: "Project Documentation & License"
 location: "intro paragraph"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Community_10
+  - community/Project_Documentation__License
 ---
 
 # Rationale: Front-end / Back-end separation
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[go-admin Project (English README)]] - `rationale_for` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_10
+#graphify/document #graphify/EXTRACTED #community/Project_Documentation__License

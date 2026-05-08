@@ -1,12 +1,12 @@
 ---
 source_file: "cmd/migrate/migration/models/sys_api.go"
 type: "code"
-community: "Community 8"
+community: "Community 73"
 location: "L3"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_8
+  - community/Community_73
 ---
 
 # SysApi
@@ -18,4 +18,4 @@ tags:
 - [[sys_api.go_1]] - `contains` [EXTRACTED]
 - [[sys_api.go_5]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_8
+#graphify/code #graphify/EXTRACTED #community/Community_73

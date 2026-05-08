@@ -1,12 +1,12 @@
 ---
 source_file: "common/middleware/permission.go"
 type: "code"
-community: "Community 6"
+community: "Community 32"
 location: "L15"
 tags:
   - graphify/code
   - graphify/INFERRED
-  - community/Community_6
+  - community/Community_32
 ---
 
 # AuthCheckRole()
@@ -31,4 +31,4 @@ tags:
 - [[registerSysServerMonitorRouter()]] - `calls` [INFERRED]
 - [[registerSysUserRouter()]] - `calls` [INFERRED]
 
-#graphify/code #graphify/INFERRED #community/Community_6
+#graphify/code #graphify/INFERRED #community/Community_32

@@ -1,12 +1,12 @@
 ---
 source_file: "app/admin/service/sys_dept.go"
 type: "code"
-community: "Community 3"
+community: "Community 40"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_3
+  - community/Community_40
 ---
 
 # sys_dept.go
@@ -16,4 +16,4 @@ tags:
 - [[deptLabelCall()]] - `contains` [EXTRACTED]
 - [[deptTreeCall()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_3
+#graphify/code #graphify/EXTRACTED #community/Community_40

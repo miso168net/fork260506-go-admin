@@ -1,11 +1,11 @@
 ---
 source_file: "x_fork.branch-origin.md"
 type: "document"
-community: "Community 10"
+community: "Project Documentation & License"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Community_10
+  - community/Project_Documentation__License
 ---
 
 # main branch (this fork)
@@ -16,4 +16,4 @@ tags:
 - [[Source HEAD a5cc0a9 (Add readwrite timeout to HTTP server)]] - `references` [EXTRACTED]
 - [[master branch (original default)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_10
+#graphify/document #graphify/EXTRACTED #community/Project_Documentation__License

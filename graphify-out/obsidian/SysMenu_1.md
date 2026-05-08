@@ -1,12 +1,12 @@
 ---
 source_file: "cmd/migrate/migration/models/sys_menu.go"
 type: "code"
-community: "Community 8"
+community: "Community 72"
 location: "L3"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_8
+  - community/Community_72
 ---
 
 # SysMenu
@@ -18,4 +18,4 @@ tags:
 - [[sys_menu.go_1]] - `contains` [EXTRACTED]
 - [[sys_menu.go_5]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_8
+#graphify/code #graphify/EXTRACTED #community/Community_72

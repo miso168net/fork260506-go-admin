@@ -1,12 +1,12 @@
 ---
 source_file: "app/jobs/examples.go"
 type: "code"
-community: "Community 4"
+community: "Community 25"
 location: "L11"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_4
+  - community/Community_25
 ---
 
 # InitJob()
@@ -15,4 +15,4 @@ tags:
 - [[examples.go]] - `contains` [EXTRACTED]
 - [[run()]] - `calls` [INFERRED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_4
+#graphify/code #graphify/EXTRACTED #community/Community_25

@@ -1,12 +1,12 @@
 ---
 source_file: "app/other/apis/sys_server_monitor.go"
 type: "code"
-community: "Community 24"
+community: "Community 43"
 location: "L31"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_24
+  - community/Community_43
 ---
 
 # ServerMonitor
@@ -15,4 +15,4 @@ tags:
 - [[.ServerInfo()]] - `method` [EXTRACTED]
 - [[sys_server_monitor.go]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_24
+#graphify/code #graphify/EXTRACTED #community/Community_43

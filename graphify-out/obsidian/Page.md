@@ -1,12 +1,12 @@
 ---
 source_file: "common/models/response.go"
 type: "code"
-community: "Community 30"
+community: "Community 75"
 location: "L13"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_30
+  - community/Community_75
 ---
 
 # Page
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[response.go]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_30
+#graphify/code #graphify/EXTRACTED #community/Community_75

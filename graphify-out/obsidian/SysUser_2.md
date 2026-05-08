@@ -1,12 +1,12 @@
 ---
 source_file: "app/admin/service/sys_user.go"
 type: "code"
-community: "Community 3"
+community: "Sys API/User Service & DataScope"
 location: "L17"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_3
+  - community/Sys_API/User_Service__DataScope
 ---
 
 # SysUser
@@ -24,4 +24,4 @@ tags:
 - [[.UpdateStatus()_2]] - `method` [EXTRACTED]
 - [[sys_user.go_3]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_3
+#graphify/code #graphify/EXTRACTED #community/Sys_API/User_Service__DataScope

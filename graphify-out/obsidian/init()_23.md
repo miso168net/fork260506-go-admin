@@ -1,12 +1,12 @@
 ---
 source_file: "static/form-generator/js/preview.8ce4e0db.js"
 type: "code"
-community: "Community 9"
+community: "TinyMCE Form Generator Bundle"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_9
+  - community/TinyMCE_Form_Generator_Bundle
 ---
 
 # init()
@@ -17,4 +17,4 @@ tags:
 - [[preview.8ce4e0db.js]] - `contains` [EXTRACTED]
 - [[setupSimpleDatabase()]] - `calls` [INFERRED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_9
+#graphify/code #graphify/EXTRACTED #community/TinyMCE_Form_Generator_Bundle

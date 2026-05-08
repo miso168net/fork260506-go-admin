@@ -1,12 +1,12 @@
 ---
 source_file: "test/gen_test.go"
 type: "code"
-community: "Community 47"
+community: "Community 100"
 location: "L31"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_47
+  - community/Community_100
 ---
 
 # TestGoApiTemplate()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[gen_test.go]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_47
+#graphify/code #graphify/EXTRACTED #community/Community_100

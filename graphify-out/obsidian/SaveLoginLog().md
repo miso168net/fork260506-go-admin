@@ -1,12 +1,12 @@
 ---
 source_file: "app/admin/models/sys_login_log.go"
 type: "code"
-community: "Community 8"
+community: "Community 59"
 location: "L46"
 tags:
   - graphify/code
   - graphify/INFERRED
-  - community/Community_8
+  - community/Community_59
 ---
 
 # SaveLoginLog()
@@ -16,4 +16,4 @@ tags:
 - [[.Error()]] - `calls` [INFERRED]
 - [[sys_login_log.go_1]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/Community_8
+#graphify/code #graphify/INFERRED #community/Community_59

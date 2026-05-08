@@ -1,12 +1,12 @@
 ---
 source_file: "common/dto/pagination.go"
 type: "code"
-community: "Community 3"
+community: "Pagination & Search DTOs"
 location: "L3"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_3
+  - community/Pagination__Search_DTOs
 ---
 
 # Pagination
@@ -16,4 +16,4 @@ tags:
 - [[.GetPageSize()]] - `method` [EXTRACTED]
 - [[pagination.go]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_3
+#graphify/code #graphify/EXTRACTED #community/Pagination__Search_DTOs
