@@ -4,4 +4,4 @@ cost.json
 .graphify_incremental.json
 .graphify_*.json
 .needs_update
-obsidian/.obsidian/
+obsidian/.obsidian/*
